@@ -1,8 +1,14 @@
 # Preparazione al test d'ingresso
 
-Sito per esercitarsi su un test di ammissione a risposta multipla (quattro opzioni,
-una sola corretta). Funziona offline, senza installare nulla e senza account: basta
-aprire `index.html` con un doppio clic.
+Sito per esercitarsi sul test di ammissione alla laurea magistrale in **Comunicazione
+pubblica e d'impresa (COM, LM-59)** dell'Università degli Studi di Milano: domande a
+risposta multipla con quattro opzioni, una sola corretta. Funziona offline, senza
+installare nulla e senza account: basta aprire `index.html` con un doppio clic.
+
+Le materie della prova, indicate dalla presentazione ufficiale del corso, sono
+**inglese, teorie della comunicazione, informatica, marketing, statistica e attualità**.
+La banca dati attuale contiene 65 domande su queste aree, ognuna con spiegazione e
+riferimento al testo consigliato dall'ateneo.
 
 ## Le tre modalità
 
@@ -33,10 +39,10 @@ un foglio di calcolo, `tools/converti.py` le trasforma nel formato giusto parten
 Le regole della prova (durata, punti per risposta esatta ed errata, soglia di superamento)
 si impostano nel blocco `esame` di ogni banca dati, così la simulazione rispecchia il bando.
 
-## Che materiale serve per test realistici
+## Materiale d'esame e cosa manca ancora
 
-L'elenco è in [`COSA-SERVE.md`](COSA-SERVE.md): bando, programma, testi in programma ed
-eventuali prove degli anni precedenti.
+Bibliografia ufficiale, materie della prova e materiale ancora da recuperare sono in
+[`COSA-SERVE.md`](COSA-SERVE.md).
 
 ## Pubblicare il sito online (facoltativo)
 

@@ -1,44 +1,62 @@
-# Cosa serve per rendere i test realistici
+# Materiale d'esame: quello che c'è e quello che manca
 
-Più materiale arriva da queste tre righe, più le domande somigliano a quelle vere.
-Anche solo i punti in **grassetto** bastano per partire.
+Test di ammissione alla laurea magistrale in **Comunicazione pubblica e d'impresa (COM,
+classe LM-59)** — Università degli Studi di Milano.
 
-## 1. La cornice della prova (il "come")
-Serve a impostare tempo, punteggio e soglia identici a quelli reali.
+## Quello che sappiamo (fonte: presentazione ufficiale del corso, ver. 04/23)
 
-- **Università, corso di laurea magistrale e anno accademico** (es. "Statale di Milano, LM in …, a.a. 2026/27")
-- **Il bando / avviso di ammissione in PDF** (o il link): è il documento che di solito contiene tutto il resto
-- **Numero di domande e durata della prova**
-- **Punteggio**: quanto vale una risposta esatta, se le errate tolgono punti (es. −0,25) e quanto vale una domanda lasciata in bianco
-- **Soglia di superamento** o punteggio minimo per essere ammessi
-- Come sono distribuite le domande fra le materie (es. 15 di logica, 10 di economia, 5 di inglese)
-- Se la prova è al computer o su carta, se si può tornare indietro sulle domande
+**Materie della prova:** inglese, teorie della comunicazione, informatica, marketing,
+statistica, attualità.
 
-## 2. Il contenuto (il "cosa")
-Serve per scrivere domande sugli argomenti giusti, con il giusto livello di difficoltà.
+**Bibliografia consigliata dall'ateneo:**
 
-- **Il programma del corso / syllabus dettagliato** (link o PDF)
-- **L'elenco dei testi consigliati**, con capitoli o pagine effettivamente in programma
-- Eventuali **dispense, slide o appunti** di chi ha seguito il corso
-- Le **parti su cui l'esame insiste di più**, se lo sapete già da qualcuno che l'ha sostenuto
+| Testo | Area |
+| --- | --- |
+| Kotler, Armstrong, *Principles of Marketing*, Pearson (edizione recente) | Marketing |
+| Balbi, Magaudda, *A History of Digital Media*, Routledge, 2018 | Media digitali, teorie della comunicazione |
+| Snyder, Henry, *Fluency with Information Technology*, Pearson, 7ª ed. (o recente) | Informatica |
+| Agresti, Finlay, *Statistical Methods for the Social Sciences*, Pearson (edizione recente) | Statistica |
 
-## 3. Il modello delle domande (il "come sono scritte")
-È la parte che sposta di più il risultato: mi permette di imitare stile, lunghezza e trabocchetti tipici.
+L'ateneo raccomanda inoltre di **seguire con continuità le notizie di attualità**.
 
-- **Prove degli anni precedenti**, simulazioni ufficiali, esempi pubblicati dall'ateneo
-- Eventuali **eserciziari o quiz** consigliati dal corso
-- Anche solo **5–10 domande d'esempio reali** cambiano molto la resa
+**Calendario 2026/27** (da verificare sull'avviso di ammissione): domanda di ammissione
+dal 24/03/2026 al 25/08/2026; domanda di immatricolazione dall'08/09/2026 al 15/09/2026;
+200 posti disponibili, più 30 riservati a cittadini non UE e 3 al progetto Marco Polo.
+Nel ciclo 2022/23 la prova si teneva il 6 settembre alle 9:30.
 
-## In che formato mandarmele
-Va bene qualunque cosa: PDF, Word, foto delle pagine, link a pagine web, testo incollato nella chat.
-Se il materiale è già in forma di quiz, l'ideale è una riga per domanda con le quattro opzioni e la lettera
-della risposta corretta — ma non è necessario riordinarlo prima: ci penso io.
+## Quello che manca ancora
 
-## Cosa faccio io con quel materiale
-1. Costruisco le banche dati di domande divise per materia, ognuna con spiegazione della risposta e riferimento al testo.
-2. Imposto la simulazione con il tempo, il punteggio e la soglia reali del bando.
-3. Aggiungo l'allenamento per materia e il ripasso automatico degli errori.
+1. **L'avviso di ammissione dell'anno in corso**, per: data e ora esatte della prova,
+   **numero di domande, durata, punteggio, eventuale penalità** per le risposte errate e
+   criteri della graduatoria. Sono i numeri del blocco `esame` in `domande/banche.js`:
+   appena li conosciamo, la simulazione diventa fedele al minuto.
+2. **Prove degli anni precedenti o simulazioni ufficiali**, anche solo cinque o dieci
+   domande vere: servono a imitare stile, lunghezza e trabocchetti tipici.
+3. **Appunti, dispense o riassunti** dei quattro testi, se ne ha o se li recupera da chi
+   ha già sostenuto la prova: permettono di calibrare la difficoltà e coprire i capitoli
+   su cui l'esame insiste davvero.
+4. **Attualità**: quali fonti segue (quotidiani, settimanali, newsletter) e su quali temi
+   vuole essere interrogata. Le domande di questa sezione vanno scritte sulle notizie
+   delle settimane immediatamente precedenti alla prova, quindi si aggiungono per ultime.
 
-## Due limiti da tenere presenti
-- Le domande che scrivo sono **verosimili**, non le domande vere del test: servono ad allenarsi, non a indovinare la prova.
-- Se il bando cambia le regole (tempo, penalità, soglia), va aggiornato il blocco `esame` della banca dati: sono tre numeri, si cambia in un minuto.
+## Come procurarsi i testi
+
+I quattro manuali sono in commercio e coperti da diritto d'autore: non è possibile
+ottenerne copie integrali per via digitale. Le strade legittime sono:
+
+- **Biblioteche dell'Università degli Studi di Milano**: il catalogo di ateneo consente
+  prestito e consultazione anche a non iscritti in molte sedi; alcuni manuali Pearson
+  sono disponibili in versione elettronica per gli utenti dell'ateneo.
+- **Biblioteche civiche e prestito interbibliotecario** (in Lombardia, il sistema
+  bibliotecario è interconnesso: un testo può essere richiesto da un'altra sede).
+- **Edizioni precedenti usate**: per Kotler e Agresti-Finlay le differenze fra edizioni
+  sono marginali rispetto ai contenuti richiesti da un test d'ingresso, e costano poco.
+- **Anteprime e capitoli di saggio** degli editori e di Google Libri, utili per verificare
+  la struttura dei capitoli.
+- **Risorse aperte equivalenti** per fare esercizio sugli stessi argomenti: i manuali
+  *Principles of Marketing* e *Introductory Statistics* di OpenStax sono gratuiti e
+  coprono in larga parte lo stesso programma di base.
+
+In ogni caso, le domande di questo sito sono costruite sugli **argomenti** dei quattro
+testi, non sul loro testo: sono verosimili e servono ad allenarsi, non riproducono la
+prova reale.
