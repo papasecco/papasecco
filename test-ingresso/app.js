@@ -52,8 +52,10 @@ let vistaPrec = "v-home";
 
 // ---------- tema ----------
 const temaSalvato = leggi(CHIAVI.tema, null);
+const temaOspite = document.documentElement.dataset.theme; // quando la pagina è ospitata altrove
+const scuroDiSistema = temaOspite ? temaOspite === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
 if (temaSalvato) document.documentElement.dataset.tema = temaSalvato;
-else if (matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.tema = "scuro";
+else if (scuroDiSistema) document.documentElement.dataset.tema = "scuro";
 $("#nav-tema").onclick = () => {
   const nuovo = document.documentElement.dataset.tema === "scuro" ? "chiaro" : "scuro";
   document.documentElement.dataset.tema = nuovo;
