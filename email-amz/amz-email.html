@@ -20,6 +20,10 @@
     .px{padding-left:22px!important;padding-right:22px!important;}
     .h1{font-size:22px!important;line-height:30px!important;}
     .logo{width:230px!important;}
+    .stack{display:block!important;width:100%!important;box-sizing:border-box!important;}
+    .stack-logo{padding:20px 20px 10px 20px!important;text-align:center!important;border-right:0!important;border-bottom:1px solid #e4eae5!important;}
+    .stack-text{padding:14px 22px 20px 22px!important;text-align:center!important;}
+    .brandlogo{margin:0 auto!important;}
   }
 </style>
 </head>
@@ -56,7 +60,7 @@
     <!-- ============ CORPO ============ -->
     <tr>
       <td class="px" style="padding:34px 40px 8px 40px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:26px;color:#333333;">
-        <p style="margin:0 0 20px 0;">Gentile <strong>{{nome}}</strong>,</p>
+        <p style="margin:0 0 20px 0;">Gentile <strong>{{ contact.firstname }}</strong>,</p>
 
         <p style="margin:0 0 18px 0;">
           da oltre <strong>40 anni</strong> AMZ opera nel mondo del tennis e degli sport di racchetta,
@@ -72,15 +76,34 @@
 
     <!-- ============ MARCHI ============ -->
     <tr>
-      <td class="px" style="padding:10px 40px 6px 40px;">
+      <td class="px" style="padding:16px 40px 6px 40px;">
+
+        <!-- titolino di sezione -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td width="50%" style="width:50%;border-bottom:1px solid #dfe5df;font-size:0;line-height:0;">&nbsp;</td>
+            <td align="center" style="padding:0 14px;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:#1f5c34;font-weight:bold;white-space:nowrap;">I nostri marchi</td>
+            <td width="50%" style="width:50%;border-bottom:1px solid #dfe5df;font-size:0;line-height:0;">&nbsp;</td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td class="px" style="padding:20px 40px 6px 40px;">
         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 
           <tr>
-            <td style="padding:0 0 12px 0;">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f6f9f6;border-left:4px solid #1f5c34;">
+            <td style="padding:0 0 14px 0;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ffffff;border:1px solid #e4eae5;">
+                <tr><td colspan="2" style="height:4px;line-height:4px;font-size:0;background-color:#00843D;">&nbsp;</td></tr>
                 <tr>
-                  <td style="padding:16px 18px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#333333;">
-                    <span style="display:block;font-size:16px;letter-spacing:1px;font-weight:bold;color:#1f5c34;padding-bottom:4px;">GREENSET</span>
+                  <td class="stack stack-logo" width="168" align="center" valign="middle" style="width:168px;background-color:#f7faf7;border-right:1px solid #e4eae5;padding:22px 16px;">
+                    <img src="assets/logo-greenset.png" alt="GREENSET" width="124" class="brandlogo" style="width:124px;max-width:100%;height:auto;margin:0 auto;" />
+                  </td>
+                  <td class="stack stack-text" valign="middle" style="padding:20px 22px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#444444;">
+                    <span style="display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:bold;color:#00843D;padding-bottom:7px;">Superfici da gioco</span>
                     Superfici professionali per campi da tennis, utilizzate anche nei pi&ugrave; importanti tornei internazionali.
                   </td>
                 </tr>
@@ -89,12 +112,16 @@
           </tr>
 
           <tr>
-            <td style="padding:0 0 12px 0;">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f6f9f6;border-left:4px solid #1f5c34;">
+            <td style="padding:0 0 14px 0;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ffffff;border:1px solid #e4eae5;">
+                <tr><td colspan="2" style="height:4px;line-height:4px;font-size:0;background-color:#D8232A;">&nbsp;</td></tr>
                 <tr>
-                  <td style="padding:16px 18px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#333333;">
-                    <span style="display:block;font-size:16px;letter-spacing:1px;font-weight:bold;color:#1f5c34;padding-bottom:4px;">SOLINCO</span>
-                    Corde, racchette e accessori sviluppati per giocatori che ricercano prestazioni, controllo e affidabilit&agrave;.
+                  <td class="stack stack-logo" width="168" align="center" valign="middle" style="width:168px;background-color:#f7faf7;border-right:1px solid #e4eae5;padding:22px 16px;">
+                    <img src="assets/logo-solinco.png" alt="SOLINCO" width="124" class="brandlogo" style="width:124px;max-width:100%;height:auto;margin:0 auto;" />
+                  </td>
+                  <td class="stack stack-text" valign="middle" style="padding:20px 22px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#444444;">
+                    <span style="display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:bold;color:#D8232A;padding-bottom:7px;">Corde, racchette e accessori</span>
+                    Sviluppati per giocatori che ricercano prestazioni, controllo e affidabilit&agrave;.
                   </td>
                 </tr>
               </table>
@@ -102,11 +129,15 @@
           </tr>
 
           <tr>
-            <td style="padding:0 0 12px 0;">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f6f9f6;border-left:4px solid #1f5c34;">
+            <td style="padding:0 0 14px 0;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ffffff;border:1px solid #e4eae5;">
+                <tr><td colspan="2" style="height:4px;line-height:4px;font-size:0;background-color:#0F6E8C;">&nbsp;</td></tr>
                 <tr>
-                  <td style="padding:16px 18px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#333333;">
-                    <span style="display:block;font-size:16px;letter-spacing:1px;font-weight:bold;color:#1f5c34;padding-bottom:4px;">EASYGRIP</span>
+                  <td class="stack stack-logo" width="168" align="center" valign="middle" style="width:168px;background-color:#f7faf7;border-right:1px solid #e4eae5;padding:22px 16px;">
+                    <img src="assets/logo-easygrip.png" alt="EASYGRIP" width="124" class="brandlogo" style="width:124px;max-width:100%;height:auto;margin:0 auto;" />
+                  </td>
+                  <td class="stack stack-text" valign="middle" style="padding:20px 22px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#444444;">
+                    <span style="display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:bold;color:#0F6E8C;padding-bottom:7px;">Pickleball e didattica</span>
                     Una realt&agrave; innovativa dedicata al pickleball e agli strumenti propedeutici per l&rsquo;insegnamento di tennis, padel e pickleball.
                   </td>
                 </tr>

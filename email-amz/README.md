@@ -10,14 +10,16 @@ Email HTML pronta all'invio, in italiano, per la presentazione di AMZ a circoli,
 | `amz-email-anteprima.html` | Copia autonoma con le immagini incorporate in base64: si apre nel browser con doppio clic per vedere subito il risultato. Non usarla per l'invio (Gmail e Outlook bloccano le immagini base64). |
 | `assets/amz-court-surface.png` | Logo AMZ Court Surface, estratto dal PDF fornito, sfondo trasparente, 700 px (visualizzato a 260 px). |
 | `assets/loghi-partner.png` | **Segnaposto da sostituire** con la striscia loghi (AMZ GreenSet · Nitto ATP Finals · Next Gen ATP Finals · Davis Cup Madrid Finals 2019 · Tennis Australia). |
+| `assets/logo-greenset.png`<br>`assets/logo-solinco.png`<br>`assets/logo-easygrip.png` | **Segnaposto tipografici da sostituire** con i loghi ufficiali dei tre marchi. Canvas 440×130 px trasparente, visualizzati a 124 px. |
 
 ## Cosa completare prima dell'invio
 
 1. **Striscia loghi** – salvare l'immagine dei loghi come `assets/loghi-partner.png`, mantenendo un formato orizzontale (circa 7:1, larghezza consigliata 1040 px). Il layout si adatta da solo.
 2. **Recapiti nel footer** – nel blocco footer di `amz-email.html` sostituire indirizzo, telefono, `info@amz.it` e `www.amz.it` con i dati reali.
-3. **Nome destinatario** – il testo contiene il segnaposto `{{nome}}`. Adeguarlo alla sintassi della piattaforma usata (Mailchimp `*|FNAME|*`, Brevo `{{ contact.NOME }}`, ecc.).
-4. **Disiscrizione** – `{{unsubscribe_url}}` va sostituito con il link generato dalla piattaforma (obbligatorio per invii commerciali).
-5. **Immagini** – caricare i due PNG su un server o CDN e sostituire `src="assets/..."` con gli URL completi `https://...`. In alternativa allegarli come CID (`src="cid:amz-logo"`).
+3. **Loghi dei marchi** – sovrascrivere `logo-greenset.png`, `logo-solinco.png` e `logo-easygrip.png` con i file ufficiali, mantenendo nome e proporzioni (440×130 px, sfondo trasparente, logo centrato). Nessuna modifica all'HTML: il layout resta identico.
+4. **Nome destinatario** – il testo usa il segnaposto `{{ contact.firstname }}`. Se la piattaforma di invio usa un'altra sintassi, adeguarlo (Mailchimp `*|FNAME|*`, Brevo `{{ contact.FIRSTNAME }}`).
+5. **Disiscrizione** – `{{unsubscribe_url}}` va sostituito con il link generato dalla piattaforma (obbligatorio per invii commerciali).
+6. **Immagini** – caricare i PNG su un server o CDN e sostituire `src="assets/..."` con gli URL completi `https://...`. In alternativa allegarli come CID (`src="cid:amz-logo"`).
 
 ## Oggetto suggerito
 
@@ -30,5 +32,6 @@ Alternative: *Da oltre 40 anni al fianco di chi vive il tennis* · *AMZ: Greense
 - Struttura a tabelle, larghezza fissa 600 px, CSS inline: compatibile con Outlook (incluso il commento condizionale MSO), Gmail, Apple Mail e client mobili.
 - Media query a 620 px per la resa su smartphone (padding ridotto, logo rimpicciolito).
 - Preheader nascosto per il testo di anteprima nella inbox.
-- Palette: verde scuro `#1F5C34`, verde AMZ `#5CBD75` (campionato dal logo originale), fondo `#F2F4F2`.
+- Palette: verde scuro `#1F5C34`, verde AMZ `#5CBD75` (campionato dal logo originale), fondo `#F2F4F2`. Ogni marchio ha un colore d'accento proprio (Greenset `#00843D`, Solinco `#D8232A`, Easygrip `#0F6E8C`) usato per la barretta superiore della card e per l'occhiello.
+- Le card dei marchi sono a due colonne (logo + testo) su desktop e si impilano sotto i 620 px, con logo e testo centrati.
 - Testo alternativo (`alt`) su tutte le immagini: l'email resta leggibile anche con le immagini bloccate.
