@@ -7,8 +7,18 @@ installare nulla e senza account: basta aprire `index.html` con un doppio clic.
 
 Le materie della prova, indicate dalla presentazione ufficiale del corso, sono
 **inglese, teorie della comunicazione, informatica, marketing, statistica e attualità**.
-La banca dati attuale contiene 65 domande su queste aree, ognuna con spiegazione e
-riferimento al testo consigliato dall'ateneo.
+La banca dati contiene **203 domande** su queste aree, ognuna con spiegazione e
+riferimento al testo o al capitolo da cui deriva:
+
+| Materia | Domande |
+| --- | --- |
+| Informatica (Snyder, Henry — *Fluency*) | 58 |
+| Marketing (Kotler, Armstrong) | 46 |
+| Storia dei media digitali (Balbi, Magaudda) | 35 |
+| Statistica (Agresti, Finlay) | 30 |
+| Inglese | 20 |
+| Teorie della comunicazione | 9 |
+| Attualità e istituzioni | 5 |
 
 ## Le tre modalità
 

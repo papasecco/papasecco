@@ -335,6 +335,9 @@ select,input[type=number]{
      English language · Communication theory · Computer science ·
      Marketing · Statistics · Current news
 
+   Le domande sono costruite sugli argomenti dei testi consigliati e, dove indicato
+   nel campo `fonte`, sui riassunti di Kotler, Balbi-Magaudda e Snyder-Henry.
+
    Bibliografia consigliata dall'ateneo:
      - Kotler, Armstrong, Principles of Marketing, Pearson (edizione recente)
      - Balbi, Magaudda, A History of Digital Media, Routledge, 2018
@@ -351,88 +354,88 @@ window.BANCHE = [
 {
   id: "com-unimi",
   titolo: "COM Unimi — banca d'esame",
-  descrizione: "marketing, statistica, informatica, teorie della comunicazione, inglese, attualità",
-  esame: { durataMinuti: 45, numeroDomande: 40, puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null },
+  descrizione: "marketing, statistica, informatica, media digitali, teorie della comunicazione, inglese, attualità",
+  esame: { durataMinuti: 50, numeroDomande: 50, puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null },
   domande: [
 
   /* ================= MARKETING (Kotler, Armstrong) ================= */
   { id:"MKT01", materia:"Marketing", testo:"Quale elemento NON fa parte del marketing mix tradizionale (le «quattro P»)?",
-    opzioni:["Prodotto","Prezzo","Personale","Promozione"], corretta:2,
+    opzioni:["Personale","Promozione","Prodotto","Prezzo"], corretta:0,
     spiegazione:"Le quattro P sono product, price, place e promotion. Personale (people), processi e physical evidence appartengono al mix esteso a sette P, usato per i servizi.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT02", materia:"Marketing", testo:"Nel modello STP, che cosa indica la fase di «positioning»?",
-    opzioni:["Dividere il mercato in gruppi omogenei di consumatori","Scegliere i segmenti su cui l'impresa vuole competere","Collocare l'offerta nella mente del consumatore rispetto ai concorrenti","Stabilire il prezzo di vendita rispetto ai costi"], corretta:2,
+    opzioni:["Scegliere i segmenti su cui l'impresa vuole competere","Collocare l'offerta nella mente del consumatore rispetto ai concorrenti","Stabilire il prezzo di vendita rispetto ai costi","Dividere il mercato in gruppi omogenei di consumatori"], corretta:1,
     spiegazione:"Segmentation divide il mercato, targeting sceglie i segmenti, positioning definisce la posizione distintiva che il prodotto deve occupare nella percezione del consumatore rispetto alla concorrenza.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT03", materia:"Marketing", testo:"Nell'analisi SWOT, «opportunità» e «minacce» riguardano:",
-    opzioni:["L'ambiente esterno all'impresa","Le risorse interne dell'impresa","Esclusivamente i concorrenti diretti","Il solo andamento delle vendite"], corretta:0,
+    opzioni:["Esclusivamente i concorrenti diretti","Il solo andamento delle vendite","L'ambiente esterno all'impresa","Le risorse interne dell'impresa"], corretta:2,
     spiegazione:"Punti di forza e di debolezza descrivono fattori interni; opportunità e minacce descrivono fattori esterni (mercato, tecnologia, normativa, concorrenza).",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT04", materia:"Marketing", testo:"Che cosa distingue il «marketing concept» dal «selling concept»?",
-    opzioni:["Il marketing concept parte dai bisogni del cliente, il selling concept dai prodotti già realizzati","Il marketing concept riguarda solo i beni di lusso","Il selling concept si applica ai soli mercati esteri","Non c'è differenza sostanziale fra i due"], corretta:0,
+    opzioni:["Il marketing concept riguarda solo i beni di lusso","Il selling concept si applica ai soli mercati esteri","Non c'è differenza sostanziale fra i due","Il marketing concept parte dai bisogni del cliente, il selling concept dai prodotti già realizzati"], corretta:3,
     spiegazione:"Il selling concept parte dal prodotto esistente e punta a venderlo con azioni di vendita e promozione; il marketing concept parte dai bisogni del mercato obiettivo per costruire l'offerta.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT05", materia:"Marketing", testo:"Nella fase di maturità del ciclo di vita del prodotto ci si aspetta tipicamente:",
-    opzioni:["Vendite in forte accelerazione e concorrenza assente","Rallentamento della crescita delle vendite e forte pressione competitiva","Vendite nulle e costi di sviluppo elevati","Un aumento costante dei margini unitari"], corretta:1,
+    opzioni:["Rallentamento della crescita delle vendite e forte pressione competitiva","Vendite nulle e costi di sviluppo elevati","Un aumento costante dei margini unitari","Vendite in forte accelerazione e concorrenza assente"], corretta:0,
     spiegazione:"Nella maturità il tasso di crescita delle vendite rallenta, il mercato è affollato e i margini tendono a comprimersi: l'impresa difende la quota con differenziazione, promozioni o modifiche del prodotto.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT06", materia:"Marketing", testo:"Il customer lifetime value (CLV) misura:",
-    opzioni:["Il valore dell'intero flusso di acquisti che un cliente genera nel corso della relazione","Il costo medio per acquisire un nuovo cliente","La quota di mercato dell'impresa","Il numero di clienti persi in un anno"], corretta:0,
+    opzioni:["Il numero di clienti persi in un anno","Il valore dell'intero flusso di acquisti che un cliente genera nel corso della relazione","Il costo medio per acquisire un nuovo cliente","La quota di mercato dell'impresa"], corretta:1,
     spiegazione:"Il CLV è il valore attuale dei margini generati da un cliente lungo tutta la durata della relazione: giustifica investimenti in fidelizzazione superiori al margine del singolo acquisto.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT07", materia:"Marketing", testo:"Che cos'è la brand equity?",
-    opzioni:["Il costo sostenuto per registrare il marchio","Il valore differenziale che la conoscenza della marca aggiunge al prodotto e alle risposte del consumatore","Il numero di punti vendita in cui la marca è distribuita","Il fatturato annuo generato dal marchio"], corretta:1,
+    opzioni:["Il fatturato annuo generato dal marchio","Il costo sostenuto per registrare il marchio","Il valore differenziale che la conoscenza della marca aggiunge al prodotto e alle risposte del consumatore","Il numero di punti vendita in cui la marca è distribuita"], corretta:2,
     spiegazione:"La brand equity è l'effetto differenziale della conoscenza della marca sulle reazioni del consumatore: a parità di prodotto, una marca forte ottiene preferenza, disponibilità a pagare e fedeltà maggiori.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT08", materia:"Marketing", testo:"Una strategia di «market penetration pricing» consiste nel:",
-    opzioni:["Lanciare il prodotto a prezzo alto per massimizzare i margini sui primi acquirenti","Lanciare il prodotto a prezzo basso per conquistare rapidamente quote di mercato","Fissare il prezzo uguale a quello del leader di mercato","Differenziare il prezzo per area geografica"], corretta:1,
+    opzioni:["Fissare il prezzo uguale a quello del leader di mercato","Differenziare il prezzo per area geografica","Lanciare il prodotto a prezzo alto per massimizzare i margini sui primi acquirenti","Lanciare il prodotto a prezzo basso per conquistare rapidamente quote di mercato"], corretta:3,
     spiegazione:"Il penetration pricing punta su un prezzo iniziale basso per attrarre volumi e quote; la strategia opposta è il market skimming, che parte da un prezzo alto per i segmenti meno sensibili al prezzo.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT09", materia:"Marketing", testo:"Nella ricerca di mercato, i dati secondari sono:",
-    opzioni:["Dati raccolti appositamente per il problema di ricerca in esame","Dati già esistenti, raccolti in precedenza per altri scopi","Dati di natura esclusivamente qualitativa","Dati raccolti solo tramite interviste in profondità"], corretta:1,
+    opzioni:["Dati già esistenti, raccolti in precedenza per altri scopi","Dati di natura esclusivamente qualitativa","Dati raccolti solo tramite interviste in profondità","Dati raccolti appositamente per il problema di ricerca in esame"], corretta:0,
     spiegazione:"I dati secondari (statistiche pubbliche, ricerche già svolte, archivi aziendali) esistono già e costano meno; i dati primari sono raccolti ex novo per lo specifico obiettivo di ricerca.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT10", materia:"Marketing", testo:"Fornitori, intermediari commerciali e clienti fanno parte:",
-    opzioni:["Del microambiente dell'impresa","Del macroambiente dell'impresa","Dell'ambiente demografico","Del solo ambiente tecnologico"], corretta:0,
+    opzioni:["Del solo ambiente tecnologico","Del microambiente dell'impresa","Del macroambiente dell'impresa","Dell'ambiente demografico"], corretta:1,
     spiegazione:"Il microambiente comprende gli attori vicini all'impresa che ne influenzano la capacità di servire i clienti; il macroambiente comprende le forze più ampie: demografiche, economiche, naturali, tecnologiche, politiche e culturali.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT11", materia:"Marketing", testo:"Nel modello delle cinque forze competitive di Porter NON rientra:",
-    opzioni:["Il potere contrattuale dei fornitori","La minaccia di prodotti sostitutivi","La minaccia di nuovi entranti","La struttura organizzativa interna dell'impresa"], corretta:3,
+    opzioni:["La minaccia di prodotti sostitutivi","La minaccia di nuovi entranti","La struttura organizzativa interna dell'impresa","Il potere contrattuale dei fornitori"], corretta:2,
     spiegazione:"Le cinque forze sono: concorrenti diretti, nuovi entranti, prodotti sostitutivi, potere dei fornitori e potere dei clienti. L'organizzazione interna riguarda l'analisi delle risorse, non la struttura del settore." },
 
   { id:"MKT12", materia:"Marketing", testo:"La value proposition di una marca è:",
-    opzioni:["L'insieme dei benefici promessi al cliente, che motivano la scelta di quella marca","Il prezzo minimo praticabile senza perdite","La somma degli investimenti pubblicitari annui","La descrizione tecnica del processo produttivo"], corretta:0,
+    opzioni:["Il prezzo minimo praticabile senza perdite","La somma degli investimenti pubblicitari annui","La descrizione tecnica del processo produttivo","L'insieme dei benefici promessi al cliente, che motivano la scelta di quella marca"], corretta:3,
     spiegazione:"La value proposition risponde alla domanda «perché comprare da noi e non dai concorrenti»: è l'insieme dei benefici e dei valori promessi al segmento obiettivo.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT13", materia:"Marketing", testo:"La dissonanza cognitiva post-acquisto si manifesta:",
-    opzioni:["Prima della decisione, nella fase di ricerca di informazioni","Dopo l'acquisto, come disagio legato ai vantaggi delle alternative scartate","Solo negli acquisti di prodotti a basso coinvolgimento","Esclusivamente nei mercati business to business"], corretta:1,
+    opzioni:["Dopo l'acquisto, come disagio legato ai vantaggi delle alternative scartate","Solo negli acquisti di prodotti a basso coinvolgimento","Esclusivamente nei mercati business to business","Prima della decisione, nella fase di ricerca di informazioni"], corretta:0,
     spiegazione:"Dopo un acquisto impegnativo il consumatore può percepire disagio pensando ai benefici delle alternative non scelte: le imprese lo riducono con comunicazione post-vendita, garanzie e assistenza.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT14", materia:"Marketing", testo:"Nel marketing dei servizi, le tre P aggiuntive rispetto al mix tradizionale sono:",
-    opzioni:["People, process, physical evidence","Price, place, promotion","Positioning, packaging, publicity","Performance, planning, profit"], corretta:0,
+    opzioni:["Performance, planning, profit","People, process, physical evidence","Price, place, promotion","Positioning, packaging, publicity"], corretta:1,
     spiegazione:"Poiché i servizi sono intangibili e prodotti in presenza del cliente, il mix si estende a persone, processi di erogazione ed elementi tangibili che rendono percepibile la qualità.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   { id:"MKT15", materia:"Marketing", testo:"Un'impresa che sceglie una strategia di marketing indifferenziato (di massa):",
-    opzioni:["Propone un'offerta unica all'intero mercato, ignorando le differenze fra segmenti","Sviluppa un'offerta specifica per ciascun segmento identificato","Si concentra su un solo segmento di nicchia","Personalizza il prodotto per il singolo cliente"], corretta:0,
+    opzioni:["Si concentra su un solo segmento di nicchia","Personalizza il prodotto per il singolo cliente","Propone un'offerta unica all'intero mercato, ignorando le differenze fra segmenti","Sviluppa un'offerta specifica per ciascun segmento identificato"], corretta:2,
     spiegazione:"Il marketing indifferenziato punta su ciò che i consumatori hanno in comune con un'unica offerta; differenziato, concentrato e micromarketing rappresentano livelli crescenti di adattamento ai segmenti.",
     fonte:"Kotler, Armstrong, Principles of Marketing" },
 
   /* ================= STATISTICA (Agresti, Finlay) ================= */
   { id:"STA01", materia:"Statistica", testo:"Il titolo di studio, rilevato come «licenza media, diploma, laurea», è una variabile misurata su scala:",
-    opzioni:["Nominale","Ordinale","A intervalli","Di rapporti"], corretta:1,
+    opzioni:["A intervalli","Di rapporti","Nominale","Ordinale"], corretta:3,
     spiegazione:"Le modalità hanno un ordine naturale ma le distanze fra loro non sono quantificabili: è una scala ordinale.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
@@ -452,7 +455,7 @@ window.BANCHE = [
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA05", materia:"Statistica", testo:"Il p-value di un test statistico indica:",
-    opzioni:["La probabilità che l'ipotesi nulla sia vera","La probabilità di osservare un risultato estremo almeno quanto quello ottenuto, supponendo vera l'ipotesi nulla","La dimensione dell'effetto osservato","La probabilità di commettere un errore di secondo tipo"], corretta:1,
+    opzioni:["La dimensione dell'effetto osservato","La probabilità di commettere un errore di secondo tipo","La probabilità che l'ipotesi nulla sia vera","La probabilità di osservare un risultato estremo almeno quanto quello ottenuto, supponendo vera l'ipotesi nulla"], corretta:3,
     spiegazione:"Il p-value è calcolato assumendo vera H0 e misura quanto i dati osservati sarebbero improbabili sotto quell'ipotesi; non è la probabilità che H0 sia vera né una misura dell'ampiezza dell'effetto.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
@@ -467,17 +470,17 @@ window.BANCHE = [
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA08", materia:"Statistica", testo:"Il coefficiente di correlazione di Pearson può assumere valori:",
-    opzioni:["Da 0 a 1","Da −1 a +1","Da −100 a +100","Qualsiasi valore reale"], corretta:1,
+    opzioni:["Qualsiasi valore reale","Da 0 a 1","Da −1 a +1","Da −100 a +100"], corretta:2,
     spiegazione:"r varia fra −1 e +1: il segno indica la direzione della relazione lineare, il valore assoluto la sua intensità. Vale 0 in assenza di relazione lineare.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA09", materia:"Statistica", testo:"In un campionamento casuale stratificato:",
-    opzioni:["Si estraggono unità a caso dall'intera popolazione senza distinzioni","Si divide la popolazione in gruppi omogenei e si estrae un campione casuale da ciascuno","Si intervistano le persone più facilmente raggiungibili","Si sceglie un solo gruppo e lo si osserva integralmente"], corretta:1,
+    opzioni:["Si intervistano le persone più facilmente raggiungibili","Si sceglie un solo gruppo e lo si osserva integralmente","Si estraggono unità a caso dall'intera popolazione senza distinzioni","Si divide la popolazione in gruppi omogenei e si estrae un campione casuale da ciascuno"], corretta:3,
     spiegazione:"La stratificazione divide la popolazione in strati omogenei rispetto a una caratteristica rilevante ed estrae da ognuno: garantisce la rappresentanza di tutti i sottogruppi e riduce l'errore di stima.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA10", materia:"Statistica", testo:"In una distribuzione normale, quale percentuale approssimativa dei casi cade entro due deviazioni standard dalla media?",
-    opzioni:["Circa il 50%","Circa il 68%","Circa il 95%","Circa il 99,9%"], corretta:2,
+    opzioni:["Circa il 95%","Circa il 99,9%","Circa il 50%","Circa il 68%"], corretta:0,
     spiegazione:"Per la regola empirica: circa il 68% entro una deviazione standard, circa il 95% entro due, circa il 99,7% entro tre.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
@@ -487,33 +490,33 @@ window.BANCHE = [
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA12", materia:"Statistica", testo:"Si osserva una forte associazione fra vendite di gelati e numero di annegamenti. L'interpretazione statisticamente corretta è:",
-    opzioni:["I gelati causano gli annegamenti","Esiste una variabile di confondimento, la temperatura, associata a entrambi","L'associazione è certamente dovuta al caso","La correlazione osservata dimostra un nesso causale inverso"], corretta:1,
+    opzioni:["La correlazione osservata dimostra un nesso causale inverso","I gelati causano gli annegamenti","Esiste una variabile di confondimento, la temperatura, associata a entrambi","L'associazione è certamente dovuta al caso"], corretta:2,
     spiegazione:"È il caso classico di associazione spuria: una terza variabile (il caldo) influenza entrambi i fenomeni. La correlazione non implica causalità.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA13", materia:"Statistica", testo:"Per verificare l'associazione fra due variabili categoriali si usa in genere:",
-    opzioni:["Il test chi quadrato","Il test t per campioni appaiati","L'analisi della varianza a una via","La regressione lineare semplice"], corretta:0,
+    opzioni:["Il test t per campioni appaiati","L'analisi della varianza a una via","La regressione lineare semplice","Il test chi quadrato"], corretta:3,
     spiegazione:"Il chi quadrato confronta le frequenze osservate nella tabella di contingenza con quelle attese in caso di indipendenza fra le due variabili categoriali.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA14", materia:"Statistica", testo:"Rispetto alla media, la mediana è:",
-    opzioni:["Più sensibile ai valori anomali","Meno sensibile ai valori anomali","Calcolabile solo su variabili nominali","Sempre uguale alla moda"], corretta:1,
+    opzioni:["Meno sensibile ai valori anomali","Calcolabile solo su variabili nominali","Sempre uguale alla moda","Più sensibile ai valori anomali"], corretta:0,
     spiegazione:"La mediana dipende dalla posizione dei valori nell'ordinamento e non dalla loro grandezza: un singolo valore estremo la sposta poco, mentre trascina la media.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   { id:"STA15", materia:"Statistica", testo:"In un sondaggio, l'errore di copertura si verifica quando:",
-    opzioni:["La lista da cui si estrae il campione non rappresenta l'intera popolazione obiettivo","Alcuni intervistati rispondono in modo non sincero","Il questionario contiene troppe domande aperte","Si utilizza un campione probabilistico"], corretta:0,
+    opzioni:["Si utilizza un campione probabilistico","La lista da cui si estrae il campione non rappresenta l'intera popolazione obiettivo","Alcuni intervistati rispondono in modo non sincero","Il questionario contiene troppe domande aperte"], corretta:1,
     spiegazione:"L'errore di copertura nasce dalla lista di campionamento (per esempio un elenco telefonico che esclude chi non ha telefono fisso); è distinto dall'errore campionario, dalla mancata risposta e dall'errore di misurazione.",
     fonte:"Agresti, Finlay, Statistical Methods for the Social Sciences" },
 
   /* ================= INFORMATICA (Snyder, Henry) ================= */
   { id:"INF01", materia:"Informatica", testo:"Quanti bit compongono un byte?",
-    opzioni:["4","8","16","1024"], corretta:1,
+    opzioni:["1024","4","8","16"], corretta:2,
     spiegazione:"Un byte è formato da 8 bit e può rappresentare 2⁸ = 256 valori distinti.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF02", materia:"Informatica", testo:"Il numero binario 1010 corrisponde, in base dieci, a:",
-    opzioni:["8","10","12","20"], corretta:1,
+    opzioni:["12","20","8","10"], corretta:3,
     spiegazione:"Da sinistra: 1×8 + 0×4 + 1×2 + 0×1 = 10.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
@@ -528,93 +531,93 @@ window.BANCHE = [
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF05", materia:"Informatica", testo:"Che cosa fa il sistema DNS?",
-    opzioni:["Traduce i nomi di dominio negli indirizzi IP corrispondenti","Cifra il traffico fra browser e server","Assegna la banda disponibile agli utenti","Memorizza le password degli utenti"], corretta:0,
+    opzioni:["Assegna la banda disponibile agli utenti","Memorizza le password degli utenti","Traduce i nomi di dominio negli indirizzi IP corrispondenti","Cifra il traffico fra browser e server"], corretta:2,
     spiegazione:"Il Domain Name System funziona come un elenco telefonico della rete: converte nomi leggibili come unimi.it nell'indirizzo IP numerico del server.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF06", materia:"Informatica", testo:"Rispetto a HTTP, il protocollo HTTPS:",
-    opzioni:["Trasferisce i dati più velocemente","Cifra la comunicazione fra browser e server tramite TLS","Funziona soltanto sulle reti aziendali","Elimina la necessità di autenticarsi"], corretta:1,
+    opzioni:["Funziona soltanto sulle reti aziendali","Elimina la necessità di autenticarsi","Trasferisce i dati più velocemente","Cifra la comunicazione fra browser e server tramite TLS"], corretta:3,
     spiegazione:"La «S» sta per secure: HTTPS incapsula HTTP in una connessione cifrata TLS, che protegge riservatezza e integrità dei dati e autentica il server tramite certificato.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF07", materia:"Informatica", testo:"Quale delle seguenti è una compressione con perdita di informazione (lossy)?",
-    opzioni:["ZIP","PNG","JPEG","FLAC"], corretta:2,
+    opzioni:["JPEG","FLAC","ZIP","PNG"], corretta:0,
     spiegazione:"JPEG scarta informazione visiva poco percepibile e non è reversibile; ZIP, PNG e FLAC sono formati di compressione senza perdita.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF08", materia:"Informatica", testo:"In un database relazionale, la chiave primaria di una tabella:",
-    opzioni:["Identifica in modo univoco ciascun record","Contiene la password di accesso alla tabella","Indica l'ordine di visualizzazione dei dati","Può assumere lo stesso valore in più record"], corretta:0,
+    opzioni:["Può assumere lo stesso valore in più record","Identifica in modo univoco ciascun record","Contiene la password di accesso alla tabella","Indica l'ordine di visualizzazione dei dati"], corretta:1,
     spiegazione:"La chiave primaria identifica univocamente ogni riga: non ammette duplicati né valori nulli, ed è ciò a cui si collegano le chiavi esterne delle altre tabelle.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF09", materia:"Informatica", testo:"Che cos'è un algoritmo?",
-    opzioni:["Un linguaggio di programmazione","Una sequenza finita e non ambigua di istruzioni che porta alla soluzione di un problema","Un componente fisico del calcolatore","Un tipo di file compresso"], corretta:1,
+    opzioni:["Un tipo di file compresso","Un linguaggio di programmazione","Una sequenza finita e non ambigua di istruzioni che porta alla soluzione di un problema","Un componente fisico del calcolatore"], corretta:2,
     spiegazione:"Un algoritmo è la procedura, indipendente dal linguaggio con cui viene poi scritta, che a partire dagli input produce l'output in un numero finito di passi definiti in modo non ambiguo.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   { id:"INF10", materia:"Informatica", testo:"Nel modello «software as a service» (SaaS) del cloud computing, l'utente:",
-    opzioni:["Acquista il software su licenza e lo installa sui propri server","Usa via internet un'applicazione ospitata e gestita dal fornitore","Deve programmare l'applicazione da zero","Riceve solo spazio di archiviazione, senza applicazioni"], corretta:1,
+    opzioni:["Deve programmare l'applicazione da zero","Riceve solo spazio di archiviazione, senza applicazioni","Acquista il software su licenza e lo installa sui propri server","Usa via internet un'applicazione ospitata e gestita dal fornitore"], corretta:3,
     spiegazione:"Nel SaaS l'applicazione gira sull'infrastruttura del fornitore e si usa dal browser, con manutenzione e aggiornamenti a suo carico; IaaS fornisce infrastruttura, PaaS piattaforme di sviluppo.",
     fonte:"Snyder, Henry, Fluency with Information Technology" },
 
   /* ============ TEORIE DELLA COMUNICAZIONE E STORIA DEI MEDIA ============ */
-  { id:"COM01", materia:"Teorie e storia della comunicazione", testo:"Nel modello matematico della comunicazione di Shannon e Weaver, il «rumore» è:",
-    opzioni:["Il messaggio inviato dalla fonte","Qualunque disturbo che interferisce con la trasmissione del segnale","La risposta del destinatario alla fonte","Il canale scelto per la trasmissione"], corretta:1,
+  { id:"COM01", materia:"Teorie della comunicazione", testo:"Nel modello matematico della comunicazione di Shannon e Weaver, il «rumore» è:",
+    opzioni:["Qualunque disturbo che interferisce con la trasmissione del segnale","La risposta del destinatario alla fonte","Il canale scelto per la trasmissione","Il messaggio inviato dalla fonte"], corretta:0,
     spiegazione:"Il rumore è ogni elemento che degrada il segnale fra trasmittente e ricevente; il modello è lineare e tecnico, ed è stato criticato proprio per l'assenza di contesto e di feedback.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM02", materia:"Teorie e storia della comunicazione", testo:"La formula «Chi dice che cosa, attraverso quale canale, a chi, con quale effetto» si deve a:",
-    opzioni:["Harold Lasswell","Marshall McLuhan","Paul Lazarsfeld","Elisabeth Noelle-Neumann"], corretta:0,
+  { id:"COM02", materia:"Teorie della comunicazione", testo:"La formula «Chi dice che cosa, attraverso quale canale, a chi, con quale effetto» si deve a:",
+    opzioni:["Elisabeth Noelle-Neumann","Harold Lasswell","Marshall McLuhan","Paul Lazarsfeld"], corretta:1,
     spiegazione:"È la formula di Lasswell (1948), che scompone il processo comunicativo in cinque elementi e altrettanti ambiti di ricerca: emittente, contenuto, mezzo, pubblico ed effetti.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM03", materia:"Teorie e storia della comunicazione", testo:"Secondo la teoria dell'agenda setting di McCombs e Shaw, i media:",
-    opzioni:["Determinano direttamente le opinioni del pubblico","Influenzano l'importanza attribuita ai temi, cioè su che cosa il pubblico pensa","Non hanno alcun effetto sul pubblico","Agiscono solo sulle minoranze politicamente attive"], corretta:1,
+  { id:"COM03", materia:"Teorie della comunicazione", testo:"Secondo la teoria dell'agenda setting di McCombs e Shaw, i media:",
+    opzioni:["Agiscono solo sulle minoranze politicamente attive","Determinano direttamente le opinioni del pubblico","Influenzano l'importanza attribuita ai temi, cioè su che cosa il pubblico pensa","Non hanno alcun effetto sul pubblico"], corretta:2,
     spiegazione:"L'agenda setting sostiene che i media non dicono al pubblico che cosa pensare, ma su che cosa pensare: la rilevanza data a un tema nella copertura si trasferisce alla percezione della sua importanza.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM04", materia:"Teorie e storia della comunicazione", testo:"La teoria del «flusso di comunicazione a due fasi» (two-step flow) sostiene che:",
-    opzioni:["I messaggi dei media raggiungono tutti gli individui allo stesso modo e con lo stesso effetto","I messaggi passano dai media agli opinion leader e da questi al resto del pubblico","Gli effetti dei media si manifestano solo nel lungo periodo","La comunicazione interpersonale non ha alcun ruolo"], corretta:1,
+  { id:"COM04", materia:"Teorie della comunicazione", testo:"La teoria del «flusso di comunicazione a due fasi» (two-step flow) sostiene che:",
+    opzioni:["Gli effetti dei media si manifestano solo nel lungo periodo","La comunicazione interpersonale non ha alcun ruolo","I messaggi dei media raggiungono tutti gli individui allo stesso modo e con lo stesso effetto","I messaggi passano dai media agli opinion leader e da questi al resto del pubblico"], corretta:3,
     spiegazione:"Lazarsfeld, Berelson e Gaudet, studiando le campagne elettorali, individuano il ruolo di mediazione degli opinion leader: la relazione interpersonale filtra e rielabora il messaggio mediale.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM05", materia:"Teorie e storia della comunicazione", testo:"La «spirale del silenzio» di Elisabeth Noelle-Neumann descrive:",
+  { id:"COM05", materia:"Teorie della comunicazione", testo:"La «spirale del silenzio» di Elisabeth Noelle-Neumann descrive:",
     opzioni:["La tendenza a tacere la propria opinione quando la si percepisce minoritaria","L'aumento del rumore informativo nei media digitali","La perdita di memoria collettiva degli eventi","La riduzione progressiva dei tempi di attenzione"], corretta:0,
     spiegazione:"Per timore dell'isolamento sociale chi si percepisce in minoranza tende a non esprimersi: il silenzio rafforza la percezione della maggioranza, innescando una spirale cumulativa.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM06", materia:"Teorie e storia della comunicazione", testo:"L'approccio «usi e gratificazioni» (uses and gratifications) sposta l'attenzione:",
-    opzioni:["Da ciò che i media fanno alle persone a ciò che le persone fanno con i media","Dagli effetti a lungo termine a quelli immediati","Dalla ricerca empirica alla speculazione filosofica","Dal pubblico agli assetti proprietari delle imprese mediali"], corretta:0,
+  { id:"COM06", materia:"Teorie della comunicazione", testo:"L'approccio «usi e gratificazioni» (uses and gratifications) sposta l'attenzione:",
+    opzioni:["Dal pubblico agli assetti proprietari delle imprese mediali","Da ciò che i media fanno alle persone a ciò che le persone fanno con i media","Dagli effetti a lungo termine a quelli immediati","Dalla ricerca empirica alla speculazione filosofica"], corretta:1,
     spiegazione:"Il pubblico è considerato attivo: seleziona i media per soddisfare bisogni di informazione, identità personale, relazione e intrattenimento.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM07", materia:"Teorie e storia della comunicazione", testo:"La cosiddetta «teoria ipodermica» (bullet theory) presuppone:",
-    opzioni:["Un pubblico passivo su cui il messaggio agisce in modo diretto e uniforme","Un pubblico che negozia attivamente i significati","Effetti mediali limitati e mediati dai gruppi sociali","L'assenza di qualunque effetto misurabile"], corretta:0,
+  { id:"COM07", materia:"Teorie della comunicazione", testo:"La cosiddetta «teoria ipodermica» (bullet theory) presuppone:",
+    opzioni:["Effetti mediali limitati e mediati dai gruppi sociali","L'assenza di qualunque effetto misurabile","Un pubblico passivo su cui il messaggio agisce in modo diretto e uniforme","Un pubblico che negozia attivamente i significati"], corretta:2,
     spiegazione:"Formulata nel periodo fra le due guerre e legata alla società di massa, immagina il messaggio come un'iniezione che produce lo stesso effetto su tutti; le ricerche successive la ridimensionano.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM08", materia:"Teorie e storia della comunicazione", testo:"Secondo la teoria della coltivazione di George Gerbner, l'esposizione prolungata alla televisione:",
-    opzioni:["Non modifica la percezione della realtà","Costruisce nel tempo una visione del mondo coerente con quella rappresentata dai programmi","Produce effetti solo su chi guarda notiziari","Riduce il consenso verso le istituzioni"], corretta:1,
+  { id:"COM08", materia:"Teorie della comunicazione", testo:"Secondo la teoria della coltivazione di George Gerbner, l'esposizione prolungata alla televisione:",
+    opzioni:["Produce effetti solo su chi guarda notiziari","Riduce il consenso verso le istituzioni","Non modifica la percezione della realtà","Costruisce nel tempo una visione del mondo coerente con quella rappresentata dai programmi"], corretta:3,
     spiegazione:"La coltivazione riguarda effetti cumulativi e di lungo periodo: i forti consumatori tendono ad esempio a sovrastimare i rischi di criminalità, secondo la «sindrome del mondo cattivo».",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM09", materia:"Teorie e storia della comunicazione", testo:"L'affermazione «il medium è il messaggio» significa che:",
-    opzioni:["Il contenuto trasmesso è l'unico elemento rilevante","La forma del mezzo modifica di per sé percezione ed esperienza sociale, al di là dei contenuti","Ogni mezzo trasmette necessariamente messaggi pubblicitari","I mezzi di comunicazione sono neutrali rispetto ai contenuti"], corretta:1,
+  { id:"COM09", materia:"Teorie della comunicazione", testo:"L'affermazione «il medium è il messaggio» significa che:",
+    opzioni:["La forma del mezzo modifica di per sé percezione ed esperienza sociale, al di là dei contenuti","Ogni mezzo trasmette necessariamente messaggi pubblicitari","I mezzi di comunicazione sono neutrali rispetto ai contenuti","Il contenuto trasmesso è l'unico elemento rilevante"], corretta:0,
     spiegazione:"Per Marshall McLuhan il cambiamento sociale prodotto da un mezzo dipende dalla sua forma e dalla scala che introduce nelle relazioni umane, non dal contenuto veicolato.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM10", materia:"Teorie e storia della comunicazione", testo:"Il World Wide Web fu ideato alla fine degli anni Ottanta al CERN di Ginevra da:",
-    opzioni:["Tim Berners-Lee","Steve Jobs","Vinton Cerf","Bill Gates"], corretta:0,
+  { id:"COM10", materia:"Storia dei media digitali", testo:"Il World Wide Web fu ideato alla fine degli anni Ottanta al CERN di Ginevra da:",
+    opzioni:["Bill Gates","Tim Berners-Lee","Steve Jobs","Vinton Cerf"], corretta:1,
     spiegazione:"Tim Berners-Lee formulò la proposta nel 1989 e sviluppò HTTP, HTML e il primo browser: il Web è un servizio che gira su internet, non coincide con internet stessa.",
     fonte:"Balbi, Magaudda, A History of Digital Media" },
 
-  { id:"COM11", materia:"Teorie e storia della comunicazione", testo:"ARPANET, rete antenata di internet, entrò in funzione:",
-    opzioni:["Nel 1948, negli studi dei Bell Labs","Nel 1969, in un progetto finanziato dal Dipartimento della Difesa statunitense","Nel 1989, al CERN","Nel 1995, con la nascita dei primi motori di ricerca"], corretta:1,
+  { id:"COM11", materia:"Storia dei media digitali", testo:"ARPANET, rete antenata di internet, entrò in funzione:",
+    opzioni:["Nel 1995, con la nascita dei primi motori di ricerca","Nel 1948, negli studi dei Bell Labs","Nel 1969, in un progetto finanziato dal Dipartimento della Difesa statunitense","Nel 1989, al CERN"], corretta:2,
     spiegazione:"I primi collegamenti fra i nodi universitari di ARPANET risalgono al 1969; la commutazione di pacchetto e i protocolli TCP/IP sono le innovazioni che portano poi a internet.",
     fonte:"Balbi, Magaudda, A History of Digital Media" },
 
-  { id:"COM12", materia:"Teorie e storia della comunicazione", testo:"Nella prospettiva della «rimediazione» di Bolter e Grusin, i nuovi media:",
-    opzioni:["Cancellano completamente i media precedenti","Rappresentano e rielaborano al proprio interno le forme dei media che li hanno preceduti","Nascono senza alcun rapporto con la tradizione mediale","Riguardano solo l'ambito artistico"], corretta:1,
+  { id:"COM12", materia:"Storia dei media digitali", testo:"Nella prospettiva della «rimediazione» di Bolter e Grusin, i nuovi media:",
+    opzioni:["Nascono senza alcun rapporto con la tradizione mediale","Riguardano solo l'ambito artistico","Cancellano completamente i media precedenti","Rappresentano e rielaborano al proprio interno le forme dei media che li hanno preceduti"], corretta:3,
     spiegazione:"La rimediazione descrive il doppio movimento di immediatezza e ipermediazione con cui ogni nuovo medium incorpora e ridefinisce i linguaggi dei precedenti, invece di sostituirli in blocco.",
     fonte:"Balbi, Magaudda, A History of Digital Media" },
 
@@ -628,11 +631,11 @@ window.BANCHE = [
     spiegazione:"Periodo ipotetico di secondo tipo (situazione irreale al presente): if + past simple nella subordinata, would + infinito senza to nella principale." },
 
   { id:"ENG03", materia:"Inglese", testo:"The department is responsible ______ internal communication.",
-    opzioni:["of","for","to","about"], corretta:1,
+    opzioni:["about","of","for","to"], corretta:2,
     spiegazione:"«To be responsible for something» è la reggenza corretta; «responsible to» si usa invece per la persona a cui si risponde gerarchicamente." },
 
   { id:"ENG04", materia:"Inglese", testo:"A survey was ______ among 1,200 respondents.",
-    opzioni:["made out","carried out","taken off","brought up"], corretta:1,
+    opzioni:["taken off","brought up","made out","carried out"], corretta:3,
     spiegazione:"«To carry out a survey» significa condurre una ricerca; gli altri phrasal verb hanno significati diversi e non si usano in questo contesto." },
 
   { id:"ENG05", materia:"Inglese", testo:"Please make sure the figures ______ before the meeting.",
@@ -640,7 +643,7 @@ window.BANCHE = [
     spiegazione:"I dati subiscono l'azione: serve il passivo al presente (are + participio passato)." },
 
   { id:"ENG06", materia:"Inglese", testo:"In spite of ______ several reminders, the client did not reply.",
-    opzioni:["send","to send","sending","sent"], corretta:2,
+    opzioni:["to send","sending","sent","send"], corretta:1,
     spiegazione:"«In spite of» e «despite» sono seguiti da sostantivo o forma in -ing; con soggetto e verbo coniugato si userebbe «although»." },
 
   { id:"ENG07", materia:"Inglese", testo:"She said she ______ the presentation the day before.",
@@ -648,29 +651,708 @@ window.BANCHE = [
     spiegazione:"Nel discorso indiretto il past simple retrocede al past perfect, coerentemente con «the day before»." },
 
   { id:"ENG08", materia:"Inglese", testo:"In a business context, «stakeholders» are:",
-    opzioni:["Only the shareholders of the company","All the groups that have an interest in the organisation's activities","The company's competitors","The members of the board of directors"], corretta:1,
+    opzioni:["The company's competitors","The members of the board of directors","Only the shareholders of the company","All the groups that have an interest in the organisation's activities"], corretta:3,
     spiegazione:"Gli stakeholder comprendono dipendenti, clienti, fornitori, comunità locali e istituzioni, oltre agli azionisti (shareholder), che ne sono solo una categoria." },
 
   /* ================= ATTUALITÀ E ISTITUZIONI ================= */
   { id:"ATT01", materia:"Attualità e istituzioni", testo:"Quale istituzione dell'Unione europea detiene il potere di proposta legislativa?",
-    opzioni:["Il Parlamento europeo","La Commissione europea","Il Consiglio d'Europa","La Corte di giustizia dell'Unione europea"], corretta:1,
+    opzioni:["La Commissione europea","Il Consiglio d'Europa","La Corte di giustizia dell'Unione europea","Il Parlamento europeo"], corretta:0,
     spiegazione:"La Commissione europea propone gli atti legislativi, che vengono poi approvati da Parlamento europeo e Consiglio dell'Unione. Il Consiglio d'Europa è un'organizzazione distinta, non un'istituzione dell'UE." },
 
   { id:"ATT02", materia:"Attualità e istituzioni", testo:"Quanto dura il mandato del Presidente della Repubblica italiana?",
-    opzioni:["Cinque anni","Sei anni","Sette anni","Quattro anni"], corretta:2,
+    opzioni:["Sei anni","Sette anni","Quattro anni","Cinque anni"], corretta:1,
     spiegazione:"L'articolo 85 della Costituzione fissa in sette anni la durata del mandato; il Presidente è eletto dal Parlamento in seduta comune con i delegati regionali." },
 
   { id:"ATT03", materia:"Attualità e istituzioni", testo:"Che cosa misura il prodotto interno lordo (PIL) di un Paese?",
-    opzioni:["Il valore dei beni e servizi finali prodotti nel territorio in un dato periodo","La ricchezza complessiva accumulata dalle famiglie","Il livello medio dei prezzi al consumo","Il debito pubblico rapportato alle esportazioni"], corretta:0,
+    opzioni:["Il livello medio dei prezzi al consumo","Il debito pubblico rapportato alle esportazioni","Il valore dei beni e servizi finali prodotti nel territorio in un dato periodo","La ricchezza complessiva accumulata dalle famiglie"], corretta:2,
     spiegazione:"Il PIL è un flusso: misura il valore della produzione finale realizzata in un anno entro i confini nazionali. Non misura lo stock di ricchezza né la distribuzione del reddito." },
 
   { id:"ATT04", materia:"Attualità e istituzioni", testo:"L'Organizzazione mondiale della sanità (OMS) è:",
-    opzioni:["Un'agenzia specializzata delle Nazioni Unite con sede a Ginevra","Un organo dell'Unione europea con sede a Bruxelles","Un'organizzazione non governativa privata","Un'agenzia della NATO"], corretta:0,
+    opzioni:["Un organo dell'Unione europea con sede a Bruxelles","Un'organizzazione non governativa privata","Un'agenzia della NATO","Un'agenzia specializzata delle Nazioni Unite con sede a Ginevra"], corretta:3,
     spiegazione:"L'OMS è l'agenzia ONU per la salute pubblica, fondata nel 1948 e con sede a Ginevra." },
 
   { id:"ATT05", materia:"Attualità e istituzioni", testo:"In Italia, il cosiddetto «GDPR» disciplina:",
     opzioni:["La protezione dei dati personali nell'Unione europea","La tassazione delle imprese digitali","I diritti d'autore sulle opere musicali","La pubblicità comparativa"], corretta:0,
-    spiegazione:"Il regolamento generale sulla protezione dei dati (UE 2016/679), applicabile dal 2018, disciplina il trattamento dei dati personali e i diritti degli interessati." }
+    spiegazione:"Il regolamento generale sulla protezione dei dati (UE 2016/679), applicabile dal 2018, disciplina il trattamento dei dati personali e i diritti degli interessati." },
+/* ---- Storia dei media digitali (Balbi, Magaudda) — dagli appunti ---- */
+  { id:"MED01", materia:"Storia dei media digitali", testo:"Secondo Balbi e Magaudda, i tre media digitali centrali attorno a cui si costruisce la storia del digitale sono:",
+    opzioni:["Televisione, radio e stampa","Computer, internet e telefono mobile","Cinema, fotografia e musica","Telegrafo, telefono e satellite"], corretta:1,
+    spiegazione:"L'introduzione del volume individua computer, internet e telefono mobile come i tre dispositivi attorno ai quali ricostruire una storia globale dei media digitali.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — Introduzione" },
+
+  { id:"MED02", materia:"Storia dei media digitali", testo:"I due elementi fondamentali con cui gli autori definiscono il digitale sono:",
+    opzioni:["Analogico e discontinuo","Hardware e software","Numerizzazione e binarizzazione","Convergenza e globalizzazione"], corretta:2,
+    spiegazione:"La numerizzazione converte in cifre contenuti prima espressi in linguaggi diversi; la binarizzazione li codifica in un unico linguaggio, rendendo la trasmissione indipendente dal tipo di contenuto.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"MED03", materia:"Storia dei media digitali", testo:"Le tre matrici teoriche con cui il volume legge lo sviluppo dei media digitali sono:",
+    opzioni:["Psicologia, pedagogia e sociologia","Storia dell'arte, estetica e filosofia","Semiotica, retorica e linguistica","Political economy of communication, cultural studies e science and technology studies"], corretta:3,
+    spiegazione:"Politica ed economia, cultura e scienza e tecnologia sono i tre sguardi disciplinari con cui gli autori spiegano la costruzione sociale dei media digitali.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — Introduzione" },
+
+  { id:"MED04", materia:"Storia dei media digitali", testo:"Quale delle seguenti NON è una delle idee di società che hanno anticipato la società digitale secondo il volume?",
+    opzioni:["Società disciplinare","Società delle reti (network society)","Società dell'informazione","Società post-industriale"], corretta:0,
+    spiegazione:"Le cinque idee elencate sono: società dell'informazione, post-industriale, convergente, post-moderna e società delle reti. La «società disciplinare» appartiene ad altro filone teorico.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"MED05", materia:"Storia dei media digitali", testo:"Il passaggio da un'economia fondata sulla produzione di beni a una fondata sui servizi, con al centro lavoratori cognitivi e conoscenza teorica, definisce l'idea di:",
+    opzioni:["Società dell'informazione","Società post-industriale","Società convergente","Società post-moderna"], corretta:1,
+    spiegazione:"La società post-industriale condivide con quella digitale la dimensione immateriale dei servizi e la centralità del computer come strumento di lavoro.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"MED06", materia:"Storia dei media digitali", testo:"Le due teorie post-belliche che hanno fatto da innesco all'evoluzione della comunicazione digitale sono:",
+    opzioni:["La semiotica di Eco e lo strutturalismo di Lévi-Strauss","La teoria ipodermica e l'agenda setting","La cibernetica di Wiener e la teoria dell'informazione di Shannon","Il funzionalismo di Parsons e la teoria critica di Adorno"], corretta:2,
+    spiegazione:"Entrambe elaborate a partire dalle comunicazioni telefoniche, cibernetica e teoria dell'informazione diventano il riferimento dei media studies e fanno della comunicazione una dimensione cruciale del dopoguerra.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"MED07", materia:"Storia dei media digitali", testo:"Nel 1936 Alan Turing dà un contributo decisivo alla nascita del computer perché:",
+    opzioni:["Inventa il microprocessore","Fonda la prima azienda di software","Costruisce il primo personal computer","Adatta i principi della logica matematica a una macchina automatica governata da un linguaggio binario"], corretta:3,
+    spiegazione:"La macchina di Turing è il fondamento logico di tutti i successivi calcolatori digitali: una macchina programmabile capace di operazioni complesse a partire da un linguaggio adattabile.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED08", materia:"Storia dei media digitali", testo:"L'ENIAC, completato nel 1945, era:",
+    opzioni:["Il primo mainframe, sviluppato per scopi militari","Il primo computer dotato di interfaccia grafica","Il primo calcolatore commercializzato in Europa","Il primo personal computer domestico"], corretta:0,
+    spiegazione:"Pesava circa tremila chili e fu impiegato per calcoli militari, fra cui quelli per la bomba all'idrogeno: riflette un'informatica maschile e militare, in cui il contributo delle donne non fu riconosciuto.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED09", materia:"Storia dei media digitali", testo:"Che cosa rese celebre l'UNIVAC nel 1952?",
+    opzioni:["Fu il primo a collegarsi ad ARPANET","Fu usato per calcolare le previsioni delle elezioni presidenziali vinte da Eisenhower","Fu il primo computer con mouse","Fu il primo computer venduto in kit di montaggio"], corretta:1,
+    spiegazione:"Primo mainframe uscito dagli ambienti militari, l'UNIVAC fu usato dall'ufficio del censimento americano e poi per le previsioni elettorali: fu quest'ultimo impiego a renderlo popolare.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED10", materia:"Storia dei media digitali", testo:"Il time-sharing viene descritto dagli autori come una «innovazione conservativa» perché:",
+    opzioni:["Fu adottato soltanto da amministrazioni pubbliche conservatrici","Riproduceva il funzionamento del telegrafo","Fu concepito per sfruttare meglio i mainframe esistenti, e solo involontariamente aprì la strada all'idea di computer individuale","Impedì per anni lo sviluppo di nuovi calcolatori"], corretta:2,
+    spiegazione:"Frazionando la capacità di calcolo fra più terminali, il time-sharing nacque per supportare il mainframe; di fatto rese però pensabile il computer come strumento personale e di comunicazione.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED11", materia:"Storia dei media digitali", testo:"La legge di Moore, formulata nel 1965, prevede che:",
+    opzioni:["Il costo dei computer resti stabile per decenni","Ogni medium ne rimedi un altro","Il numero di utenti di una rete cresca con il quadrato dei nodi","La potenza dei microprocessori cresca costantemente nel tempo"], corretta:3,
+    spiegazione:"L'enunciato di Gordon Moore sulla crescita continua della potenza dei microprocessori è diventato il riferimento simbolico dell'accelerazione tecnologica del digitale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED12", materia:"Storia dei media digitali", testo:"Lo Xerox Alto (1973) è ricordato per aver introdotto:",
+    opzioni:["Il mouse e l'interfaccia grafica basata su scrivania e cartelle","Il primo microprocessore","Il primo modem domestico","Il sistema operativo MS-DOS"], corretta:0,
+    spiegazione:"Le due innovazioni dell'Alto — mouse e interfaccia grafica GUI — sono alla base del successivo successo di Apple e Microsoft: il Macintosh del 1984 vi si ispira apertamente.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED13", materia:"Storia dei media digitali", testo:"Il «dilemma dell'innovatore», richiamato a proposito del rifiuto opposto da Hewlett-Packard al prototipo di Wozniak, indica:",
+    opzioni:["La difficoltà tecnica di miniaturizzare i circuiti","La reticenza delle imprese affermate a sostenere tecnologie che rivoluzionerebbero il loro stesso mercato","L'incapacità degli hacker di fare impresa","Il conflitto fra software libero e proprietario"], corretta:1,
+    spiegazione:"Le grandi aziende informatiche non colsero il potenziale del computer individuale proprio perché avrebbe eroso il loro mercato: lo spazio fu occupato da nuove imprese come Apple e Commodore.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED14", materia:"Storia dei media digitali", testo:"Che ruolo ebbero l'Homebrew Computer Club e le controculture californiane nella storia del personal computer?",
+    opzioni:["Finanziarono la ricerca militare su ARPANET","Nessuno: il pc nacque solo dentro i laboratori aziendali","Diedero al computer un significato sociale e politico, legandolo a condivisione e diritti civili","Si opposero alla diffusione dei computer individuali"], corretta:2,
+    spiegazione:"Gli autori sottolineano che le tecnologie senza un ruolo sociale falliscono: furono hobbisti, hacker e attivisti a rendere il pc uno strumento personale di emancipazione.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED15", materia:"Storia dei media digitali", testo:"La celebre pubblicità del Macintosh trasmessa durante il Super Bowl del 1984:",
+    opzioni:["Mostrava il primo collegamento a internet","Era rivolta esclusivamente alle imprese","Fu ritirata prima della messa in onda","Si ispirava al romanzo 1984 di Orwell e identificava IBM con il Grande Fratello"], corretta:3,
+    spiegazione:"Lo spot segna una svolta culturale prima ancora che tecnica: Apple si presenta come sfidante della posizione dominante di IBM e il pc entra nell'immaginario di massa.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"MED16", materia:"Storia dei media digitali", testo:"Che cos'è la commutazione di pacchetto (packet switching) alla base di ARPANET?",
+    opzioni:["Una tecnica che spezza il messaggio in pacchetti instradati per vie diverse e ricomposti a destinazione","Un protocollo di cifratura dei dati militari","Un metodo per assegnare i nomi di dominio","Un sistema che invia il messaggio come unità unica lungo un percorso fisso"], corretta:0,
+    spiegazione:"Insieme all'assenza di un centro di comando, la commutazione di pacchetto garantisce che la rete resti funzionante anche se un nodo viene danneggiato: è tuttora la principale modalità di trasferimento dei dati.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED17", materia:"Storia dei media digitali", testo:"L'ARPA fu fondata nel 1958 dall'amministrazione Eisenhower come reazione a:",
+    opzioni:["La caduta del muro di Berlino","Il lancio sovietico dello Sputnik 1","La crisi di Cuba","La guerra del Vietnam"], corretta:1,
+    spiegazione:"Il satellite sovietico del 1957 fece percepire agli Stati Uniti un ritardo tecnologico: l'ARPA nacque per finanziare ricerca scientifica e tecnologica, e da lì passò alla comunicazione fra calcolatori.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED18", materia:"Storia dei media digitali", testo:"Nella periodizzazione proposta dagli autori, le sei ere di internet sono, nell'ordine:",
+    opzioni:["Accademica, militare, industriale, commerciale, sociale, mobile","Militare, industriale, commerciale, pubblica, sociale, mobile","Militare, accademico-scientifica, controculturale, servizio pubblico, commerciale, sociale","Commerciale, militare, sociale, accademica, pubblica, globale"], corretta:2,
+    spiegazione:"Ogni era corrisponde a un gruppo sociale che ha dato forma alla rete: militari, accademici, controculture, servizio pubblico europeo, imprese e infine gli utenti del web 2.0.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED19", materia:"Storia dei media digitali", testo:"Nel protocollo TCP/IP, adottato dalla comunità scientifica alla fine degli anni Settanta:",
+    opzioni:["TCP cifra i dati e IP li comprime","TCP serve alle reti telefoniche e IP a quelle satellitari","TCP e IP sono due nomi dello stesso protocollo","TCP gestisce il flusso di informazioni fra i nodi e IP assegna a ciascun terminale un indirizzo univoco"], corretta:3,
+    spiegazione:"È l'innovazione che rende internet una «rete di reti»: consente di integrare macchine e network eterogenei in un'architettura centrifuga, senza nodi gerarchicamente superiori.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED20", materia:"Storia dei media digitali", testo:"La «guerra degli standard» degli anni Settanta e Ottanta contrappose:",
+    opzioni:["Il modello centrifugo telematico TCP/IP al modello centripeto telefonico X.25","Windows e Macintosh","VHS e Betamax","GSM e CDMA"], corretta:0,
+    spiegazione:"Le compagnie telefoniche difendevano un'architettura centripeta, ritenuta più affidabile; la comunità accademica sosteneva una rete distribuita, con l'intelligenza ai margini (principio end-to-end).",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED21", materia:"Storia dei media digitali", testo:"Nel 1993 il CERN prese una decisione determinante per la diffusione del World Wide Web:",
+    opzioni:["Lo brevettò a livello internazionale","Lo cedette gratuitamente alla comunità mondiale","Ne vendette i diritti a Netscape","Ne limitò l'uso agli istituti di ricerca"], corretta:1,
+    spiegazione:"La cessione gratuita permise a chiunque di usarlo e migliorarlo, e fondò l'idea del web come accesso libero all'informazione e servizio pubblico.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED22", materia:"Storia dei media digitali", testo:"Perché il 1995 è considerato un anno spartiacque per internet?",
+    opzioni:["Perché viene introdotto il protocollo TCP/IP","Perché nasce il primo social network","Perché la National Science Foundation cede la dorsale accademica ai privati e Netscape si quota in borsa","Perché viene chiusa definitivamente ARPANET"], corretta:2,
+    spiegazione:"I due eventi segnano la fine del controllo diretto del governo americano sulla rete e l'inizio della corsa delle società dot-com, che porterà alla bolla speculativa esplosa nel 2001.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED23", materia:"Storia dei media digitali", testo:"Il fenomeno della «participation inequality» nel web 2.0 indica che:",
+    opzioni:["Tutti gli utenti producono la stessa quantità di contenuti","Solo i giornalisti professionisti possono pubblicare","La partecipazione è distribuita equamente fra i paesi","Circa il 90% degli utenti fruisce passivamente, il 9% partecipa moderatamente e solo l'1% intensivamente"], corretta:3,
+    spiegazione:"La figura del prosumer, che produce e consuma insieme, resta dunque una nicchia; al fenomeno si affianca lo slacktivism, la partecipazione pigra e superficiale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED24", materia:"Storia dei media digitali", testo:"Il caso francese del Minitel dimostra soprattutto che:",
+    opzioni:["Soluzioni tecnologiche semplici e conservative possono avere grande successo se sostenute dalla political economy nazionale","Le reti pubbliche falliscono sempre","Gli utenti non modificano mai l'uso previsto di un medium","Solo le tecnologie più avanzate hanno successo"], corretta:0,
+    spiegazione:"Distribuito gratuitamente da France Télécom dal 1982 e chiuso solo nel 2012, il Minitel era progettato per una comunicazione verticale, ma furono gli utenti a privilegiarne l'uso orizzontale, lo scambio di messaggi.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"MED25", materia:"Storia dei media digitali", testo:"Il concetto di «doppia nascita» (double birth) applicato al telefono mobile significa che:",
+    opzioni:["La rete mobile si sviluppa in due paesi alla volta","Una tecnologia può nascere più di una volta, con usi e valenze sociali molto diversi","Il telefono fu brevettato contemporaneamente da due inventori","Ogni telefono ha una versione analogica e una digitale"], corretta:1,
+    spiegazione:"Il radiotelefono militare e da taxi e il telefono cellulare degli anni Settanta e Ottanta sono due nascite distinte dello stesso mezzo, con pubblici, reti e significati sociali differenti.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
+
+  { id:"MED26", materia:"Storia dei media digitali", testo:"Perché lo standard GSM viene introdotto in Europa nel 1992?",
+    opzioni:["Per imitare lo standard statunitense","Per iniziativa di una singola azienda italiana","Per ragioni politiche, economiche e tecno-sociali convergenti, fra cui l'idea di un'Europa unita delle comunicazioni e la spinta dei produttori a uno standard unico","Solo per ragioni militari"], corretta:2,
+    spiegazione:"Prima del GSM le reti europee erano incompatibili fra loro (tranne quelle scandinave, con lo standard NMT). Lo standard unico portò roaming, SIM card e la leadership di aziende come Nokia ed Ericsson.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
+
+  { id:"MED27", materia:"Storia dei media digitali", testo:"Gli SMS sono definiti la «killer application» del telefono mobile perché:",
+    opzioni:["Sostituirono completamente le chiamate vocali","Furono imposti per legge in Europa","Furono progettati fin dall'inizio come servizio di massa fra abbonati","Nati come canale di servizio fra compagnia e utenti, furono gli utenti a trasformarli in comunicazione orizzontale fra abbonati"], corretta:3,
+    spiegazione:"Gli SMS sfruttavano un canale di banda inutilizzato durante le chiamate ed erano pensati per comunicazioni di servizio: l'uso sociale li ha reinventati, come mostra il caso filippino delle proteste del 2001.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
+
+  { id:"MED28", materia:"Storia dei media digitali", testo:"Napster, lanciato nel 1999, ebbe un impatto storico perché:",
+    opzioni:["Introdusse il modello peer-to-peer di condivisione dei file fra utenti","Inventò il formato mp3","Fu la prima piattaforma di streaming in abbonamento","Fu il primo negozio legale di musica online"], corretta:0,
+    spiegazione:"Il file sharing peer-to-peer scardinò la distribuzione tradizionale fondata su negozi e supporti fisici; la chiusura per violazione del copyright rese l'mp3 un fenomeno socio-culturale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"MED29", materia:"Storia dei media digitali", testo:"Il formato mp3, il cui standard è rilasciato nel 1995, nacque:",
+    opzioni:["Su iniziativa delle major discografiche per contrastare la pirateria","In ambiti estranei all'industria musicale, per le esigenze del broadcasting e dell'informatica","Come formato interno di Apple per iTunes","Come evoluzione tecnica del compact disc"], corretta:1,
+    spiegazione:"Le major all'inizio rifiutarono l'mp3 temendo la pirateria: il formato si diffuse grazie a progetti amatoriali e servizi online indipendenti.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"MED30", materia:"Storia dei media digitali", testo:"Nella storia della digitalizzazione della fotografia, il caso Kodak è esemplare perché:",
+    opzioni:["Rifiutò di produrre pellicole a colori","Acquistò Instagram nel 2012","Pur avendo realizzato nel 1975 un primo prototipo digitale, l'azienda restò legata alla stampa fotografica e finì per fallire","Fu la prima a produrre reflex digitali di successo"], corretta:2,
+    spiegazione:"È un caso classico di impresa dominante che non compie la transizione tecnologica: il mercato digitale fu conquistato da Canon e Nikon.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"MED31", materia:"Storia dei media digitali", testo:"Il podcasting viene descritto come innovazione rilevante per la radio perché:",
+    opzioni:["Ha sostituito la radio analogica in tutta Europa","Ha reso obbligatorio lo standard DAB","Ha aumentato la potenza dei trasmettitori","Ha introdotto una fruizione asincrona che rompe la logica del palinsesto"], corretta:3,
+    spiegazione:"Nato dall'intreccio fra radio e rete, il podcast svincola l'ascolto dal flusso e dall'orario di trasmissione, cioè dal palinsesto che definiva il medium radiofonico.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"MED32", materia:"Storia dei media digitali", testo:"La tesi di fondo del volume sul rapporto fra digitale e passato è che:",
+    opzioni:["Rivoluzione e continuità si alternano e si ridefiniscono reciprocamente nel tempo","Il digitale è un fenomeno lineare e uniforme in tutto il mondo","I media analogici sono destinati a scomparire rapidamente","Il digitale ha azzerato ogni continuità con i media precedenti"], corretta:0,
+    spiegazione:"Il sottotitolo stesso — «rivoluzioni e continuità» — indica che la digitalizzazione non è né lineare né coerente: è ambivalente, con ritmi diversi nel tempo e nello spazio.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — Conclusione" },
+/* ---- Informatica (Snyder, Henry — Fluency) — dagli appunti ---- */
+  { id:"INF11", materia:"Informatica", testo:"Herman Hollerith è considerato il pioniere del trattamento «produttivo» dell'informazione digitale perché:",
+    opzioni:["Progettò il primo microprocessore","Inventò e brevettò la tabulatrice, che codificava i dati come fori su schede perforate","Costruì il primo computer elettronico","Inventò il transistor"], corretta:1,
+    spiegazione:"Le schede perforate restarono la principale tecnologia digitale per circa settantacinque anni; erano però macchine solo hardware, da ricablare fisicamente per cambiarne il funzionamento.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF12", materia:"Informatica", testo:"Il passaggio ai computer «a programma memorizzato» consiste nel fatto che:",
+    opzioni:["I programmi vengono scritti direttamente in binario dagli utenti","Ogni macchina esegue una sola operazione","Le istruzioni smettono di essere cablate fisicamente e diventano bit conservati in memoria ed eseguiti dalla CPU","I dati vengono salvati su schede perforate"], corretta:2,
+    spiegazione:"Da qui viene il termine software: le istruzioni passano dall'impianto elettrico «hard» della macchina ai bit «soft» della memoria, eliminando la necessità di ricablare.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF13", materia:"Informatica", testo:"Quali caratteristiche del transistor a semiconduttore rivoluzionarono l'elettronica?",
+    opzioni:["Costo elevato ma altissima potenza","Grandi dimensioni e lunga durata","Assenza di componenti elettrici","Basso consumo, grande affidabilità, compattezza e leggerezza"], corretta:3,
+    spiegazione:"Queste proprietà resero i computer economici, compatti e affidabili e permisero di realizzare CPU molto più complesse.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF14", materia:"Informatica", testo:"Nella tecnologia dei circuiti integrati, la fotolitografia serve a:",
+    opzioni:["Stampare i componenti del circuito in strati sovrapposti su una base di silicio","Fotografare i circuiti per documentarli","Raffreddare il processore","Collegare a mano transistor e resistenze"], corretta:0,
+    spiegazione:"Nei circuiti integrati transistor e collegamenti sono fabbricati insieme in un unico blocco monolitico: il vantaggio della stampa è ciò che rende possibile la miniaturizzazione.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF15", materia:"Informatica", testo:"Un processore, in senso tecnico, comprende:",
+    opzioni:["Il sistema operativo e i programmi applicativi","La CPU e una piccola area di memoria detta cache, collegate a dispositivi di input e output","Solo lo schermo e la tastiera","Il disco fisso e la memoria di massa"], corretta:1,
+    spiegazione:"In termini tecnici processore è sinonimo di computer: la differenza fra una console, un lettore musicale e un pc sta nei dispositivi collegati e nel software.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF16", materia:"Informatica", testo:"Perché un processo possa dirsi algoritmo deve avere cinque proprietà. Quale delle seguenti NON è fra queste?",
+    opzioni:["Determinatezza","Efficacia","Casualità","Input specificato"], corretta:2,
+    spiegazione:"Le cinque proprietà sono: input specificato, output specificato, determinatezza, efficacia e terminazione. Un algoritmo deve essere non ambiguo, eseguibile dall'agente e concludersi.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF17", materia:"Informatica", testo:"La proprietà di «terminazione» di un algoritmo significa che:",
+    opzioni:["Il processo può proseguire indefinitamente","L'algoritmo va scritto in un linguaggio di programmazione","Ogni passo deve essere svolto da una persona","L'agente prima o poi conclude il calcolo, fornendo la risposta o segnalando che non è possibile"], corretta:3,
+    spiegazione:"Senza terminazione il processo non è un algoritmo: deve chiudersi con un risultato oppure con la comunicazione che la risposta non esiste.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF18", materia:"Informatica", testo:"In informatica, «astrarre» significa:",
+    opzioni:["Estrarre da una situazione il concetto o il processo di base, distinguendo i dettagli rilevanti da quelli irrilevanti","Rendere un programma più veloce","Nascondere il codice sorgente agli utenti","Tradurre un testo in linguaggio binario"], corretta:0,
+    spiegazione:"L'astrazione produce una rappresentazione essenziale del problema; la generalizzazione, invece, esprime un'idea che si applica a più situazioni.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF19", materia:"Informatica", testo:"La «riproducibilità perfetta» è la caratteristica fondamentale dell'informazione digitale perché:",
+    opzioni:["Il digitale elimina la necessità di backup","La codifica in 0 e 1 consente di copiare e verificare i dati senza introdurre errori","Le copie digitali sono sempre più leggere degli originali","I supporti digitali durano per sempre"], corretta:1,
+    spiegazione:"L'informazione analogica è fruita su un supporto che varia con continuità e degrada nella copia; quella digitale, essendo una sequenza finita di simboli, può essere replicata identica e controllata.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF20", materia:"Informatica", testo:"La metafora del desktop, adottata dai progettisti del PARC, consiste nel:",
+    opzioni:["Usare solo comandi testuali","Riprodurre il funzionamento del telefono","Rappresentare lo schermo come una scrivania virtuale con documenti in finestre sovrapposte","Nascondere ogni riferimento al mondo fisico"], corretta:2,
+    spiegazione:"Le metafore aiutano a usare la tecnologia senza leggere il manuale; con i dispositivi mobili, venuto meno il mouse, si è affermata una nuova metafora, quella tattile.",
+    fonte:"Snyder, Henry, Fluency — cap. 1" },
+
+  { id:"INF21", materia:"Informatica", testo:"Una comunicazione è asincrona quando:",
+    opzioni:["Mittente e destinatario devono essere attivi contemporaneamente","Ci sono molti destinatari","Il messaggio è cifrato","L'invio e la ricezione avvengono in due momenti diversi"], corretta:3,
+    spiegazione:"La posta elettronica è asincrona, una telefonata è sincrona. La distinzione è indipendente da quella fra broadcast, multicast e point-to-point.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF22", materia:"Informatica", testo:"Fondamentalmente, internet supporta una comunicazione:",
+    opzioni:["Asincrona e point-to-point, pur essendo abbastanza veloce da sostenere anche comunicazioni sincrone, multicast e broadcast","Solo sincrona e broadcast","Solo multicast","Esclusivamente uno-a-molti"], corretta:0,
+    spiegazione:"È questa versatilità a farne un mezzo di comunicazione universale: la rete diventa inoltre più potente ogni volta che un nuovo computer vi si collega.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF23", materia:"Informatica", testo:"Nell'architettura client/server del web:",
+    opzioni:["Il client conserva tutte le pagine del web","Il browser è il client che richiede un file, il computer che lo ospita è il server che lo invia","Il server richiede i file al browser","Client e server sono due programmi sullo stesso computer"], corretta:1,
+    spiegazione:"Ogni interazione è un «incontro fugace»: si conclude con l'invio del file. Cookie e parametri URL servono proprio a dare l'illusione di una connessione continua.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF24", materia:"Informatica", testo:"Un indirizzo IP nella forma classica è composto da:",
+    opzioni:["Un nome di dominio e un'estensione","Due numeri separati da due punti","Quattro numeri separati da punti, ciascuno con valori da 0 a 255","Otto lettere dell'alfabeto latino"], corretta:2,
+    spiegazione:"L'ampiezza dell'intervallo consente miliardi di indirizzi distinti; il pacchetto IP contiene l'indirizzo del mittente, quello del destinatario, un numero progressivo e il carico (payload).",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF25", materia:"Informatica", testo:"Nel trasferimento di dati su internet, il passaggio di un pacchetto da un router al successivo è detto:",
+    opzioni:["Ciclo","Ping","Boot","Salto (hop)"], corretta:3,
+    spiegazione:"Ogni switch legge l'indirizzo di destinazione e inoltra il pacchetto al router che lo avvicina di più; pacchetti diretti allo stesso indirizzo possono seguire percorsi differenti, tracciabili con Trace Route.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF26", materia:"Informatica", testo:"Perché i pacchetti IP contengono un numero progressivo?",
+    opzioni:["Per poter essere riordinati a destinazione e ricomporre l'informazione originale","Per calcolare il costo della trasmissione","Per identificare il proprietario del computer","Per cifrare il contenuto"], corretta:0,
+    spiegazione:"L'informazione viene spezzata in unità di dimensione prefissata, inviate una alla volta lungo itinerari diversi: la numerazione consente di rimetterle in sequenza all'arrivo.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF27", materia:"Informatica", testo:"Nel protocollo Ethernet, che cosa succede quando due computer trasmettono nello stesso istante?",
+    opzioni:["La rete si blocca fino al riavvio","Rilevano la collisione, interrompono la trasmissione e riprovano dopo un tempo di attesa casuale","Un computer centrale stabilisce chi ha la precedenza","I due messaggi vengono uniti automaticamente"], corretta:1,
+    spiegazione:"Ethernet non richiede alcuna pianificazione o sistema di controllo: ogni computer ascolta il canale e trasmette se è silente, gestendo le collisioni con attese casuali.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF28", materia:"Informatica", testo:"Le reti locali senza fili domestiche e d'ufficio usano il protocollo:",
+    opzioni:["Bluetooth","Ethernet su cavo coassiale","802.11, comunemente detto Wi-Fi","UMTS"], corretta:2,
+    spiegazione:"I telefoni cellulari usano invece protocolli di rete mobile come UMTS, mentre il Bluetooth serve normalmente a collegare periferiche, non a fornire l'accesso a internet.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF29", materia:"Informatica", testo:"Nella struttura del Domain Name System, i tredici root name server:",
+    opzioni:["Ospitano tutte le pagine web del mondo","Assegnano gli indirizzi IP ai singoli utenti","Sono i tredici principali provider mondiali","Sono i name server autorevoli di tutti i domini di primo livello"], corretta:3,
+    spiegazione:"Il loro numero e la loro distribuzione geografica servono a condividere il carico: è un esempio di ridondanza, mentre il salvataggio locale delle risposte per riutilizzarle è il caching.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF30", materia:"Informatica", testo:"Qual è la differenza fra internet e il World Wide Web?",
+    opzioni:["Internet è l'infrastruttura di cavi, router e computer indirizzati; il web è un servizio fornito da un sottoinsieme di quei computer, i server web","Sono sinonimi","Il web comprende internet","Internet riguarda solo la posta elettronica"], corretta:0,
+    spiegazione:"I server web, con i file che inviano ai browser, costituiscono insieme il World Wide Web: un servizio che viaggia sull'infrastruttura di internet.",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF31", materia:"Informatica", testo:"Le tre parti principali di un URL sono:",
+    opzioni:["Client, server e browser","Protocollo, nome del server e path della pagina","Titolo, snippet e link","Dominio, cookie e sessione"], corretta:1,
+    spiegazione:"Digitando un URL il client specifica quale protocollo usare (http), dove reperire l'informazione (il server) e quale file richiedere (il percorso sul disco del server).",
+    fonte:"Snyder, Henry, Fluency — cap. 2" },
+
+  { id:"INF32", materia:"Informatica", testo:"In HTML5, i tag:",
+    opzioni:["Non possono mai comparire da soli","Descrivono solo il colore del testo","Sono racchiusi fra parentesi angolari, vanno scritti in minuscolo e di norma si usano a coppie, con lo slash in quello di chiusura","Devono essere scritti in maiuscolo"], corretta:2,
+    spiegazione:"Esistono anche tag singoli, chiusi da uno slash prima della parentesi. Il contenuto fra i tag <html> si divide in intestazione (head) e corpo (body).",
+    fonte:"Snyder, Henry, Fluency — cap. 3" },
+
+  { id:"INF33", materia:"Informatica", testo:"Che cosa fa il browser con lo «spazio bianco» (white space) presente nel codice HTML?",
+    opzioni:["Lo riproduce esattamente com'è scritto","Segnala un errore","Lo converte in un ritorno a capo","Lo ignora, trasformando ogni sequenza in un singolo spazio"], corretta:3,
+    spiegazione:"Spazi, tabulazioni e ritorni a capo servono solo a organizzare il codice: l'ampiezza delle righe è determinata dalla dimensione della finestra del browser.",
+    fonte:"Snyder, Henry, Fluency — cap. 3" },
+
+  { id:"INF34", materia:"Informatica", testo:"Nel funzionamento di un motore di ricerca, il crawling consiste nel:",
+    opzioni:["Visitare le pagine web analizzandone il codice per costruire un indice di token","Rispondere alle interrogazioni degli utenti","Ordinare i risultati per rilevanza","Eliminare i risultati duplicati"], corretta:0,
+    spiegazione:"Il crawler prende gli indirizzi da una lista di cose da fare e vi aggiunge i nuovi URL che incontra; l'indice, costruito in anticipo, è ciò che rende immediate le risposte alle query.",
+    fonte:"Snyder, Henry, Fluency — cap. 4" },
+
+  { id:"INF35", materia:"Informatica", testo:"Una AND-query, cioè una ricerca con più parole, viene risolta dall'elaboratore delle query:",
+    opzioni:["Ordinando alfabeticamente le pagine","Intersecando le liste di URL associate a ciascun token","Sommando le liste di tutti i token","Cercando la frase esatta"], corretta:1,
+    spiegazione:"Nell'indice esistono solo le liste dei singoli token: l'intersezione individua gli URL presenti in tutte. Una OR-query, invece, richiede di unire le liste eliminando i duplicati.",
+    fonte:"Snyder, Henry, Fluency — cap. 4" },
+
+  { id:"INF36", materia:"Informatica", testo:"Il PageRank di Google è:",
+    opzioni:["Il tempo impiegato dal crawler per visitare una pagina","Il costo di un annuncio pubblicitario","Il numero che determina l'ordine in cui vengono restituiti i risultati di una query","Il numero di pagine indicizzate da un sito"], corretta:2,
+    spiegazione:"Google fu il primo a usare un ranking per stimare quali pagine interessino maggiormente all'utente, e non solo quali contengano i termini cercati.",
+    fonte:"Snyder, Henry, Fluency — cap. 4" },
+
+  { id:"INF37", materia:"Informatica", testo:"Nella valutazione dell'attendibilità delle informazioni, una fonte primaria è:",
+    opzioni:["Il giornalista che intervista un testimone","Chi legge la notizia sul giornale","Il motore di ricerca che restituisce il risultato","Una persona che ha conoscenza diretta dell'informazione"], corretta:3,
+    spiegazione:"Chi intervista la fonte primaria è fonte secondaria, chi ne fruisce attraverso i media è fonte terziaria: a ogni passaggio aumenta il rischio di distorsioni, perciò conviene verificare più fonti.",
+    fonte:"Snyder, Henry, Fluency — cap. 4" },
+
+  { id:"INF38", materia:"Informatica", testo:"Con una sequenza di n bit quanti simboli diversi si possono rappresentare?",
+    opzioni:["2 elevato alla n","n elevato alla seconda","2 per n","n più 2"], corretta:0,
+    spiegazione:"Per rappresentare i 95 caratteri di una tastiera latina non bastano 6 bit (64 combinazioni): ne servono 7, che ne forniscono 128.",
+    fonte:"Snyder, Henry, Fluency — cap. 5" },
+
+  { id:"INF39", materia:"Informatica", testo:"Il codice ASCII originale è una codifica a:",
+    opzioni:["4 bit","7 bit, estesa poi a 8 bit (Extended ASCII, ISO-8859-1) per rappresentare le lingue occidentali","8 bit fin dall'origine","16 bit"], corretta:1,
+    spiegazione:"L'ASCII nacque negli Stati Uniti e non copriva le lingue diverse dall'inglese; la sequenza a 8 bit dell'estensione fu battezzata byte, oggi unità standard di misura della memoria.",
+    fonte:"Snyder, Henry, Fluency — cap. 5" },
+
+  { id:"INF40", materia:"Informatica", testo:"La codifica UTF-8 è a lunghezza variabile: che cosa significa?",
+    opzioni:["Comprime il testo eliminando caratteri","Può codificare solo l'alfabeto latino","A seconda dei caratteri usa un numero diverso di byte, restando compatibile con l'ASCII a un byte","Cambia lunghezza a seconda della connessione"], corretta:2,
+    spiegazione:"I caratteri ASCII occupano un byte e iniziano con il bit 0; gli altri insiemi usano due, tre o quattro byte, ciascuno con primo bit 1. Per questo tutte le lingue possono convivere in una pagina web.",
+    fonte:"Snyder, Henry, Fluency — cap. 5" },
+
+  { id:"INF41", materia:"Informatica", testo:"Nel sistema esadecimale, a quanti bit corrisponde ogni singola cifra?",
+    opzioni:["8","2","16","4"], corretta:3,
+    spiegazione:"L'esadecimale usa sedici simboli (0-9 e A-F) e ogni cifra corrisponde esattamente a un gruppo di 4 bit: per questo è comodo per gli esseri umani nel leggere lunghe sequenze binarie.",
+    fonte:"Snyder, Henry, Fluency — cap. 5" },
+
+  { id:"INF42", materia:"Informatica", testo:"Il controllo di parità serve a:",
+    opzioni:["Rilevare errori nella memoria o nella trasmissione, aggiungendo un bit che rende pari il numero di 1","Comprimere i dati","Cifrare i dati","Aumentare la velocità di trasmissione"], corretta:0,
+    spiegazione:"Aggiungendo un nono bit a ogni byte, il numero complessivo di 1 resta pari: un errore lo rende dispari e viene automaticamente rilevato.",
+    fonte:"Snyder, Henry, Fluency — cap. 5" },
+
+  { id:"INF43", materia:"Informatica", testo:"Nella codifica RGB usata dai computer, un singolo pixel occupa normalmente:",
+    opzioni:["3 bit","3 byte, cioè 24 bit, uno per ciascuna intensità di rosso, verde e blu","1 byte in totale","4 bit"], corretta:1,
+    spiegazione:"Ogni subpixel ha un'intensità da 0 a 255: il nero corrisponde a tutte le luci spente, il bianco a tutte accese al massimo. Colori con le tre intensità uguali sono tonalità di grigio.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF44", materia:"Informatica", testo:"Secondo la regola di Nyquist, per digitalizzare correttamente un suono la frequenza di campionamento deve essere:",
+    opzioni:["La metà della frequenza massima","Indipendente dalla frequenza del suono","Almeno il doppio della frequenza massima da registrare","Uguale alla frequenza massima"], corretta:2,
+    spiegazione:"Poiché l'orecchio umano arriva a circa 20.000 Hz, servono almeno 40.000 campioni al secondo: nei CD si è scelta la frequenza di 44.100 Hz.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF45", materia:"Informatica", testo:"Nel processo di digitalizzazione del suono, il convertitore analogico-digitale (ADC):",
+    opzioni:["Trasforma i numeri binari in onda elettrica","Comprime i file audio","Amplifica il segnale dell'altoparlante","Campiona l'onda continua a intervalli regolari producendo numeri binari"], corretta:3,
+    spiegazione:"Il percorso inverso, dalla memoria all'altoparlante, è affidato al convertitore digitale-analogico (DAC), che ricostruisce l'onda elettrica a partire dai valori digitali.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF46", materia:"Informatica", testo:"La compressione JPEG sfrutta il fatto che l'occhio umano:",
+    opzioni:["È sensibile alle piccole variazioni di luminosità (luminanza) ma poco a quelle di colore (crominanza)","Percepisce solo il bianco e nero","Non distingue i contorni","È più sensibile al colore che alla luce"], corretta:0,
+    spiegazione:"Per questo JPEG conserva la luminanza e semplifica la crominanza, arrivando a comprimere 10:1 senza perdita apparente di qualità finché l'immagine non inizia a squadrettarsi.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF47", materia:"Informatica", testo:"Nella compressione MPEG dei filmati, oltre alla compressione dei singoli fotogrammi si sfrutta:",
+    opzioni:["L'aumento della frequenza dei fotogrammi","La coerenza fra fotogrammi consecutivi, registrando solo le differenze","La riduzione del numero di colori a due","L'eliminazione dell'audio"], corretta:1,
+    spiegazione:"Poiché due immagini successive sono di norma molto simili, trasmettere solo le differenze consente rapporti di compressione molto elevati.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF48", materia:"Informatica", testo:"La codifica run-length è un esempio di compressione:",
+    opzioni:["Applicabile solo all'audio","Che richiede sempre una chiave di cifratura","Senza perdita (lossless): la rappresentazione originale può essere ricostruita perfettamente","Con perdita, come JPEG"], corretta:2,
+    spiegazione:"Nelle compressioni lossy, come MP3 e JPEG, la rappresentazione di partenza non è più ricostruibile: si scarta ciò che i sensi umani non percepiscono.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF49", materia:"Informatica", testo:"Che cos'è la latenza?",
+    opzioni:["La quantità di informazione trasmessa per unità di tempo","Il numero di pacchetti persi","La capacità di memoria del server","Il tempo impiegato per creare o trasmettere l'informazione"], corretta:3,
+    spiegazione:"L'ampiezza di banda misura invece la quantità di informazione per unità di tempo: dividendo la quantità da trasmettere per la banda si ottiene la latenza minima.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF50", materia:"Informatica", testo:"Il «principio del mezzo universale indifferente» afferma che:",
+    opzioni:["I bit possono rappresentare qualsiasi informazione discreta e non hanno alcun significato intrinseco","Ogni sequenza di bit ha un unico significato possibile","I bit rappresentano sempre numeri binari","Solo i numeri possono essere digitalizzati"], corretta:0,
+    spiegazione:"Il significato dei bit dipende interamente dall'interpretazione che vi associano i programmi: la stessa sequenza può essere un numero, un carattere ASCII o un colore RGB.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF51", materia:"Informatica", testo:"Il riconoscimento ottico dei caratteri (OCR) serve a:",
+    opzioni:["Migliorare la risoluzione di una fotografia","Convertire in testo i pixel di un'immagine, rendendo possibile la ricerca di parole","Comprimere le immagini","Cifrare i documenti"], corretta:1,
+    spiegazione:"Una pagina acquisita come immagine descrive soltanto la colorazione dei pixel: l'OCR individua i bordi, li categorizza in caratteristiche distintive e ricostruisce i caratteri.",
+    fonte:"Snyder, Henry, Fluency — cap. 6" },
+
+  { id:"INF52", materia:"Informatica", testo:"Nella gestione dei dati personali, il regime di «opt-in» prevede che:",
+    opzioni:["I dati possano essere usati liberamente","I dati siano cancellati subito dopo la transazione","L'uso dei dati per scopi ulteriori richieda un'autorizzazione esplicita dell'interessato","L'interessato debba vietare esplicitamente l'uso ulteriore"], corretta:2,
+    spiegazione:"Nell'opt-out il consenso è presunto e l'interessato deve negarlo espressamente; le altre possibilità elencate vanno dal nessun uso al nessun limite.",
+    fonte:"Snyder, Henry, Fluency — cap. 10" },
+
+  { id:"INF53", materia:"Informatica", testo:"I principi di Fair Information Practice, riferimento internazionale sulla privacy, furono elaborati nel 1980:",
+    opzioni:["Dall'ONU","Dalla Commissione europea","Dal governo degli Stati Uniti","Dall'OCSE (OECD)"], corretta:3,
+    spiegazione:"Gli otto punti riguardano raccolta limitata, scopo, qualità, limitazioni d'uso, sicurezza, apertura, partecipazione e responsabilità. Gli Stati Uniti non hanno una legge generale ispirata a questi principi, ma un approccio settoriale.",
+    fonte:"Snyder, Henry, Fluency — cap. 10" },
+
+  { id:"INF54", materia:"Informatica", testo:"La navigazione «in incognito» o InPrivate:",
+    opzioni:["Agisce solo lato client, cioè sulle informazioni memorizzate nel nostro computer, e non su ciò che fanno i server","Impedisce ai siti di raccogliere dati su di noi","Cifra tutto il traffico di rete","Elimina i cookie di terze parti da internet"], corretta:0,
+    spiegazione:"Tracciamento e navigazione privata sono cose diverse: il tracciamento avviene sui server e presso i fornitori di contenuti, che continuano a registrare la visita.",
+    fonte:"Snyder, Henry, Fluency — cap. 10" },
+
+  { id:"INF55", materia:"Informatica", testo:"Perché è consigliabile bloccare i cookie di terze parti?",
+    opzioni:["Perché impediscono l'autenticazione ai siti","Perché sono uno dei metodi più usati per tracciare i comportamenti di navigazione a fini pubblicitari","Perché rallentano la connessione","Perché contengono sempre virus"], corretta:1,
+    spiegazione:"Le prime due parti sono l'utente e il server visitato; la terza è tipicamente una società di inserzioni pubblicitarie. I cookie di prima parte, nati in Netscape, servono invece a mantenere la sessione.",
+    fonte:"Snyder, Henry, Fluency — cap. 10" },
+
+  { id:"INF56", materia:"Informatica", testo:"Qual è la differenza fra un virus e un worm?",
+    opzioni:["Il virus riguarda solo le reti aziendali","Non c'è differenza tecnica","Il virus viaggia nascosto dentro un altro programma, il worm si riproduce da sé e si invia ai contatti dell'utente","Il worm danneggia l'hardware, il virus no"], corretta:2,
+    spiegazione:"Fra le altre forme di malware: l'exploit sfrutta i bug del software, il cavallo di Troia si maschera da programma innocuo, la backdoor apre un accesso e il rootkit combatte le difese del sistema.",
+    fonte:"Snyder, Henry, Fluency — cap. 10" },
+
+  { id:"INF57", materia:"Informatica", testo:"Nella crittografia a chiave pubblica:",
+    opzioni:["Mittente e destinatario usano la stessa chiave segreta","La chiave viene inviata insieme al messaggio","Non è necessaria alcuna chiave","Il destinatario pubblica una chiave che serve solo a cifrare, mentre la decifratura richiede un'informazione nota solo a lui"], corretta:3,
+    spiegazione:"La chiave pubblica nasce dal prodotto di grandi numeri primi: la sicurezza si fonda sulla difficoltà di fattorizzarli. Risolve così il problema dello scambio della chiave su un canale non protetto.",
+    fonte:"Snyder, Henry, Fluency — cap. 10" },
+
+  { id:"INF58", materia:"Informatica", testo:"In un foglio elettronico, la notazione A1:B10 indica:",
+    opzioni:["Un intervallo di celle contigue, dalla prima all'ultima indicata","La divisione fra due celle","Un collegamento a un altro foglio","Una formula condizionale"], corretta:0,
+    spiegazione:"Il foglio elettronico organizza l'informazione in una matrice di celle; i due punti individuano il gruppo di celle contigue compreso fra i due estremi.",
+    fonte:"Snyder, Henry, Fluency — cap. 12" },
+/* ---- Marketing (Kotler, Armstrong) — dagli appunti ---- */
+  { id:"MKT16", materia:"Marketing", testo:"Nel processo di marketing in cinque fasi, l'ultima consiste nel:",
+    opzioni:["Comprendere il mercato e i bisogni del consumatore","Ottenere valore dai clienti sotto forma di vendite, quota di mercato e profitti","Progettare il marketing mix","Segmentare il mercato"], corretta:1,
+    spiegazione:"Nelle prime quattro fasi l'impresa crea valore per il cliente e costruisce la relazione; nella quinta ne raccoglie i frutti, ottenendo in cambio valore dal consumatore.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT17", materia:"Marketing", testo:"Qual è la differenza fra bisogno, desiderio e domanda?",
+    opzioni:["Il desiderio precede sempre il bisogno","La domanda riguarda solo i beni di lusso","Il bisogno è uno stato di privazione, il desiderio è la forma che esso assume nella cultura di appartenenza, la domanda è il desiderio sostenuto dal potere d'acquisto","Sono tre sinonimi"], corretta:2,
+    spiegazione:"I bisogni sono condizioni di privazione (fisici, sociali, individuali); plasmati da cultura e personalità diventano desideri; sostenuti dal potere d'acquisto generano domanda di mercato.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT18", materia:"Marketing", testo:"La «miopia di marketing» consiste nel:",
+    opzioni:["Rivolgersi a segmenti troppo ampi","Investire poco in pubblicità","Fissare prezzi troppo bassi","Concentrarsi sui prodotti esistenti e sui loro attributi, perdendo di vista i bisogni che li generano"], corretta:3,
+    spiegazione:"Chi vende trapani rischia di dimenticare che il cliente vuole fori: l'attenzione va ai benefici e ai bisogni, non agli attributi del prodotto.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT19", materia:"Marketing", testo:"Il concetto di marketing adotta una prospettiva «outside-in», mentre il concetto di vendita ne adotta una opposta. Che cosa significa?",
+    opzioni:["Il concetto di marketing parte da un mercato ben definito e dai bisogni del cliente; il concetto di vendita parte dai prodotti esistenti dell'impresa","Il concetto di marketing riguarda solo i mercati esteri","Il concetto di vendita parte dai bisogni del cliente","Le due prospettive coincidono nel lungo periodo"], corretta:0,
+    spiegazione:"Partendo dall'interno, il concetto di vendita punta a transazioni di breve periodo con promozione aggressiva; il concetto di marketing genera profitti costruendo relazioni durature.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT20", materia:"Marketing", testo:"Il concetto di marketing sociale richiede all'impresa di conciliare:",
+    opzioni:["Le esigenze dei fornitori e quelle dei distributori","I profitti dell'impresa, i desideri del consumatore e gli interessi di lungo periodo della collettività","Solo profitti e quota di mercato","Solo i desideri immediati del consumatore"], corretta:1,
+    spiegazione:"Il concetto di marketing sociale mette in discussione i possibili conflitti fra i desideri a breve termine del consumatore e il suo benessere, e quello collettivo, a lungo termine.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT21", materia:"Marketing", testo:"La soddisfazione del cliente (customer satisfaction) dipende:",
+    opzioni:["Dalla quota di mercato dell'impresa","Dalla quantità di pubblicità ricevuta","Dal rapporto fra le prestazioni percepite del prodotto e le aspettative dell'acquirente","Solo dal prezzo pagato"], corretta:2,
+    spiegazione:"Se le prestazioni sono sotto le aspettative il cliente è insoddisfatto, se le eguagliano è soddisfatto, se le superano è entusiasta: per questo conviene promettere meno di quanto si può mantenere.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT22", materia:"Marketing", testo:"Il valore percepito dal cliente è:",
+    opzioni:["Il prezzo di listino del prodotto","Il costo di produzione più il margine","Il valore contabile della marca","La sua percezione del rapporto fra tutti i benefici e tutti i costi di un'offerta, confrontata con quelle della concorrenza"], corretta:3,
+    spiegazione:"I clienti non compiono valutazioni obiettive: agiscono in base al valore percepito, che non sempre coincide con il valore reale dell'offerta.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT23", materia:"Marketing", testo:"Nella classificazione della clientela per profittabilità e fedeltà, le «butterflies» sono clienti:",
+    opzioni:["Molto profittevoli ma fedeli solo per brevi periodi","Poco profittevoli e poco fedeli","Molto profittevoli e molto fedeli","Fedeli ma poco profittevoli"], corretta:0,
+    spiegazione:"Con le farfalle conviene sfruttare il periodo di attività con campagne promozionali mirate; con gli «strangers», poco fedeli e poco redditizi, la scelta migliore è non investire.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT24", materia:"Marketing", testo:"La customer equity (valore della clientela) è:",
+    opzioni:["Il fatturato annuo generato dai nuovi clienti","Il valore complessivo di tutti i clienti attuali e potenziali dell'impresa per l'intero ciclo di vita, al netto dei costi di acquisizione","Il capitale sociale dell'impresa","Il valore di mercato del marchio"], corretta:1,
+    spiegazione:"È l'obiettivo finale del customer relationship management: maggiore è la fedeltà della clientela, maggiore è il valore complessivo che essa genera nel tempo.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT25", materia:"Marketing", testo:"La «quota di clientela» (customer share) indica:",
+    opzioni:["La quota di mercato dell'impresa","Il numero di clienti persi ogni anno","La percentuale degli acquisti di un cliente nella sua categoria di prodotto che l'impresa riesce a intercettare","La percentuale di clienti soddisfatti"], corretta:2,
+    spiegazione:"Si accresce ampliando la gamma offerta ai clienti attuali e con tecniche di cross-selling e up-selling, cioè proponendo prodotti complementari o di fascia superiore.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT26", materia:"Marketing", testo:"Nella matrice del Boston Consulting Group, una SBU con quota di mercato elevata in un mercato a bassa crescita è:",
+    opzioni:["Una star","Un question mark","Un dog","Una cash cow"], corretta:3,
+    spiegazione:"Le cash cow sono attività affermate che richiedono investimenti limitati: generano la liquidità con cui sostenere star e question mark.",
+    fonte:"Kotler, Armstrong — cap. 2" },
+
+  { id:"MKT27", materia:"Marketing", testo:"Nella matrice BCG, un «question mark» (dilemma) è un'attività:",
+    opzioni:["Con bassa quota di mercato in un mercato in forte crescita, che richiede ingenti investimenti","Con alta quota in un mercato stagnante","Con alta quota in un mercato in crescita","Con bassa quota in un mercato stagnante"], corretta:0,
+    spiegazione:"Il percorso tipico di una SBU parte dal question mark, passa per star e cash cow e finisce come dog; la matrice, però, fotografa il presente e non pianifica il futuro.",
+    fonte:"Kotler, Armstrong — cap. 2" },
+
+  { id:"MKT28", materia:"Marketing", testo:"Nella matrice prodotto/mercato di Ansoff, vendere prodotti esistenti in nuovi mercati geografici o demografici corrisponde a una strategia di:",
+    opzioni:["Diversificazione","Sviluppo del mercato","Penetrazione del mercato","Sviluppo del prodotto"], corretta:1,
+    spiegazione:"La penetrazione aumenta le vendite dei prodotti attuali nei mercati attuali; lo sviluppo del prodotto immette nuovi prodotti nei mercati attuali; la diversificazione riguarda prodotti e mercati entrambi nuovi.",
+    fonte:"Kotler, Armstrong — cap. 2" },
+
+  { id:"MKT29", materia:"Marketing", testo:"La catena del valore dell'impresa indica:",
+    opzioni:["La successione dei prezzi di vendita nel tempo","La struttura gerarchica dell'organizzazione","L'insieme delle funzioni aziendali che, progettando, producendo, distribuendo e sostenendo i prodotti, generano valore per il cliente","La sequenza dei ricarichi applicati lungo il canale distributivo"], corretta:2,
+    spiegazione:"Il successo dipende dal coordinamento fra le funzioni; guardando oltre i confini aziendali si arriva alla rete valore-servizio, che comprende fornitori, distributori e clienti.",
+    fonte:"Kotler, Armstrong — cap. 2" },
+
+  { id:"MKT30", materia:"Marketing", testo:"Secondo il testo, la missione aziendale dovrebbe essere definita:",
+    opzioni:["In base ai volumi di produzione","In base ai concorrenti da superare","In base al rendimento atteso per gli azionisti","In base al modo in cui l'impresa crea valore per i clienti, non in base a ciò che produce"], corretta:3,
+    spiegazione:"Una missione formulata in termini di prodotto invecchia con il prodotto; una missione centrata sul valore per il cliente guida l'impresa anche quando cambiano tecnologie e mercati.",
+    fonte:"Kotler, Armstrong — cap. 2" },
+
+  { id:"MKT31", materia:"Marketing", testo:"Le principali variabili con cui si segmenta un mercato di consumo sono:",
+    opzioni:["Geografiche, demografiche, psicografiche e comportamentali","Solo demografiche e geografiche","Solo relative al prezzo","Produttive e distributive"], corretta:0,
+    spiegazione:"Un segmento di mercato è un gruppo di consumatori che risponde in modo analogo agli stimoli di marketing dell'impresa.",
+    fonte:"Kotler, Armstrong — cap. 7" },
+
+  { id:"MKT32", materia:"Marketing", testo:"Nel modello stimolo-risposta del comportamento d'acquisto, la «scatola nera» del consumatore indica:",
+    opzioni:["Il budget destinato alla pubblicità","I processi mentali con cui gli stimoli si trasformano in reazioni, non direttamente osservabili","L'insieme dei dati raccolti dalle ricerche di mercato","Il punto vendita in cui avviene l'acquisto"], corretta:1,
+    spiegazione:"Gli stimoli di marketing (le quattro P) e quelli ambientali entrano nella scatola nera; il compito dell'operatore di marketing è capire che cosa vi accade, perché la mente non funziona in modo lineare.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT33", materia:"Marketing", testo:"Quali sono le quattro grandi categorie di fattori che influenzano il comportamento d'acquisto del consumatore?",
+    opzioni:["Interni, esterni, diretti e indiretti","Razionali, emotivi, individuali e collettivi","Culturali, sociali, personali e psicologici","Economici, politici, giuridici e tecnologici"], corretta:2,
+    spiegazione:"Fra i culturali rientrano cultura, subcultura e classe sociale; fra i sociali i gruppi, la famiglia, ruoli e status; fra i personali età, occupazione, stile di vita; fra gli psicologici motivazione, percezione, apprendimento e convinzioni.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT34", materia:"Marketing", testo:"Un «gruppo di aspirazione» è:",
+    opzioni:["Il gruppo familiare di origine","Qualsiasi gruppo di cui si è membri","Un gruppo creato dall'impresa per il lancio di un prodotto","Un gruppo a cui l'individuo non appartiene ma a cui vorrebbe appartenere"], corretta:3,
+    spiegazione:"I gruppi di appartenenza esercitano un'influenza diretta sui membri; i gruppi di riferimento fungono da termine di confronto; quelli di aspirazione sono l'ambiente a cui si spera di accedere.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT35", materia:"Marketing", testo:"Il buzz marketing consiste nel:",
+    opzioni:["Coinvolgere leader d'opinione perché diventino ambasciatori della marca e ne parlino nella loro rete di relazioni","Acquistare spazi pubblicitari in televisione","Abbassare temporaneamente i prezzi","Inviare cataloghi per posta"], corretta:0,
+    spiegazione:"I leader d'opinione influenzano gli altri grazie a competenze, personalità o rete di relazioni: il passaparola così attivato risulta più credibile della pubblicità.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT36", materia:"Marketing", testo:"Lo stile di vita di un consumatore viene misurato lungo le dimensioni AIO, cioè:",
+    opzioni:["Attenzione, informazione e ordine","Attività, interessi e opinioni","Acquisti, investimenti e obiettivi","Aspettative, immagine e occupazione"], corretta:1,
+    spiegazione:"Lo stile di vita è il modello di vita in termini psicografici: va oltre la classe sociale e la personalità, e descrive lo schema di azioni e interazioni con il mondo esterno.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT37", materia:"Marketing", testo:"La «personalità di marca» è:",
+    opzioni:["Il tono di voce usato dai venditori","La reputazione finanziaria dell'azienda","La combinazione di caratteristiche umane attribuibili a una marca, come sincerità, competenza o raffinatezza","Il carattere del fondatore dell'impresa"], corretta:2,
+    spiegazione:"I consumatori tendono a scegliere marche con una personalità affine alla propria o al proprio concetto di sé: la comunicazione lavora spesso su questa corrispondenza.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT38", materia:"Marketing", testo:"La ricerca motivazionale è:",
+    opzioni:["Un'indagine statistica sui volumi di vendita","Il calcolo del ritorno sugli investimenti pubblicitari","Un test di gradimento del prezzo","Una ricerca qualitativa volta a indagare le motivazioni inconsce e nascoste del consumatore"], corretta:3,
+    spiegazione:"Nasce dall'idea, di matrice freudiana, che l'acquirente sia in larga parte inconsapevole delle forze che guidano il suo comportamento; vi lavorano psicologi, antropologi e altri esperti di scienze sociali.",
+    fonte:"Kotler, Armstrong — cap. 5" },
+
+  { id:"MKT39", materia:"Marketing", testo:"Quali sono i cinque strumenti del mix promozionale?",
+    opzioni:["Pubblicità, promozione delle vendite, vendita personale, pubbliche relazioni e marketing diretto","Prodotto, prezzo, punto vendita, promozione e persone","Televisione, radio, stampa, affissioni e internet","Segmentazione, targeting, posizionamento, prezzo e distribuzione"], corretta:0,
+    spiegazione:"Il mix della comunicazione di marketing combina questi cinque strumenti per trasmettere valore al cliente e costruire relazioni.",
+    fonte:"Kotler, Armstrong — cap. 14" },
+
+  { id:"MKT40", materia:"Marketing", testo:"La pubblicità è definita come:",
+    opzioni:["Un contatto diretto con singoli clienti","Promozione non personale di idee, beni o servizi svolta dietro compenso da un promotore identificato","Presentazione personale svolta dalla forza vendita","Un incentivo di breve periodo all'acquisto"], corretta:1,
+    spiegazione:"La promozione delle vendite è invece un incentivo di breve periodo, la vendita personale una presentazione diretta, le pubbliche relazioni mirano a un'immagine favorevole, il marketing diretto contatta singoli clienti.",
+    fonte:"Kotler, Armstrong — cap. 14" },
+
+  { id:"MKT41", materia:"Marketing", testo:"La comunicazione integrata di marketing (CIM) consiste nel:",
+    opzioni:["Affidare la comunicazione a più agenzie indipendenti","Comunicare solo attraverso i canali digitali","Coordinare tutti i canali di comunicazione dell'impresa per trasmettere un messaggio chiaro e coerente","Concentrare tutto il budget sulla televisione"], corretta:2,
+    spiegazione:"Senza integrazione, pubblicità, campagne prezzi ed etichette possono trasmettere messaggi diversi, generando una percezione confusa della marca.",
+    fonte:"Kotler, Armstrong — cap. 14" },
+
+  { id:"MKT42", materia:"Marketing", testo:"Nel processo di comunicazione a nove elementi, il «rumore» è:",
+    opzioni:["Il volume della pubblicità televisiva","La quantità di messaggi concorrenti sul mercato","La reazione negativa del pubblico","La distorsione o l'interferenza non prevista per cui il destinatario percepisce un messaggio diverso da quello inviato"], corretta:3,
+    spiegazione:"Gli altri elementi sono emittente, codifica, messaggio, mezzo, decodifica, destinatario, risposta e feedback: il consumatore distratto durante lo spot è un caso tipico di rumore.",
+    fonte:"Kotler, Armstrong — cap. 14" },
+
+  { id:"MKT43", materia:"Marketing", testo:"Gli stadi di disponibilità all'acquisto del pubblico obiettivo sono, nell'ordine:",
+    opzioni:["Consapevolezza, conoscenza, gradimento, preferenza, convinzione, acquisto","Attenzione, interesse, desiderio, azione, fedeltà, riacquisto","Bisogno, desiderio, domanda, scelta, acquisto, uso","Contatto, prova, adozione, fedeltà, passaparola, abbandono"], corretta:0,
+    spiegazione:"Il responsabile della comunicazione deve sapere a quale stadio si trova il pubblico e verso quale stadio va condotto: da questo dipendono contenuto e forma del messaggio.",
+    fonte:"Kotler, Armstrong — cap. 14" },
+
+  { id:"MKT44", materia:"Marketing", testo:"Il passaggio dal broadcasting al «narrowcasting» nella comunicazione di marketing indica:",
+    opzioni:["Il ritorno ai grandi mezzi di massa","Lo spostamento verso media più specializzati e mirati, rivolti a segmenti di pubblico ristretti","La riduzione dei budget pubblicitari","L'abbandono di ogni forma di pubblicità"], corretta:1,
+    spiegazione:"Costi crescenti dei mass media, pubblici più frammentati e nuove tecnologie spingono verso riviste specializzate, canali tematici, e-mail, podcast, telefoni e social network.",
+    fonte:"Kotler, Armstrong — cap. 14" },
+
+  { id:"MKT45", materia:"Marketing", testo:"Il customer relationship management (CRM) indica:",
+    opzioni:["La gestione dei rapporti con i fornitori","Il controllo dei costi di distribuzione","L'intero processo di creazione e mantenimento di relazioni profittevoli con i clienti mediante valore e soddisfazione superiori","Esclusivamente il software di gestione dei contatti"], corretta:2,
+    spiegazione:"Include la gestione dei dati di clientela e delle occasioni di contatto, ma il suo senso è più ampio: massimizzare fedeltà, valore del ciclo di vita del cliente e customer equity.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+
+  { id:"MKT46", materia:"Marketing", testo:"Il partner relationship management riguarda:",
+    opzioni:["La gestione degli azionisti di minoranza","L'accordo fra imprese concorrenti sui prezzi","La selezione del personale di vendita","La collaborazione con partner interni all'impresa ed esterni, lungo tutta la catena di fornitura, per creare valore per il cliente"], corretta:3,
+    spiegazione:"Fornitori e distributori non sono soltanto venditori e clienti: sono partner che concorrono all'offerta di valore, e vanno gestiti con la stessa cura riservata ai clienti.",
+    fonte:"Kotler, Armstrong — cap. 1" },
+/* ---- Statistica (Agresti, Finlay) — integrazione ---- */
+  { id:"STA16", materia:"Statistica", testo:"Il numero di figli per famiglia è una variabile:",
+    opzioni:["Quantitativa discreta","Quantitativa continua","Qualitativa nominale","Qualitativa ordinale"], corretta:0,
+    spiegazione:"Assume valori numerici isolati e conteggiabili; una variabile continua, come l'altezza, può assumere qualunque valore in un intervallo.",
+    fonte:"Agresti, Finlay — cap. 2" },
+
+  { id:"STA17", materia:"Statistica", testo:"Una scala Likert con modalità «per niente d'accordo, poco, abbastanza, molto d'accordo» produce una variabile:",
+    opzioni:["Di rapporti","Ordinale","Nominale","A intervalli"], corretta:1,
+    spiegazione:"Le modalità sono ordinate ma le distanze fra loro non sono quantificabili: tecnicamente non si dovrebbe calcolarne la media, mentre la mediana è appropriata.",
+    fonte:"Agresti, Finlay — cap. 2" },
+
+  { id:"STA18", materia:"Statistica", testo:"Lo scarto interquartile (IQR) è:",
+    opzioni:["La media degli scarti dalla media","La radice quadrata della varianza","La differenza fra il terzo e il primo quartile, cioè l'ampiezza dell'intervallo che contiene il 50% centrale dei dati","La differenza fra valore massimo e minimo"], corretta:2,
+    spiegazione:"È una misura di dispersione robusta rispetto ai valori anomali, coerente con la mediana; il campo di variazione (range) è invece massimo meno minimo.",
+    fonte:"Agresti, Finlay — cap. 3" },
+
+  { id:"STA19", materia:"Statistica", testo:"Che rapporto c'è fra varianza e deviazione standard?",
+    opzioni:["Sono la stessa cosa","La varianza è la radice quadrata della deviazione standard","La deviazione standard è la varianza divisa per n","La deviazione standard è la radice quadrata della varianza ed è espressa nella stessa unità di misura dei dati"], corretta:3,
+    spiegazione:"Poiché la varianza è una media di scarti al quadrato, la sua unità di misura è al quadrato: la radice riporta l'indice alla scala originale, rendendolo interpretabile.",
+    fonte:"Agresti, Finlay — cap. 3" },
+
+  { id:"STA20", materia:"Statistica", testo:"Un punteggio z pari a −2 indica che l'osservazione:",
+    opzioni:["Si colloca due deviazioni standard sotto la media","Vale due unità in meno della media","Ha probabilità del 2% di verificarsi","È il secondo valore più basso della distribuzione"], corretta:0,
+    spiegazione:"La standardizzazione esprime ogni valore come numero di deviazioni standard di distanza dalla media, rendendo confrontabili variabili misurate su scale diverse.",
+    fonte:"Agresti, Finlay — cap. 4" },
+
+  { id:"STA21", materia:"Statistica", testo:"Il teorema del limite centrale afferma che, per campioni sufficientemente numerosi:",
+    opzioni:["La varianza campionaria tende a zero","La distribuzione campionaria della media è approssimativamente normale, qualunque sia la forma della distribuzione della popolazione","La popolazione tende a distribuirsi normalmente","La media campionaria coincide con quella della popolazione"], corretta:1,
+    spiegazione:"È il risultato che giustifica l'uso della distribuzione normale nell'inferenza anche quando i dati di partenza non sono normali.",
+    fonte:"Agresti, Finlay — cap. 4" },
+
+  { id:"STA22", materia:"Statistica", testo:"A parità di altre condizioni, un intervallo di confidenza al 99% rispetto a uno al 95% è:",
+    opzioni:["Della stessa ampiezza","Calcolabile solo su campioni piccoli","Più ampio, perché una maggiore confidenza richiede un margine d'errore più grande","Più stretto"], corretta:2,
+    spiegazione:"Aumentare la confidenza significa accettare meno rischio di sbagliare, e quindi coprire un intervallo di valori più ampio; per stringerlo occorre aumentare la numerosità campionaria.",
+    fonte:"Agresti, Finlay — cap. 5" },
+
+  { id:"STA23", materia:"Statistica", testo:"Un sondaggio riporta il 52% di consensi con un margine d'errore di ±3 punti. L'interpretazione corretta è:",
+    opzioni:["Il 3% degli intervistati ha risposto in modo errato","Il risultato è sbagliato del 3%","Il 52% è certamente il valore vero","La stima nella popolazione è plausibilmente compresa fra il 49% e il 55%"], corretta:3,
+    spiegazione:"Il margine d'errore definisce l'intervallo di confidenza attorno alla stima puntuale: con quel margine, la differenza fra 52% e 48% non è statisticamente conclusiva.",
+    fonte:"Agresti, Finlay — cap. 5" },
+
+  { id:"STA24", materia:"Statistica", testo:"Nella verifica di ipotesi, l'ipotesi nulla:",
+    opzioni:["Esprime tipicamente l'assenza di effetto o di differenza ed è quella sottoposta a verifica","Afferma sempre l'esistenza di un effetto","È l'ipotesi che il ricercatore vuole dimostrare","Coincide con l'ipotesi alternativa"], corretta:0,
+    spiegazione:"L'ipotesi alternativa esprime invece l'effetto atteso dal ricercatore; il test può portare a rifiutare H0, mai a dimostrarla.",
+    fonte:"Agresti, Finlay — cap. 6" },
+
+  { id:"STA25", materia:"Statistica", testo:"Un risultato statisticamente significativo:",
+    opzioni:["Implica che l'effetto sia di grande entità","Non è necessariamente rilevante sul piano pratico, soprattutto con campioni molto grandi","È sempre importante nella sostanza","Dimostra un rapporto di causa-effetto"], corretta:1,
+    spiegazione:"Con campioni molto numerosi anche differenze minime risultano significative: accanto al p-value occorre valutare la dimensione dell'effetto e il suo significato sostantivo.",
+    fonte:"Agresti, Finlay — cap. 6" },
+
+  { id:"STA26", materia:"Statistica", testo:"La differenza fondamentale fra uno studio osservazionale e un esperimento è che nell'esperimento:",
+    opzioni:["Il campione è più numeroso","Non si usano gruppi di confronto","Il ricercatore assegna i soggetti ai trattamenti, di norma in modo casuale","I dati sono raccolti con un questionario"], corretta:2,
+    spiegazione:"L'assegnazione casuale rende i gruppi mediamente equivalenti rispetto alle altre variabili: per questo l'esperimento consente conclusioni causali che lo studio osservazionale non permette.",
+    fonte:"Agresti, Finlay — cap. 2" },
+
+  { id:"STA27", materia:"Statistica", testo:"Un campione raccolto intervistando i passanti in una piazza è un esempio di:",
+    opzioni:["Campione casuale semplice","Campione stratificato","Campione a grappoli","Campione di convenienza, soggetto a distorsione di selezione"], corretta:3,
+    spiegazione:"Nei campioni non probabilistici non tutti hanno la stessa possibilità di essere scelti: le stime che ne derivano non sono generalizzabili alla popolazione.",
+    fonte:"Agresti, Finlay — cap. 2" },
+
+  { id:"STA28", materia:"Statistica", testo:"In una regressione lineare, il coefficiente di determinazione R² indica:",
+    opzioni:["La quota di variabilità della variabile dipendente spiegata dal modello","La pendenza della retta di regressione","La probabilità che il modello sia corretto","Il numero di variabili indipendenti"], corretta:0,
+    spiegazione:"Varia fra 0 e 1: più è vicino a 1, maggiore è la parte di variazione della Y che il modello riesce a rendere conto. Non dice però nulla sulla correttezza causale del modello.",
+    fonte:"Agresti, Finlay — cap. 9" },
+
+  { id:"STA29", materia:"Statistica", testo:"In una tabella di contingenza che incrocia titolo di studio e voto, per confrontare correttamente i gruppi conviene calcolare:",
+    opzioni:["La deviazione standard delle frequenze","Le percentuali di riga o di colonna, non le sole frequenze assolute","Solo il totale generale","La media dei valori della tabella"], corretta:1,
+    spiegazione:"Le frequenze assolute dipendono dalla numerosità dei gruppi: solo le percentuali calcolate all'interno di ciascun gruppo rendono confrontabili distribuzioni di ampiezza diversa.",
+    fonte:"Agresti, Finlay — cap. 8" },
+
+  { id:"STA30", materia:"Statistica", testo:"Nella regressione multipla si introducono più variabili indipendenti soprattutto per:",
+    opzioni:["Ridurre la numerosità campionaria necessaria","Trasformare variabili qualitative in quantitative","Stimare l'effetto di ciascuna variabile tenendo sotto controllo le altre","Aumentare automaticamente la significatività"], corretta:2,
+    spiegazione:"È il modo statistico di «controllare» le variabili di confondimento: il coefficiente esprime l'effetto di una variabile a parità delle altre incluse nel modello.",
+    fonte:"Agresti, Finlay — cap. 11" },
+
+  /* ---- Inglese — integrazione (livello B2, lessico di comunicazione e impresa) ---- */
+  { id:"ENG09", materia:"Inglese", testo:"By the time the meeting started, the team ______ the presentation.",
+    opzioni:["was finishing","finishes","has finished","had finished"], corretta:3,
+    spiegazione:"Il past perfect indica l'azione anteriore a un altro momento del passato, qui segnalato da «by the time»." },
+
+  { id:"ENG10", materia:"Inglese", testo:"The agency, ______ won the award last year, has opened a new office in Milan.",
+    opzioni:["which","who","whose","what"], corretta:0,
+    spiegazione:"Il pronome relativo si riferisce a una cosa (l'agenzia come entità): «who» si usa per le persone, «whose» esprime possesso." },
+
+  { id:"ENG11", materia:"Inglese", testo:"We need to ______ a decision before the end of the month.",
+    opzioni:["do","make","take up","bring"], corretta:1,
+    spiegazione:"In inglese si dice «make a decision»; «do» si usa con business, research, homework." },
+
+  { id:"ENG12", materia:"Inglese", testo:"There isn't ______ evidence to support that claim.",
+    opzioni:["many","a few","much","several"], corretta:2,
+    spiegazione:"«Evidence» è un sostantivo non numerabile: richiede much, little, a great deal of." },
+
+  { id:"ENG13", materia:"Inglese", testo:"The survey results are ______ than we expected.",
+    opzioni:["most encouraging","encouraginger","the more encouraging","more encouraging"], corretta:3,
+    spiegazione:"Comparativo di maggioranza di un aggettivo lungo: more + aggettivo + than." },
+
+  { id:"ENG14", materia:"Inglese", testo:"In marketing, «target audience» means:",
+    opzioni:["The specific group of people a message is intended to reach","The total population of a country","The people who produce the advertisement","The budget allocated to a campaign"], corretta:0,
+    spiegazione:"Il pubblico obiettivo è il gruppo definito a cui si rivolgono messaggio e mezzi scelti." },
+
+  { id:"ENG15", materia:"Inglese", testo:"«To raise awareness» of a brand means:",
+    opzioni:["To change its logo","To increase how well people know it","To increase its price","To reduce its advertising costs"], corretta:1,
+    spiegazione:"Brand awareness indica la notorietà della marca, cioè quanto il pubblico la conosce e la riconosce." },
+
+  { id:"ENG16", materia:"Inglese", testo:"The campaign was so successful ______ the company doubled its budget.",
+    opzioni:["as","for","that","than"], corretta:2,
+    spiegazione:"Costruzione «so + aggettivo + that» per esprimere la conseguenza." },
+
+  { id:"ENG17", materia:"Inglese", testo:"If the client ______ earlier, we would have changed the schedule.",
+    opzioni:["would call","has called","called","had called"], corretta:3,
+    spiegazione:"Periodo ipotetico di terzo tipo, riferito a un passato non modificabile: if + past perfect, would have + participio passato." },
+
+  { id:"ENG18", materia:"Inglese", testo:"A «deadline» is:",
+    opzioni:["The time by which something must be completed","A line of text in a headline","A cancelled project","A type of contract"], corretta:0,
+    spiegazione:"È il termine ultimo per la consegna; «to meet a deadline» significa rispettarlo, «to miss a deadline» non rispettarlo." },
+
+  { id:"ENG19", materia:"Inglese", testo:"The data ______ collected over three years.",
+    opzioni:["has","were","was being","is"], corretta:1,
+    spiegazione:"Nell'uso scientifico e formale «data» è plurale (singolare: datum), e regge il passivo «were collected»." },
+
+  { id:"ENG20", materia:"Inglese", testo:"Which sentence is correct?",
+    opzioni:["He suggested postpone the launch","He suggested to postpone the launch","He suggested postponing the launch","He suggested us to postpone the launch"], corretta:2,
+    spiegazione:"Il verbo «suggest» è seguito dalla forma in -ing oppure da una subordinata con that: «he suggested that we postpone the launch»." }
 
   ]
 }
