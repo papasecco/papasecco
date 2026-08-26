@@ -1,32 +1,54 @@
 /* ============================================================================
-   BANCHE DATI — Test di ammissione alla laurea magistrale
-   Comunicazione pubblica e d'impresa (COM, LM-59), Università degli Studi di Milano
+   BANCHE DATI — Prova di ammissione alla laurea magistrale
+   Comunicazione pubblica e d'impresa (COM, LM-59 R), Università degli Studi di Milano
+   Anno accademico 2026/2027 — bando Rep.Reg. 0011372/26 del 24/03/2026
 
-   Materie della prova (fonte: presentazione ufficiale del corso, ver. 04/23):
-     English language · Communication theory · Computer science ·
-     Marketing · Statistics · Current news
+   COME FUNZIONA LA PROVA (art. 5 del bando)
+     - 2 settembre 2026, ore 9:30, da remoto; in italiano o in inglese, a scelta.
+     - Questionario a risposta chiusa su: teoria della comunicazione, informatica,
+       marketing, statistica, attualità.
+     - Punteggio: +1 per ogni risposta esatta, 0 per ogni risposta errata o non data.
+       Nessuna penalità: conviene rispondere sempre.
+     - Pesi nella graduatoria: voto di laurea (o media esami) 40%, teoria della
+       comunicazione 25%, informatica 10%, marketing 10%, statistica 10%, attualità 5%.
+       Sul solo test i pesi valgono quindi 41,7% / 16,7% / 16,7% / 16,7% / 8,3%.
+     - In caso di parità precede chi ha il punteggio più alto nel test, poi il più giovane.
 
-   Le domande sono costruite sugli argomenti dei testi consigliati e, dove indicato
-   nel campo `fonte`, sui riassunti di Kotler, Balbi-Magaudda e Snyder-Henry.
+   L'INGLESE NON FA PARTE DELLA PROVA: il livello B2 è requisito d'accesso, verificato
+   con certificazione oppure con il test SLAM del 24 settembre 2026. Le domande di
+   inglese restano nella banca dati come allenamento, ma sono escluse dalle simulazioni.
 
-   Bibliografia consigliata dall'ateneo:
-     - Kotler, Armstrong, Principles of Marketing, Pearson (edizione recente)
-     - Balbi, Magaudda, A History of Digital Media, Routledge, 2018
-     - Snyder, Henry, Fluency with Information Technology, Pearson (7ª ed. o recente)
-     - Agresti, Finlay, Statistical Methods for the Social Sciences, Pearson
+   Testi indicati dal bando (edizione italiana):
+     - Kotler, Armstrong, Principi di marketing, Pearson (edizione recente)
+     - Balbi, Magaudda, Storia dei media digitali, Laterza, 2014
+     - Snyder, Henry, Amoroso, Fluency. Conoscere e usare l'informatica, Pearson, 7ª ed.
+     - Agresti, Finlay, Metodi statistici di base e avanzati per le scienze sociali, Pearson, 2020
+     - Attualità: lettura regolare dei quotidiani e dei media informativi
 
-   ATTENZIONE: durata, numero di domande, punteggio ed eventuale penalità qui sotto
-   sono un'ipotesi di lavoro. Vanno allineati all'avviso di ammissione dell'anno in
-   corso: si cambiano i numeri nel blocco `esame` e la simulazione si adegua.
-   Formato e istruzioni: vedi domande/MODELLO.md
+   Numero di domande e durata non sono indicati dal bando: i valori qui sotto sono una
+   scelta di allenamento e si possono cambiare liberamente.
+   Formato delle domande: vedi domande/MODELLO.md
    ========================================================================== */
 
 window.BANCHE = [
 {
   id: "com-unimi",
-  titolo: "COM Unimi — banca d'esame",
-  descrizione: "marketing, statistica, informatica, media digitali, teorie della comunicazione, inglese, attualità",
-  esame: { durataMinuti: 50, numeroDomande: 50, puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null },
+  titolo: "COM Unimi 2026/27 — banca d'esame",
+  descrizione: "teoria della comunicazione, informatica, marketing, statistica, attualità (più inglese per il test SLAM)",
+  esame: {
+    data: "2026-09-02T09:30",
+    durataMinuti: 50, numeroDomande: 50,
+    puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null,
+    // pesi ufficiali delle aree del test (art. 5 del bando)
+    pesi: {
+      "Teorie della comunicazione": 25,
+      "Informatica": 10,
+      "Marketing": 10,
+      "Statistica": 10,
+      "Attualità e istituzioni": 5
+    },
+    pesoTitolo: 40   // voto di laurea o media esami, fuori dal test
+  },
   domande: [
 
   /* ================= MARKETING (Kotler, Armstrong) ================= */
@@ -277,17 +299,17 @@ window.BANCHE = [
     spiegazione:"Per Marshall McLuhan il cambiamento sociale prodotto da un mezzo dipende dalla sua forma e dalla scala che introduce nelle relazioni umane, non dal contenuto veicolato.",
     fonte:"Teorie della comunicazione" },
 
-  { id:"COM10", materia:"Storia dei media digitali", testo:"Il World Wide Web fu ideato alla fine degli anni Ottanta al CERN di Ginevra da:",
+  { id:"COM10", materia:"Teorie della comunicazione", testo:"Il World Wide Web fu ideato alla fine degli anni Ottanta al CERN di Ginevra da:",
     opzioni:["Bill Gates","Tim Berners-Lee","Steve Jobs","Vinton Cerf"], corretta:1,
     spiegazione:"Tim Berners-Lee formulò la proposta nel 1989 e sviluppò HTTP, HTML e il primo browser: il Web è un servizio che gira su internet, non coincide con internet stessa.",
     fonte:"Balbi, Magaudda, A History of Digital Media" },
 
-  { id:"COM11", materia:"Storia dei media digitali", testo:"ARPANET, rete antenata di internet, entrò in funzione:",
+  { id:"COM11", materia:"Teorie della comunicazione", testo:"ARPANET, rete antenata di internet, entrò in funzione:",
     opzioni:["Nel 1995, con la nascita dei primi motori di ricerca","Nel 1948, negli studi dei Bell Labs","Nel 1969, in un progetto finanziato dal Dipartimento della Difesa statunitense","Nel 1989, al CERN"], corretta:2,
     spiegazione:"I primi collegamenti fra i nodi universitari di ARPANET risalgono al 1969; la commutazione di pacchetto e i protocolli TCP/IP sono le innovazioni che portano poi a internet.",
     fonte:"Balbi, Magaudda, A History of Digital Media" },
 
-  { id:"COM12", materia:"Storia dei media digitali", testo:"Nella prospettiva della «rimediazione» di Bolter e Grusin, i nuovi media:",
+  { id:"COM12", materia:"Teorie della comunicazione", testo:"Nella prospettiva della «rimediazione» di Bolter e Grusin, i nuovi media:",
     opzioni:["Nascono senza alcun rapporto con la tradizione mediale","Riguardano solo l'ambito artistico","Cancellano completamente i media precedenti","Rappresentano e rielaborano al proprio interno le forme dei media che li hanno preceduti"], corretta:3,
     spiegazione:"La rimediazione descrive il doppio movimento di immediatezza e ipermediazione con cui ogni nuovo medium incorpora e ridefinisce i linguaggi dei precedenti, invece di sostituirli in blocco.",
     fonte:"Balbi, Magaudda, A History of Digital Media" },
@@ -346,162 +368,162 @@ window.BANCHE = [
     opzioni:["La protezione dei dati personali nell'Unione europea","La tassazione delle imprese digitali","I diritti d'autore sulle opere musicali","La pubblicità comparativa"], corretta:0,
     spiegazione:"Il regolamento generale sulla protezione dei dati (UE 2016/679), applicabile dal 2018, disciplina il trattamento dei dati personali e i diritti degli interessati." },
 /* ---- Storia dei media digitali (Balbi, Magaudda) — dagli appunti ---- */
-  { id:"MED01", materia:"Storia dei media digitali", testo:"Secondo Balbi e Magaudda, i tre media digitali centrali attorno a cui si costruisce la storia del digitale sono:",
+  { id:"MED01", materia:"Teorie della comunicazione", testo:"Secondo Balbi e Magaudda, i tre media digitali centrali attorno a cui si costruisce la storia del digitale sono:",
     opzioni:["Televisione, radio e stampa","Computer, internet e telefono mobile","Cinema, fotografia e musica","Telegrafo, telefono e satellite"], corretta:1,
     spiegazione:"L'introduzione del volume individua computer, internet e telefono mobile come i tre dispositivi attorno ai quali ricostruire una storia globale dei media digitali.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — Introduzione" },
 
-  { id:"MED02", materia:"Storia dei media digitali", testo:"I due elementi fondamentali con cui gli autori definiscono il digitale sono:",
+  { id:"MED02", materia:"Teorie della comunicazione", testo:"I due elementi fondamentali con cui gli autori definiscono il digitale sono:",
     opzioni:["Analogico e discontinuo","Hardware e software","Numerizzazione e binarizzazione","Convergenza e globalizzazione"], corretta:2,
     spiegazione:"La numerizzazione converte in cifre contenuti prima espressi in linguaggi diversi; la binarizzazione li codifica in un unico linguaggio, rendendo la trasmissione indipendente dal tipo di contenuto.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
 
-  { id:"MED03", materia:"Storia dei media digitali", testo:"Le tre matrici teoriche con cui il volume legge lo sviluppo dei media digitali sono:",
+  { id:"MED03", materia:"Teorie della comunicazione", testo:"Le tre matrici teoriche con cui il volume legge lo sviluppo dei media digitali sono:",
     opzioni:["Psicologia, pedagogia e sociologia","Storia dell'arte, estetica e filosofia","Semiotica, retorica e linguistica","Political economy of communication, cultural studies e science and technology studies"], corretta:3,
     spiegazione:"Politica ed economia, cultura e scienza e tecnologia sono i tre sguardi disciplinari con cui gli autori spiegano la costruzione sociale dei media digitali.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — Introduzione" },
 
-  { id:"MED04", materia:"Storia dei media digitali", testo:"Quale delle seguenti NON è una delle idee di società che hanno anticipato la società digitale secondo il volume?",
+  { id:"MED04", materia:"Teorie della comunicazione", testo:"Quale delle seguenti NON è una delle idee di società che hanno anticipato la società digitale secondo il volume?",
     opzioni:["Società disciplinare","Società delle reti (network society)","Società dell'informazione","Società post-industriale"], corretta:0,
     spiegazione:"Le cinque idee elencate sono: società dell'informazione, post-industriale, convergente, post-moderna e società delle reti. La «società disciplinare» appartiene ad altro filone teorico.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
 
-  { id:"MED05", materia:"Storia dei media digitali", testo:"Il passaggio da un'economia fondata sulla produzione di beni a una fondata sui servizi, con al centro lavoratori cognitivi e conoscenza teorica, definisce l'idea di:",
+  { id:"MED05", materia:"Teorie della comunicazione", testo:"Il passaggio da un'economia fondata sulla produzione di beni a una fondata sui servizi, con al centro lavoratori cognitivi e conoscenza teorica, definisce l'idea di:",
     opzioni:["Società dell'informazione","Società post-industriale","Società convergente","Società post-moderna"], corretta:1,
     spiegazione:"La società post-industriale condivide con quella digitale la dimensione immateriale dei servizi e la centralità del computer come strumento di lavoro.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
 
-  { id:"MED06", materia:"Storia dei media digitali", testo:"Le due teorie post-belliche che hanno fatto da innesco all'evoluzione della comunicazione digitale sono:",
+  { id:"MED06", materia:"Teorie della comunicazione", testo:"Le due teorie post-belliche che hanno fatto da innesco all'evoluzione della comunicazione digitale sono:",
     opzioni:["La semiotica di Eco e lo strutturalismo di Lévi-Strauss","La teoria ipodermica e l'agenda setting","La cibernetica di Wiener e la teoria dell'informazione di Shannon","Il funzionalismo di Parsons e la teoria critica di Adorno"], corretta:2,
     spiegazione:"Entrambe elaborate a partire dalle comunicazioni telefoniche, cibernetica e teoria dell'informazione diventano il riferimento dei media studies e fanno della comunicazione una dimensione cruciale del dopoguerra.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
 
-  { id:"MED07", materia:"Storia dei media digitali", testo:"Nel 1936 Alan Turing dà un contributo decisivo alla nascita del computer perché:",
+  { id:"MED07", materia:"Teorie della comunicazione", testo:"Nel 1936 Alan Turing dà un contributo decisivo alla nascita del computer perché:",
     opzioni:["Inventa il microprocessore","Fonda la prima azienda di software","Costruisce il primo personal computer","Adatta i principi della logica matematica a una macchina automatica governata da un linguaggio binario"], corretta:3,
     spiegazione:"La macchina di Turing è il fondamento logico di tutti i successivi calcolatori digitali: una macchina programmabile capace di operazioni complesse a partire da un linguaggio adattabile.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED08", materia:"Storia dei media digitali", testo:"L'ENIAC, completato nel 1945, era:",
+  { id:"MED08", materia:"Teorie della comunicazione", testo:"L'ENIAC, completato nel 1945, era:",
     opzioni:["Il primo mainframe, sviluppato per scopi militari","Il primo computer dotato di interfaccia grafica","Il primo calcolatore commercializzato in Europa","Il primo personal computer domestico"], corretta:0,
     spiegazione:"Pesava circa tremila chili e fu impiegato per calcoli militari, fra cui quelli per la bomba all'idrogeno: riflette un'informatica maschile e militare, in cui il contributo delle donne non fu riconosciuto.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED09", materia:"Storia dei media digitali", testo:"Che cosa rese celebre l'UNIVAC nel 1952?",
+  { id:"MED09", materia:"Teorie della comunicazione", testo:"Che cosa rese celebre l'UNIVAC nel 1952?",
     opzioni:["Fu il primo a collegarsi ad ARPANET","Fu usato per calcolare le previsioni delle elezioni presidenziali vinte da Eisenhower","Fu il primo computer con mouse","Fu il primo computer venduto in kit di montaggio"], corretta:1,
     spiegazione:"Primo mainframe uscito dagli ambienti militari, l'UNIVAC fu usato dall'ufficio del censimento americano e poi per le previsioni elettorali: fu quest'ultimo impiego a renderlo popolare.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED10", materia:"Storia dei media digitali", testo:"Il time-sharing viene descritto dagli autori come una «innovazione conservativa» perché:",
+  { id:"MED10", materia:"Teorie della comunicazione", testo:"Il time-sharing viene descritto dagli autori come una «innovazione conservativa» perché:",
     opzioni:["Fu adottato soltanto da amministrazioni pubbliche conservatrici","Riproduceva il funzionamento del telegrafo","Fu concepito per sfruttare meglio i mainframe esistenti, e solo involontariamente aprì la strada all'idea di computer individuale","Impedì per anni lo sviluppo di nuovi calcolatori"], corretta:2,
     spiegazione:"Frazionando la capacità di calcolo fra più terminali, il time-sharing nacque per supportare il mainframe; di fatto rese però pensabile il computer come strumento personale e di comunicazione.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED11", materia:"Storia dei media digitali", testo:"La legge di Moore, formulata nel 1965, prevede che:",
+  { id:"MED11", materia:"Teorie della comunicazione", testo:"La legge di Moore, formulata nel 1965, prevede che:",
     opzioni:["Il costo dei computer resti stabile per decenni","Ogni medium ne rimedi un altro","Il numero di utenti di una rete cresca con il quadrato dei nodi","La potenza dei microprocessori cresca costantemente nel tempo"], corretta:3,
     spiegazione:"L'enunciato di Gordon Moore sulla crescita continua della potenza dei microprocessori è diventato il riferimento simbolico dell'accelerazione tecnologica del digitale.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED12", materia:"Storia dei media digitali", testo:"Lo Xerox Alto (1973) è ricordato per aver introdotto:",
+  { id:"MED12", materia:"Teorie della comunicazione", testo:"Lo Xerox Alto (1973) è ricordato per aver introdotto:",
     opzioni:["Il mouse e l'interfaccia grafica basata su scrivania e cartelle","Il primo microprocessore","Il primo modem domestico","Il sistema operativo MS-DOS"], corretta:0,
     spiegazione:"Le due innovazioni dell'Alto — mouse e interfaccia grafica GUI — sono alla base del successivo successo di Apple e Microsoft: il Macintosh del 1984 vi si ispira apertamente.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED13", materia:"Storia dei media digitali", testo:"Il «dilemma dell'innovatore», richiamato a proposito del rifiuto opposto da Hewlett-Packard al prototipo di Wozniak, indica:",
+  { id:"MED13", materia:"Teorie della comunicazione", testo:"Il «dilemma dell'innovatore», richiamato a proposito del rifiuto opposto da Hewlett-Packard al prototipo di Wozniak, indica:",
     opzioni:["La difficoltà tecnica di miniaturizzare i circuiti","La reticenza delle imprese affermate a sostenere tecnologie che rivoluzionerebbero il loro stesso mercato","L'incapacità degli hacker di fare impresa","Il conflitto fra software libero e proprietario"], corretta:1,
     spiegazione:"Le grandi aziende informatiche non colsero il potenziale del computer individuale proprio perché avrebbe eroso il loro mercato: lo spazio fu occupato da nuove imprese come Apple e Commodore.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED14", materia:"Storia dei media digitali", testo:"Che ruolo ebbero l'Homebrew Computer Club e le controculture californiane nella storia del personal computer?",
+  { id:"MED14", materia:"Teorie della comunicazione", testo:"Che ruolo ebbero l'Homebrew Computer Club e le controculture californiane nella storia del personal computer?",
     opzioni:["Finanziarono la ricerca militare su ARPANET","Nessuno: il pc nacque solo dentro i laboratori aziendali","Diedero al computer un significato sociale e politico, legandolo a condivisione e diritti civili","Si opposero alla diffusione dei computer individuali"], corretta:2,
     spiegazione:"Gli autori sottolineano che le tecnologie senza un ruolo sociale falliscono: furono hobbisti, hacker e attivisti a rendere il pc uno strumento personale di emancipazione.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED15", materia:"Storia dei media digitali", testo:"La celebre pubblicità del Macintosh trasmessa durante il Super Bowl del 1984:",
+  { id:"MED15", materia:"Teorie della comunicazione", testo:"La celebre pubblicità del Macintosh trasmessa durante il Super Bowl del 1984:",
     opzioni:["Mostrava il primo collegamento a internet","Era rivolta esclusivamente alle imprese","Fu ritirata prima della messa in onda","Si ispirava al romanzo 1984 di Orwell e identificava IBM con il Grande Fratello"], corretta:3,
     spiegazione:"Lo spot segna una svolta culturale prima ancora che tecnica: Apple si presenta come sfidante della posizione dominante di IBM e il pc entra nell'immaginario di massa.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
 
-  { id:"MED16", materia:"Storia dei media digitali", testo:"Che cos'è la commutazione di pacchetto (packet switching) alla base di ARPANET?",
+  { id:"MED16", materia:"Teorie della comunicazione", testo:"Che cos'è la commutazione di pacchetto (packet switching) alla base di ARPANET?",
     opzioni:["Una tecnica che spezza il messaggio in pacchetti instradati per vie diverse e ricomposti a destinazione","Un protocollo di cifratura dei dati militari","Un metodo per assegnare i nomi di dominio","Un sistema che invia il messaggio come unità unica lungo un percorso fisso"], corretta:0,
     spiegazione:"Insieme all'assenza di un centro di comando, la commutazione di pacchetto garantisce che la rete resti funzionante anche se un nodo viene danneggiato: è tuttora la principale modalità di trasferimento dei dati.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED17", materia:"Storia dei media digitali", testo:"L'ARPA fu fondata nel 1958 dall'amministrazione Eisenhower come reazione a:",
+  { id:"MED17", materia:"Teorie della comunicazione", testo:"L'ARPA fu fondata nel 1958 dall'amministrazione Eisenhower come reazione a:",
     opzioni:["La caduta del muro di Berlino","Il lancio sovietico dello Sputnik 1","La crisi di Cuba","La guerra del Vietnam"], corretta:1,
     spiegazione:"Il satellite sovietico del 1957 fece percepire agli Stati Uniti un ritardo tecnologico: l'ARPA nacque per finanziare ricerca scientifica e tecnologica, e da lì passò alla comunicazione fra calcolatori.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED18", materia:"Storia dei media digitali", testo:"Nella periodizzazione proposta dagli autori, le sei ere di internet sono, nell'ordine:",
+  { id:"MED18", materia:"Teorie della comunicazione", testo:"Nella periodizzazione proposta dagli autori, le sei ere di internet sono, nell'ordine:",
     opzioni:["Accademica, militare, industriale, commerciale, sociale, mobile","Militare, industriale, commerciale, pubblica, sociale, mobile","Militare, accademico-scientifica, controculturale, servizio pubblico, commerciale, sociale","Commerciale, militare, sociale, accademica, pubblica, globale"], corretta:2,
     spiegazione:"Ogni era corrisponde a un gruppo sociale che ha dato forma alla rete: militari, accademici, controculture, servizio pubblico europeo, imprese e infine gli utenti del web 2.0.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED19", materia:"Storia dei media digitali", testo:"Nel protocollo TCP/IP, adottato dalla comunità scientifica alla fine degli anni Settanta:",
+  { id:"MED19", materia:"Teorie della comunicazione", testo:"Nel protocollo TCP/IP, adottato dalla comunità scientifica alla fine degli anni Settanta:",
     opzioni:["TCP cifra i dati e IP li comprime","TCP serve alle reti telefoniche e IP a quelle satellitari","TCP e IP sono due nomi dello stesso protocollo","TCP gestisce il flusso di informazioni fra i nodi e IP assegna a ciascun terminale un indirizzo univoco"], corretta:3,
     spiegazione:"È l'innovazione che rende internet una «rete di reti»: consente di integrare macchine e network eterogenei in un'architettura centrifuga, senza nodi gerarchicamente superiori.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED20", materia:"Storia dei media digitali", testo:"La «guerra degli standard» degli anni Settanta e Ottanta contrappose:",
+  { id:"MED20", materia:"Teorie della comunicazione", testo:"La «guerra degli standard» degli anni Settanta e Ottanta contrappose:",
     opzioni:["Il modello centrifugo telematico TCP/IP al modello centripeto telefonico X.25","Windows e Macintosh","VHS e Betamax","GSM e CDMA"], corretta:0,
     spiegazione:"Le compagnie telefoniche difendevano un'architettura centripeta, ritenuta più affidabile; la comunità accademica sosteneva una rete distribuita, con l'intelligenza ai margini (principio end-to-end).",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED21", materia:"Storia dei media digitali", testo:"Nel 1993 il CERN prese una decisione determinante per la diffusione del World Wide Web:",
+  { id:"MED21", materia:"Teorie della comunicazione", testo:"Nel 1993 il CERN prese una decisione determinante per la diffusione del World Wide Web:",
     opzioni:["Lo brevettò a livello internazionale","Lo cedette gratuitamente alla comunità mondiale","Ne vendette i diritti a Netscape","Ne limitò l'uso agli istituti di ricerca"], corretta:1,
     spiegazione:"La cessione gratuita permise a chiunque di usarlo e migliorarlo, e fondò l'idea del web come accesso libero all'informazione e servizio pubblico.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED22", materia:"Storia dei media digitali", testo:"Perché il 1995 è considerato un anno spartiacque per internet?",
+  { id:"MED22", materia:"Teorie della comunicazione", testo:"Perché il 1995 è considerato un anno spartiacque per internet?",
     opzioni:["Perché viene introdotto il protocollo TCP/IP","Perché nasce il primo social network","Perché la National Science Foundation cede la dorsale accademica ai privati e Netscape si quota in borsa","Perché viene chiusa definitivamente ARPANET"], corretta:2,
     spiegazione:"I due eventi segnano la fine del controllo diretto del governo americano sulla rete e l'inizio della corsa delle società dot-com, che porterà alla bolla speculativa esplosa nel 2001.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED23", materia:"Storia dei media digitali", testo:"Il fenomeno della «participation inequality» nel web 2.0 indica che:",
+  { id:"MED23", materia:"Teorie della comunicazione", testo:"Il fenomeno della «participation inequality» nel web 2.0 indica che:",
     opzioni:["Tutti gli utenti producono la stessa quantità di contenuti","Solo i giornalisti professionisti possono pubblicare","La partecipazione è distribuita equamente fra i paesi","Circa il 90% degli utenti fruisce passivamente, il 9% partecipa moderatamente e solo l'1% intensivamente"], corretta:3,
     spiegazione:"La figura del prosumer, che produce e consuma insieme, resta dunque una nicchia; al fenomeno si affianca lo slacktivism, la partecipazione pigra e superficiale.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED24", materia:"Storia dei media digitali", testo:"Il caso francese del Minitel dimostra soprattutto che:",
+  { id:"MED24", materia:"Teorie della comunicazione", testo:"Il caso francese del Minitel dimostra soprattutto che:",
     opzioni:["Soluzioni tecnologiche semplici e conservative possono avere grande successo se sostenute dalla political economy nazionale","Le reti pubbliche falliscono sempre","Gli utenti non modificano mai l'uso previsto di un medium","Solo le tecnologie più avanzate hanno successo"], corretta:0,
     spiegazione:"Distribuito gratuitamente da France Télécom dal 1982 e chiuso solo nel 2012, il Minitel era progettato per una comunicazione verticale, ma furono gli utenti a privilegiarne l'uso orizzontale, lo scambio di messaggi.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
 
-  { id:"MED25", materia:"Storia dei media digitali", testo:"Il concetto di «doppia nascita» (double birth) applicato al telefono mobile significa che:",
+  { id:"MED25", materia:"Teorie della comunicazione", testo:"Il concetto di «doppia nascita» (double birth) applicato al telefono mobile significa che:",
     opzioni:["La rete mobile si sviluppa in due paesi alla volta","Una tecnologia può nascere più di una volta, con usi e valenze sociali molto diversi","Il telefono fu brevettato contemporaneamente da due inventori","Ogni telefono ha una versione analogica e una digitale"], corretta:1,
     spiegazione:"Il radiotelefono militare e da taxi e il telefono cellulare degli anni Settanta e Ottanta sono due nascite distinte dello stesso mezzo, con pubblici, reti e significati sociali differenti.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
 
-  { id:"MED26", materia:"Storia dei media digitali", testo:"Perché lo standard GSM viene introdotto in Europa nel 1992?",
+  { id:"MED26", materia:"Teorie della comunicazione", testo:"Perché lo standard GSM viene introdotto in Europa nel 1992?",
     opzioni:["Per imitare lo standard statunitense","Per iniziativa di una singola azienda italiana","Per ragioni politiche, economiche e tecno-sociali convergenti, fra cui l'idea di un'Europa unita delle comunicazioni e la spinta dei produttori a uno standard unico","Solo per ragioni militari"], corretta:2,
     spiegazione:"Prima del GSM le reti europee erano incompatibili fra loro (tranne quelle scandinave, con lo standard NMT). Lo standard unico portò roaming, SIM card e la leadership di aziende come Nokia ed Ericsson.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
 
-  { id:"MED27", materia:"Storia dei media digitali", testo:"Gli SMS sono definiti la «killer application» del telefono mobile perché:",
+  { id:"MED27", materia:"Teorie della comunicazione", testo:"Gli SMS sono definiti la «killer application» del telefono mobile perché:",
     opzioni:["Sostituirono completamente le chiamate vocali","Furono imposti per legge in Europa","Furono progettati fin dall'inizio come servizio di massa fra abbonati","Nati come canale di servizio fra compagnia e utenti, furono gli utenti a trasformarli in comunicazione orizzontale fra abbonati"], corretta:3,
     spiegazione:"Gli SMS sfruttavano un canale di banda inutilizzato durante le chiamate ed erano pensati per comunicazioni di servizio: l'uso sociale li ha reinventati, come mostra il caso filippino delle proteste del 2001.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
 
-  { id:"MED28", materia:"Storia dei media digitali", testo:"Napster, lanciato nel 1999, ebbe un impatto storico perché:",
+  { id:"MED28", materia:"Teorie della comunicazione", testo:"Napster, lanciato nel 1999, ebbe un impatto storico perché:",
     opzioni:["Introdusse il modello peer-to-peer di condivisione dei file fra utenti","Inventò il formato mp3","Fu la prima piattaforma di streaming in abbonamento","Fu il primo negozio legale di musica online"], corretta:0,
     spiegazione:"Il file sharing peer-to-peer scardinò la distribuzione tradizionale fondata su negozi e supporti fisici; la chiusura per violazione del copyright rese l'mp3 un fenomeno socio-culturale.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
 
-  { id:"MED29", materia:"Storia dei media digitali", testo:"Il formato mp3, il cui standard è rilasciato nel 1995, nacque:",
+  { id:"MED29", materia:"Teorie della comunicazione", testo:"Il formato mp3, il cui standard è rilasciato nel 1995, nacque:",
     opzioni:["Su iniziativa delle major discografiche per contrastare la pirateria","In ambiti estranei all'industria musicale, per le esigenze del broadcasting e dell'informatica","Come formato interno di Apple per iTunes","Come evoluzione tecnica del compact disc"], corretta:1,
     spiegazione:"Le major all'inizio rifiutarono l'mp3 temendo la pirateria: il formato si diffuse grazie a progetti amatoriali e servizi online indipendenti.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
 
-  { id:"MED30", materia:"Storia dei media digitali", testo:"Nella storia della digitalizzazione della fotografia, il caso Kodak è esemplare perché:",
+  { id:"MED30", materia:"Teorie della comunicazione", testo:"Nella storia della digitalizzazione della fotografia, il caso Kodak è esemplare perché:",
     opzioni:["Rifiutò di produrre pellicole a colori","Acquistò Instagram nel 2012","Pur avendo realizzato nel 1975 un primo prototipo digitale, l'azienda restò legata alla stampa fotografica e finì per fallire","Fu la prima a produrre reflex digitali di successo"], corretta:2,
     spiegazione:"È un caso classico di impresa dominante che non compie la transizione tecnologica: il mercato digitale fu conquistato da Canon e Nikon.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
 
-  { id:"MED31", materia:"Storia dei media digitali", testo:"Il podcasting viene descritto come innovazione rilevante per la radio perché:",
+  { id:"MED31", materia:"Teorie della comunicazione", testo:"Il podcasting viene descritto come innovazione rilevante per la radio perché:",
     opzioni:["Ha sostituito la radio analogica in tutta Europa","Ha reso obbligatorio lo standard DAB","Ha aumentato la potenza dei trasmettitori","Ha introdotto una fruizione asincrona che rompe la logica del palinsesto"], corretta:3,
     spiegazione:"Nato dall'intreccio fra radio e rete, il podcast svincola l'ascolto dal flusso e dall'orario di trasmissione, cioè dal palinsesto che definiva il medium radiofonico.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
 
-  { id:"MED32", materia:"Storia dei media digitali", testo:"La tesi di fondo del volume sul rapporto fra digitale e passato è che:",
+  { id:"MED32", materia:"Teorie della comunicazione", testo:"La tesi di fondo del volume sul rapporto fra digitale e passato è che:",
     opzioni:["Rivoluzione e continuità si alternano e si ridefiniscono reciprocamente nel tempo","Il digitale è un fenomeno lineare e uniforme in tutto il mondo","I media analogici sono destinati a scomparire rapidamente","Il digitale ha azzerato ogni continuità con i media precedenti"], corretta:0,
     spiegazione:"Il sottotitolo stesso — «rivoluzioni e continuità» — indica che la digitalizzazione non è né lineare né coerente: è ambivalente, con ritmi diversi nel tempo e nello spazio.",
     fonte:"Balbi, Magaudda, Storia dei media digitali — Conclusione" },
@@ -1023,7 +1045,124 @@ window.BANCHE = [
 
   { id:"ENG20", materia:"Inglese", testo:"Which sentence is correct?",
     opzioni:["He suggested postpone the launch","He suggested to postpone the launch","He suggested postponing the launch","He suggested us to postpone the launch"], corretta:2,
-    spiegazione:"Il verbo «suggest» è seguito dalla forma in -ing oppure da una subordinata con that: «he suggested that we postpone the launch»." }
+    spiegazione:"Il verbo «suggest» è seguito dalla forma in -ing oppure da una subordinata con that: «he suggested that we postpone the launch»." },
+/* ---- Teorie della comunicazione — integrazione (area al 25% del bando) ---- */
+  { id:"COM13", materia:"Teorie della comunicazione", testo:"Il concetto di «digital divide» indica:",
+    opzioni:["La distinzione fra hardware e software","Il passaggio dall'analogico al digitale","La separazione fra reti pubbliche e private","La disparità nell'accesso e nell'uso delle tecnologie digitali fra aree geografiche e gruppi sociali"], corretta:3,
+    spiegazione:"Balbi e Magaudda osservano che la diffusione del digitale è stata globale ma ha amplificato disuguaglianze preesistenti, invece di annullarle.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"COM14", materia:"Teorie della comunicazione", testo:"Con l'espressione «ontofania digitale», ripresa da Stéphane Vial, si indica:",
+    opzioni:["Il modo in cui l'universo digitale si manifesta e condiziona l'esperienza e la percezione del mondo contemporaneo","La nascita del primo computer","La teoria matematica dell'informazione","Il processo di conversione dei contenuti in cifre"], corretta:0,
+    spiegazione:"Il digitale non è solo un insieme di strumenti: struttura il modo in cui percepiamo la realtà, ed è per questo un centro di interessi culturali, politici ed economici.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"COM15", materia:"Teorie della comunicazione", testo:"Il concetto di «autostrade dell'informazione», al centro dei programmi politici dei primi anni Novanta:",
+    opzioni:["Nacque in Giappone negli anni Settanta","Indicava la rete delle reti come infrastruttura strategica per sviluppo economico e accesso universale ai servizi","Riguardava esclusivamente il trasporto merci","Fu proposto dalle sole aziende private"], corretta:1,
+    spiegazione:"Nel 1993 gli Stati Uniti lanciano la National Information Infrastructure e l'Unione europea il libro bianco «Crescita, competitività, occupazione», seguito dal rapporto Bangemann.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"COM16", materia:"Teorie della comunicazione", testo:"Secondo l'approccio della costruzione sociale della tecnologia, sostenuto dagli autori:",
+    opzioni:["La società non ha alcuna influenza sullo sviluppo tecnico","Le tecnologie evolvono in modo lineare e prevedibile","Tecnologie e società si modellano a vicenda, in un processo di co-costruzione","La tecnologia determina in modo unilaterale i cambiamenti sociali"], corretta:2,
+    spiegazione:"È la posizione opposta al determinismo tecnologico: nel processo intervengono elementi politici, economici, culturali e scientifici, e il ruolo degli utilizzatori è decisivo.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — Introduzione" },
+
+  { id:"COM17", materia:"Teorie della comunicazione", testo:"La «convergenza» dei media indica:",
+    opzioni:["La fusione fra due emittenti televisive","L'uniformarsi dei gusti del pubblico","La riduzione del numero di quotidiani","L'unificazione, resa possibile dalla digitalizzazione, fra contenuti editoriali, telecomunicazioni e informatica"], corretta:3,
+    spiegazione:"La digitalizzazione di contenuti, dispositivi e reti fa cadere i confini fra settori un tempo separati: è una delle cinque idee di società che hanno anticipato quella digitale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 1" },
+
+  { id:"COM18", materia:"Teorie della comunicazione", testo:"Il termine «prosumer», centrale nel web 2.0, indica:",
+    opzioni:["L'utente che è insieme produttore e consumatore di contenuti","Il consumatore professionale di tecnologia","Chi acquista solo prodotti digitali","Il produttore di software proprietario"], corretta:0,
+    spiegazione:"I contenuti generati dagli utenti diventano il cuore del web sociale; la participation inequality mostra però che i prosumer attivi restano una nicchia.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"COM19", materia:"Teorie della comunicazione", testo:"Che cosa distingue Wikipedia dal precedente progetto Encarta di Microsoft?",
+    opzioni:["Non c'è differenza nel modello editoriale","Wikipedia è orizzontale e aperta alle modifiche degli utenti, Encarta seguiva il modello dell'enciclopedia tradizionale con contenuti di esperti","Wikipedia è a pagamento, Encarta era gratuita","Encarta era scritta dagli utenti"], corretta:1,
+    spiegazione:"È l'esempio più citato di intelligenza collettiva: contenuti flessibili, modificabili in tempo reale e senza un meccanismo centrale di produzione.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"COM20", materia:"Teorie della comunicazione", testo:"Nel movimento del software libero e open source, il principio fondamentale è:",
+    opzioni:["La vendita del software a prezzo calmierato","L'uso del software solo in ambito accademico","Il lavoro collettivo di programmatori e attivisti per rendere l'informatica libera e condivisa","La protezione brevettuale del codice"], corretta:2,
+    spiegazione:"Linux non ha conquistato il desktop, ma è alla base di supercomputer, dispositivi portatili e di Android: la cultura hacker della condivisione ha attraversato tutta la storia del digitale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 2" },
+
+  { id:"COM21", materia:"Teorie della comunicazione", testo:"Il fallimento del WAP in Occidente alla fine degli anni Novanta si spiega soprattutto con:",
+    opzioni:["L'assenza di telefoni cellulari sul mercato","Il divieto imposto dai governi europei","La mancanza di operatori interessati","Scarsa usabilità, lentezza, costi elevati e servizi limitati, mentre il pc si affermava come standard per la navigazione"], corretta:3,
+    spiegazione:"In Giappone lo stesso tipo di servizio ebbe grande successo grazie a uno standard più adatto alla rete: la stessa tecnologia produce esiti diversi in contesti socio-culturali diversi.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
+
+  { id:"COM22", materia:"Teorie della comunicazione", testo:"L'iPhone (2007) segna una svolta soprattutto perché:",
+    opzioni:["Introduce lo schermo multi-touch, rendendo il tatto centrale nell'interazione, e avvicina il telefono alla logica del computer","È il primo telefono cellulare al mondo","È il primo telefono con fotocamera","Introduce lo standard GSM"], corretta:0,
+    spiegazione:"Insieme a iOS e ad Android, nato in casa Google su base Linux, trasforma il telefono in una piattaforma di applicazioni e nel principale accesso alla rete per le generazioni più giovani.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 4" },
+
+  { id:"COM23", materia:"Teorie della comunicazione", testo:"Nella storia della digitalizzazione della musica, il compact disc:",
+    opzioni:["Non ebbe alcun impatto sul mercato","Nasce alla fine degli anni Settanta su impulso di Sony e Philips e porta il digitale nel consumo musicale prima di mp3 e streaming","È successivo alla diffusione dell'mp3","Fu introdotto da Apple"], corretta:1,
+    spiegazione:"Il CD digitalizza il supporto ma non la distribuzione: sono mp3, iPod e file sharing, nei primi anni Duemila, a riconfigurare l'intero settore.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"COM24", materia:"Teorie della comunicazione", testo:"L'ipertesto, reso possibile dal linguaggio HTML, si caratterizza per:",
+    opzioni:["L'assenza di testo scritto","La sola presenza di immagini","Una lettura non lineare, costruita dal fruitore attraverso i collegamenti, senza inizio e fine prestabiliti","Una struttura rigidamente sequenziale"], corretta:2,
+    spiegazione:"Con la pubblicazione gratuita e immediata, è una delle due grandi trasformazioni della scrittura negli anni Novanta: l'utente comune diventa potenziale produttore di testi.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"COM25", materia:"Teorie della comunicazione", testo:"Il «citizen journalism» indica:",
+    opzioni:["Il giornalismo praticato solo da professionisti iscritti all'albo","La cronaca locale dei quotidiani","Il servizio pubblico radiotelevisivo","Il coinvolgimento dei cittadini nella produzione e diffusione delle notizie"], corretta:3,
+    spiegazione:"La circolazione in rete moltiplica canali e fonti e mette in discussione le gerarchie della stampa tradizionale, contribuendo alla crisi economica della stampa periodica occidentale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"COM26", materia:"Teorie della comunicazione", testo:"Il confronto fra Netflix e Blockbuster è citato come esempio di:",
+    opzioni:["Impresa che adatta il proprio modello alla distribuzione digitale contro impresa che non compie la transizione e fallisce","Fusione fra due grandi gruppi mediali","Fallimento della distribuzione digitale","Intervento pubblico nel settore audiovisivo"], corretta:0,
+    spiegazione:"Netflix nasce nel 1999 come noleggio di dvd per posta e diventa piattaforma di streaming; Blockbuster, legato ai punti vendita fisici, fallisce nel 2010.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"COM27", materia:"Teorie della comunicazione", testo:"Perché la digitalizzazione della radio (DAB) ha avuto meno successo di quella televisiva?",
+    opzioni:["Perché l'Unione europea non l'ha mai finanziata","Per ragioni politico-economiche, tecniche e culturali: la radio ha un ruolo più periferico e offre meno vantaggi percepiti rispetto alla tv digitale","Perché la radio analogica era già digitale","Perché mancavano le frequenze"], corretta:1,
+    spiegazione:"Il progetto europeo Eureka-147 nasce già negli anni Ottanta, ma la transizione resta frammentaria; è invece la rete a rilanciare l'ascolto, con web radio e podcast.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 5" },
+
+  { id:"COM28", materia:"Teorie della comunicazione", testo:"Il controllo cinese della rete, con il Golden Shield e il «partito dei 50 centesimi», dimostra che:",
+    opzioni:["Il filtraggio dei contenuti è tecnicamente impossibile","Le piattaforme private sono immuni dalle pressioni statali","La rete non è per natura libera o democratica: le sue caratteristiche dipendono da usi politici, interessi economici e vincoli tecnici","Internet non può essere controllata dai governi"], corretta:2,
+    spiegazione:"Il controllo passa soprattutto dagli intermediari — provider, motori di ricerca, moderatori — e smentisce l'idea di un'internet uniforme e globale.",
+    fonte:"Balbi, Magaudda, Storia dei media digitali — cap. 3" },
+
+  { id:"COM29", materia:"Teorie della comunicazione", testo:"Il gatekeeping, nella sociologia della comunicazione, indica:",
+    opzioni:["La censura esercitata dai governi","La difesa tecnica dell'accesso a una rete","La fidelizzazione del pubblico televisivo","Il processo di selezione con cui redazioni e professionisti decidono quali notizie passano e quali no"], corretta:3,
+    spiegazione:"Studiato da Kurt Lewin e applicato al giornalismo da David Manning White, descrive i «cancelli» lungo il flusso dell'informazione; nel web sociale il ruolo si sposta anche su piattaforme e algoritmi." },
+
+  { id:"COM30", materia:"Teorie della comunicazione", testo:"Il concetto di «framing» applicato all'informazione indica:",
+    opzioni:["La selezione di alcuni aspetti della realtà e la loro messa in rilievo, che orienta l'interpretazione di un fatto","La quantità di spazio dedicato a una notizia","Il formato tecnico di un'immagine","La successione delle notizie in un telegiornale"], corretta:0,
+    spiegazione:"Mentre l'agenda setting riguarda quali temi diventano rilevanti, il framing riguarda il modo in cui vengono inquadrati: stessa notizia, cornici interpretative diverse." },
+
+  /* ---- Attualità e istituzioni — integrazione ---- */
+  { id:"ATT06", materia:"Attualità e istituzioni", testo:"L'AGCOM è:",
+    opzioni:["Un organo del Ministero dell'Interno","L'Autorità per le garanzie nelle comunicazioni, che vigila su telecomunicazioni, media e servizi digitali","Un'agenzia europea con sede a Bruxelles","L'associazione delle imprese di comunicazione"], corretta:1,
+    spiegazione:"È un'autorità amministrativa indipendente: garantisce pluralismo, concorrenza e tutela degli utenti nel sistema delle comunicazioni." },
+
+  { id:"ATT07", materia:"Attualità e istituzioni", testo:"Il Parlamento europeo:",
+    opzioni:["È nominato dalla Commissione europea","Si rinnova ogni anno","È eletto a suffragio universale diretto dai cittadini dell'Unione ogni cinque anni","È composto dai capi di Stato e di governo"], corretta:2,
+    spiegazione:"Insieme al Consiglio dell'Unione esercita la funzione legislativa e approva il bilancio; è l'unica istituzione dell'UE eletta direttamente dai cittadini." },
+
+  { id:"ATT08", materia:"Attualità e istituzioni", testo:"L'obiettivo principale della Banca centrale europea è:",
+    opzioni:["Finanziare direttamente i bilanci degli Stati","Fissare il livello dei salari","Gestire il debito pubblico dei paesi membri","Mantenere la stabilità dei prezzi nell'area euro"], corretta:3,
+    spiegazione:"La BCE persegue un tasso d'inflazione del 2% nel medio periodo, agendo soprattutto sui tassi d'interesse di riferimento." },
+
+  { id:"ATT09", materia:"Attualità e istituzioni", testo:"Nel Consiglio di sicurezza delle Nazioni Unite hanno diritto di veto:",
+    opzioni:["I cinque membri permanenti: Stati Uniti, Russia, Cina, Francia e Regno Unito","Tutti i quindici membri","I soli paesi fondatori europei","I paesi che contribuiscono di più al bilancio ONU"], corretta:0,
+    spiegazione:"Il Consiglio di sicurezza è composto da quindici membri, cinque permanenti con diritto di veto e dieci eletti a rotazione per due anni." },
+
+  { id:"ATT10", materia:"Attualità e istituzioni", testo:"La Costituzione della Repubblica italiana è entrata in vigore:",
+    opzioni:["Il 1° gennaio 1970","Il 1° gennaio 1948","Il 2 giugno 1946","Il 25 aprile 1945"], corretta:1,
+    spiegazione:"Il 2 giugno 1946 si tennero il referendum istituzionale e l'elezione dell'Assemblea costituente; la Costituzione entrò in vigore il 1° gennaio 1948." },
+
+  { id:"ATT11", materia:"Attualità e istituzioni", testo:"In seguito alla riforma costituzionale entrata in applicazione con la legislatura iniziata nel 2022, il Parlamento italiano è composto da:",
+    opzioni:["500 deputati e 250 senatori","300 deputati e 150 senatori","400 deputati e 200 senatori elettivi","630 deputati e 315 senatori elettivi"], corretta:2,
+    spiegazione:"La riduzione del numero dei parlamentari, approvata con referendum confermativo nel 2020, ha avuto effetto dalle elezioni politiche del 2022." },
+
+  { id:"ATT12", materia:"Attualità e istituzioni", testo:"Che cosa misura il tasso d'inflazione?",
+    opzioni:["La quantità di moneta in circolazione","Il rapporto fra debito pubblico e PIL","La differenza fra importazioni ed esportazioni","La variazione percentuale del livello generale dei prezzi al consumo in un dato periodo"], corretta:3,
+    spiegazione:"Un'inflazione elevata riduce il potere d'acquisto dei redditi; la deflazione è la variazione negativa dello stesso indice." }
 
   ]
 }

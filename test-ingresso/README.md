@@ -5,20 +5,25 @@ pubblica e d'impresa (COM, LM-59)** dell'Università degli Studi di Milano: doma
 risposta multipla con quattro opzioni, una sola corretta. Funziona offline, senza
 installare nulla e senza account: basta aprire `index.html` con un doppio clic.
 
-Le materie della prova, indicate dalla presentazione ufficiale del corso, sono
-**inglese, teorie della comunicazione, informatica, marketing, statistica e attualità**.
-La banca dati contiene **203 domande** su queste aree, ognuna con spiegazione e
+La prova si tiene **il 2 settembre 2026 alle 9.30, da remoto**, e verte su **teoria della
+comunicazione, informatica, marketing, statistica e attualità**. Ogni risposta esatta vale
+1 punto, quelle errate e quelle non date valgono 0: conviene rispondere sempre. Regole,
+scadenze e pesi delle aree sono riassunti in [`BANDO.md`](BANDO.md).
+La banca dati contiene **228 domande** su queste aree, ognuna con spiegazione e
 riferimento al testo o al capitolo da cui deriva:
 
 | Materia | Domande |
 | --- | --- |
-| Informatica (Snyder, Henry — *Fluency*) | 58 |
+| Teorie della comunicazione (Balbi, Magaudda) | 62 |
+| Informatica (Snyder, Henry, Amoroso — *Fluency*) | 58 |
 | Marketing (Kotler, Armstrong) | 46 |
-| Storia dei media digitali (Balbi, Magaudda) | 35 |
 | Statistica (Agresti, Finlay) | 30 |
-| Inglese | 20 |
-| Teorie della comunicazione | 9 |
-| Attualità e istituzioni | 5 |
+| Inglese (per il test SLAM, fuori dalla prova) | 20 |
+| Attualità e istituzioni | 12 |
+
+**La simulazione d'esame rispetta i pesi del bando**: estrae le domande in proporzione
+41,7% comunicazione, 16,7% informatica, 16,7% marketing, 16,7% statistica, 8,3% attualità,
+ed esclude l'inglese. Il risultato mostra anche il punteggio ponderato con quei pesi.
 
 ## Le tre modalità
 

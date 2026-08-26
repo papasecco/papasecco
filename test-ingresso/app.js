@@ -31,7 +31,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 // ---------- dati ----------
 const BANCHE = (window.BANCHE || []).filter(b => b && Array.isArray(b.domande) && b.domande.length);
 const bancaDi = id => BANCHE.find(b => b.id === id) || BANCHE[0];
-const CONF_DEF = { durataMinuti: 60, numeroDomande: 30, puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null };
+const CONF_DEF = { durataMinuti: 60, numeroDomande: 30, puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0,
+                   sogliaSufficienza: null, pesi: null, pesoTitolo: null, data: null };
 const confDi = b => Object.assign({}, CONF_DEF, (b && b.esame) || {});
 
 // tutte le domande, con banca e chiave stabile
@@ -43,6 +44,43 @@ function domandeDi(banca) {
   }));
 }
 const chiave = q => `${q._banca}::${q.id}`;
+
+// Ripartisce n domande fra le materie secondo i pesi del bando (metodo dei resti
+// maggiori). Se una materia non ha abbastanza domande, le mancanti vanno alle altre.
+function quotePesate(n, pesi, disponibiliPerMateria) {
+  const materie = Object.keys(pesi).filter(m => (disponibiliPerMateria[m] || 0) > 0);
+  const totPesi = materie.reduce((s, m) => s + pesi[m], 0);
+  if (!materie.length || !totPesi) return {};
+  const esatte = {}, quote = {};
+  materie.forEach(m => { esatte[m] = n * pesi[m] / totPesi; quote[m] = Math.floor(esatte[m]); });
+  let resto = n - materie.reduce((s, m) => s + quote[m], 0);
+  materie.sort((a, b) => (esatte[b] - quote[b]) - (esatte[a] - quote[a]))
+         .forEach(m => { if (resto > 0) { quote[m]++; resto--; } });
+  // niente più domande di quante ne esistano: il surplus si redistribuisce
+  let surplus = 0;
+  materie.forEach(m => {
+    const max = disponibiliPerMateria[m];
+    if (quote[m] > max) { surplus += quote[m] - max; quote[m] = max; }
+  });
+  while (surplus > 0) {
+    const spazio = materie.filter(m => quote[m] < disponibiliPerMateria[m])
+                          .sort((a, b) => pesi[b] - pesi[a]);
+    if (!spazio.length) break;
+    spazio.forEach(m => { if (surplus > 0) { quote[m]++; surplus--; } });
+  }
+  return quote;
+}
+
+function estraiPesata(qs, n, pesi) {
+  const perMateria = {};
+  qs.forEach(q => (perMateria[q.materia] || (perMateria[q.materia] = [])).push(q));
+  const conteggi = {};
+  Object.keys(perMateria).forEach(m => conteggi[m] = perMateria[m].length);
+  const quote = quotePesate(n, pesi, conteggi);
+  let scelte = [];
+  Object.entries(quote).forEach(([m, q]) => { scelte = scelte.concat(mescola(perMateria[m]).slice(0, q)); });
+  return mescola(scelte);
+}
 
 // ---------- stato ----------
 let sessione = null;      // prova in corso
@@ -80,7 +118,28 @@ function confermaAbbandono() {
 }
 
 // ---------- HOME ----------
+function disegnaProva() {
+  const box = $("#home-esame");
+  const banca = BANCHE.find(b => confDi(b).data);
+  if (!banca) { box.hidden = true; return; }
+  const conf = confDi(banca);
+  const quando = new Date(conf.data);
+  if (isNaN(quando)) { box.hidden = true; return; }
+  const giorni = Math.ceil((quando - Date.now()) / 86400000);
+  const data = quando.toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
+  const ora = quando.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
+  let stato;
+  if (giorni > 1) stato = `<b>${giorni}</b> <span>giorni alla prova</span>`;
+  else if (giorni === 1) stato = `<b>domani</b>`;
+  else if (giorni === 0) stato = `<b>oggi</b>`;
+  else stato = `<span>prova già svolta</span>`;
+  box.innerHTML = `${stato} <span>${esc(banca.titolo.split("—")[0].trim())} · ${data}, ore ${ora}${
+    conf.pesoTitolo ? " · il voto di laurea pesa il " + conf.pesoTitolo + "% della graduatoria" : ""}</span>`;
+  box.hidden = false;
+}
+
 function disegnaHome() {
+  disegnaProva();
   const box = $("#home-riepilogo");
   const storico = leggi(CHIAVI.storico, []);
   const errori = leggi(CHIAVI.errori, {});
@@ -127,9 +186,14 @@ function apriSetup(modalita) {
   $("#c-tempo").hidden = modalita !== "esame";
   $("#f-banca").innerHTML = BANCHE.map(b => `<option value="${esc(b.id)}">${esc(b.titolo)}</option>`).join("");
   $("#f-banca").onchange = aggiornaSetup;
+  $("#f-pesi").onchange = aggiornaSetup;
   aggiornaSetup();
   $("#f-errore").hidden = true;
   mostra("v-setup");
+}
+
+function pesiAttivi(conf) {
+  return modalitaSetup === "esame" && !!conf.pesi && $("#f-pesi").checked;
 }
 
 function materieSelezionate() {
@@ -141,8 +205,19 @@ function aggiornaSetup() {
   const conf = confDi(banca);
   $("#f-banca-hint").textContent = `${banca.domande.length} domande disponibili${banca.descrizione ? " — " + banca.descrizione : ""}`;
 
+  const conPesi = pesiAttivi(conf);
+  $("#c-pesi").hidden = !(modalitaSetup === "esame" && conf.pesi);
+  $("#f-pesi-nota").hidden = !conPesi;
+  if (conPesi) {
+    const tot = Object.values(conf.pesi).reduce((a, b) => a + b, 0);
+    $("#f-pesi-nota").textContent = "Sul totale del test: " + Object.entries(conf.pesi)
+      .sort((a, b) => b[1] - a[1])
+      .map(([m, p]) => `${m} ${Math.round(p / tot * 100)}%`).join(" · ") +
+      ". L'inglese non fa parte della prova.";
+  }
+
   const materie = [...new Set(domandeDi(banca).map(q => q.materia))];
-  $("#c-materie").hidden = materie.length < 2;
+  $("#c-materie").hidden = materie.length < 2 || conPesi;
   $("#f-materie").innerHTML = materie.map(m =>
     `<button type="button" class="chip" aria-pressed="true" data-materia="${esc(m)}">${esc(m)}</button>`).join("");
   $$("#f-materie .chip").forEach(ch => ch.onclick = () => {
@@ -165,7 +240,12 @@ function aggiornaSetup() {
 
 function disponibili() {
   const banca = bancaDi($("#f-banca").value);
+  const conf = confDi(banca);
   let qs = domandeDi(banca);
+  if (pesiAttivi(conf)) {
+    // la simulazione ufficiale usa solo le aree previste dal bando
+    return qs.filter(q => conf.pesi[q.materia] > 0);
+  }
   const mat = materieSelezionate();
   if (mat.length) qs = qs.filter(q => mat.includes(q.materia));
   if (modalitaSetup === "errori") {
@@ -195,13 +275,19 @@ $("#f-avvia").onclick = () => {
   const conf = confDi(banca);
   let qs = disponibili();
   if (!qs.length) return;
-  if ($("#f-mesc-dom").checked) qs = mescola(qs);
   const n = Math.min(Math.max(1, parseInt($("#f-numero").value, 10) || qs.length), qs.length);
-  qs = qs.slice(0, n);
+  const conPesi = pesiAttivi(conf);
+  if (conPesi) {
+    qs = estraiPesata(qs, n, conf.pesi);
+  } else {
+    if ($("#f-mesc-dom").checked) qs = mescola(qs);
+    qs = qs.slice(0, n);
+  }
 
   const mescolaOpz = $("#f-mesc-opz").checked;
   sessione = {
     modalita: modalitaSetup,
+    pesata: conPesi,
     banca: banca.id,
     titolo: `${banca.titolo} — ${modalitaSetup === "esame" ? "simulazione" : modalitaSetup === "allenamento" ? "allenamento" : "ripasso errori"}`,
     conf,
@@ -366,6 +452,14 @@ function consegna() {
   punti = arrotonda(punti);
   const totale = sessione.domande.length;
   const percentuale = Math.round(corrette / totale * 100);
+  let ponderato = null;
+  if (sessione.pesata && conf.pesi) {
+    const presenti = Object.keys(perMateria).filter(m => conf.pesi[m] > 0);
+    const totPesi = presenti.reduce((s, m) => s + conf.pesi[m], 0);
+    if (totPesi) ponderato = Math.round(presenti.reduce(
+      (s, m) => s + conf.pesi[m] / totPesi * (perMateria[m].ok / perMateria[m].tot), 0) * 100);
+  }
+
   let soglia = null, proporzionata = false;
   if (sessione.modalita === "esame" && conf.sogliaSufficienza != null) {
     soglia = conf.sogliaSufficienza;
@@ -374,7 +468,7 @@ function consegna() {
       proporzionata = true;
     }
   }
-  ultimoEsito = { corrette, errate, omesse, punti, totale, percentuale, perMateria, soglia, proporzionata,
+  ultimoEsito = { corrette, errate, omesse, punti, totale, percentuale, perMateria, soglia, proporzionata, ponderato,
                   durata: Date.now() - sessione.inizio, sessione: sessione, conf };
 
   const storico = leggi(CHIAVI.storico, []);
@@ -399,6 +493,9 @@ function disegnaRisultati() {
     ${passato === null ? "" : `<div class="esito ${passato ? "ok" : "ko"}">${passato
         ? `Prova superata: ${e.punti} punti su una soglia di ${soglia}${nota}`
         : `Sotto la soglia di ${soglia} punti${nota}`}</div>`}
+    ${e.ponderato === null || e.ponderato === undefined ? "" :
+      `<div class="ponderato">Punteggio del test pesato come da bando: <b>${e.ponderato}%</b>` +
+      (e.conf.pesoTitolo ? ` <span>— nella graduatoria vale il ${100 - e.conf.pesoTitolo}%, il resto è il voto di laurea</span>` : "") + `</div>`}
     <div class="dati">
       <div><b>${e.corrette}</b>esatte</div>
       <div><b>${e.errate}</b>errate</div>

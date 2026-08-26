@@ -17,6 +17,7 @@
   --avviso:#e5b95b; --avviso-tenue:#332910; --ombra:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
+[hidden]{display:none !important}   /* le regole display:flex qui sotto vincerebbero sull'attributo hidden */
 html,body{margin:0;padding:0}
 body{
   background:var(--bg); color:var(--testo);
@@ -65,6 +66,11 @@ button{font:inherit}
 .card-t{font-size:1.12rem}
 .card-d{color:var(--testo-tenue);font-size:.9rem;line-height:1.45}
 
+.esame-info{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:22px;
+  background:var(--sfondo-card);border:1px solid var(--bordo);border-left:4px solid var(--acc);
+  border-radius:12px;padding:14px 18px;box-shadow:var(--ombra);font-size:.92rem}
+.esame-info b{font-family:Newsreader,Georgia,serif;font-size:1.25rem;font-variant-numeric:tabular-nums}
+.esame-info span{color:var(--testo-tenue)}
 .riepilogo{margin-top:26px}
 .riepilogo .box{background:var(--sfondo-card);border:1px solid var(--bordo);border-radius:var(--r);padding:16px 18px;box-shadow:var(--ombra)}
 .riepilogo h2{font-size:1rem;margin:0 0 10px}
@@ -145,6 +151,9 @@ select,input[type=number]{
 .sintesi .esito{font-weight:650;margin-top:4px}
 .sintesi .esito.ok{color:var(--ok)}
 .sintesi .esito.ko{color:var(--ko)}
+.sintesi .ponderato{margin-top:14px;font-size:.95rem}
+.sintesi .ponderato b{font-size:1.1rem;color:var(--acc)}
+.sintesi .ponderato span{color:var(--testo-tenue);font-size:.85rem}
 .sintesi .dati{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:18px;color:var(--testo-tenue);font-size:.9rem}
 .sintesi .dati b{display:block;color:var(--testo);font-size:1.15rem;font-variant-numeric:tabular-nums}
 .barre{margin-top:22px;display:flex;flex-direction:column;gap:12px}
