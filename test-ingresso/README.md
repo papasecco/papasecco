@@ -36,7 +36,7 @@ ed esclude l'inglese. Il risultato mostra anche il punteggio ponderato con quei 
 ## Come si usa
 
 1. Scarica la cartella `test-ingresso/` e apri `index.html` nel browser (Chrome, Safari, Firefox).
-2. Scegli una delle tre sezioni. La simulazione parte già impostata a 30 domande in 30 minuti; numero, tempo e materie restano modificabili.
+2. Scegli una delle tre sezioni. La simulazione è fissa a 30 domande in 30 minuti, come la prova; l'allenamento prende tutte le domande delle materie selezionate.
 3. Durante la prova: `1`–`4` (o `A`–`D`) per rispondere, `←` e `→` per spostarsi, `⚑ Segna`
    per marcare una domanda da rivedere, la *Mappa delle domande* per saltare dove serve.
    Le domande sbagliate finiscono automaticamente nella sezione **I miei errori**.

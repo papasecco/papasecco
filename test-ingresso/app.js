@@ -94,6 +94,7 @@ function estraiPesata(qs, n, pesi) {
 let sessione = null;      // prova in corso
 let tick = null;          // timer
 let ultimoEsito = null;   // per la schermata risultati
+let vistaCorrente = "v-home";
 let vistaPrec = "v-home";
 
 // ---------- tema ----------
@@ -109,15 +110,44 @@ $("#nav-tema").onclick = () => {
 };
 
 // ---------- navigazione ----------
-function mostra(id) {
+// vistaCorrente e vistaPrec tengono traccia di dove siamo e da dove veniamo,
+// così «Indietro» torna davvero alla schermata precedente. Ogni cambio di
+// schermata è anche una voce nella cronologia: il tasto indietro del browser
+// e del telefono si muove dentro il sito invece di uscirne.
+function mostra(id, opzioni) {
+  const conCronologia = !opzioni || opzioni.cronologia !== false;
   $$(".view").forEach(v => { v.hidden = v.id !== id; });
-  if (id !== "v-stat" && id !== "v-errori") vistaPrec = id;
+  if (id !== vistaCorrente) {
+    vistaPrec = vistaCorrente;
+    vistaCorrente = id;
+    if (conCronologia) { try { history.pushState({ vista: id }, ""); } catch {} }
+  }
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
+
+// Ridisegna il contenuto della schermata a cui si arriva.
+function aggiornaVista(id) {
+  if (id === "v-home") disegnaHome();
+  else if (id === "v-errori") disegnaErrori();
+  else if (id === "v-stat") disegnaStat();
+}
+
+function tornaIndietro() {
+  const destinazione = vistaPrec && vistaPrec !== vistaCorrente ? vistaPrec : "v-home";
+  mostra(destinazione);
+  aggiornaVista(destinazione);
+}
+
+window.addEventListener("popstate", ev => {
+  const destinazione = (ev.state && ev.state.vista) || "v-home";
+  mostra(destinazione, { cronologia: false });
+  aggiornaVista(destinazione);
+});
+
 $("#btn-home").onclick = () => { if (confermaAbbandono()) { mostra("v-home"); disegnaHome(); } };
 $("#r-home").onclick = () => { mostra("v-home"); disegnaHome(); };
 $("#nav-stat").onclick = () => { disegnaStat(); mostra("v-stat"); };
-$$("[data-back]").forEach(b => b.onclick = () => { mostra(vistaPrec === "v-stat" ? "v-home" : vistaPrec); disegnaHome(); });
+$$("[data-back]").forEach(b => b.onclick = tornaIndietro);
 
 function confermaAbbandono() {
   if (!sessione || $("#v-quiz").hidden) return true;
@@ -194,6 +224,7 @@ function apriSetup(modalita) {
   if (!BANCHE.length) { alert("Nessuna banca dati caricata: controlla il file domande/banche.js"); return; }
   $("#setup-titolo").textContent =
     modalita === "esame" ? "Simulazione d'esame" : modalita === "allenamento" ? "Allenamento libero" : "Ripasso degli errori";
+  $("#c-parametri").hidden = true;   // domande e tempo non sono modificabili
   $("#c-tempo").hidden = modalita !== "esame";
   $("#c-banca").hidden = BANCHE.length < 2;
   $("#f-banca").innerHTML = BANCHE.map(b => `<option value="${esc(b.id)}">${esc(b.titolo)}</option>`).join("");
@@ -244,7 +275,7 @@ function aggiornaSetup() {
   // in allenamento si parte da tutte le domande disponibili, in ordine casuale
   $("#f-numero").value = modalitaSetup === "esame" ? conf.numeroDomande : totali;
   $("#f-riassunto").textContent = modalitaSetup === "esame"
-    ? `${conf.numeroDomande} domande in ${conf.durataMinuti} minuti` +
+    ? `${conf.numeroDomande} domande in ${conf.durataMinuti} minuti, come la prova` +
       (conf.pesi ? ", distribuite con i pesi del bando" : "") +
       `. Risposta esatta ${segno(conf.puntiCorretta)}, errata ${segno(conf.puntiErrata)}: nessuna penalità, conviene rispondere sempre.`
     : modalitaSetup === "allenamento"
@@ -754,5 +785,6 @@ window.addEventListener("beforeunload", e => {
 
 // ---------- avvio ----------
 disegnaHome();
-mostra("v-home");
+try { history.replaceState({ vista: "v-home" }, ""); } catch {}
+mostra("v-home", { cronologia: false });
 })();
