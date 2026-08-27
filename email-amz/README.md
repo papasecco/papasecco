@@ -17,7 +17,7 @@ Email HTML pronta all'invio, in italiano, per la presentazione di AMZ a circoli,
 
 ## Cosa completare prima dell'invio
 
-1. **Recapiti nel footer** – nel blocco footer di `amz-email.html` sostituire indirizzo, `info@amz.it` e `www.amz.it` con i dati reali (il telefono è stato rimosso).
+1. **Numero verde** – i recapiti nel footer sono quelli reali (AMZ F.lli Puci srl, Bra CN, info@amzsports.it). Il numero verde 800 174 587 è stato lasciato fuori su richiesta: per rimetterlo, aggiungerlo alla riga dell'indirizzo nel footer.
 2. **Nome destinatario** – il testo usa il merge tag di GoHighLevel `{{contact.first_name}}`. Su altre piattaforme va adeguato (Mailchimp `*|FNAME|*`, Brevo `{{ contact.FIRSTNAME }}`).
 3. **Disiscrizione** – `{{unsubscribe_url}}` va sostituito con il link generato dalla piattaforma (obbligatorio per invii commerciali).
 4. **Immagini** – caricare i PNG su un server o CDN e sostituire `src="assets/..."` con gli URL completi `https://...`. In alternativa allegarli come CID (`src="cid:amz-logo"`).
