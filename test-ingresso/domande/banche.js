@@ -25,6 +25,11 @@
      - Agresti, Finlay, Metodi statistici di base e avanzati per le scienze sociali, Pearson, 2020
      - Attualità: lettura regolare dei quotidiani e dei media informativi
 
+   Alcune domande derivano inoltre dagli appunti usati per le edizioni precedenti della
+   prova, che indicavano altri testi: McQuail (Sociologia dei media), Console e altri
+   (Introduzione all'informatica) e Natale (La ricerca sociale). Gli argomenti restano
+   pertinenti alle stesse aree d'esame.
+
    Numero di domande e durata non sono indicati dal bando: i valori qui sotto sono una
    scelta di allenamento e si possono cambiare liberamente.
    Formato delle domande: vedi domande/MODELLO.md
@@ -1162,7 +1167,332 @@ window.BANCHE = [
 
   { id:"ATT12", materia:"Attualità e istituzioni", testo:"Che cosa misura il tasso d'inflazione?",
     opzioni:["La quantità di moneta in circolazione","Il rapporto fra debito pubblico e PIL","La differenza fra importazioni ed esportazioni","La variazione percentuale del livello generale dei prezzi al consumo in un dato periodo"], corretta:3,
-    spiegazione:"Un'inflazione elevata riduce il potere d'acquisto dei redditi; la deflazione è la variazione negativa dello stesso indice." }
+    spiegazione:"Un'inflazione elevata riduce il potere d'acquisto dei redditi; la deflazione è la variazione negativa dello stesso indice." },
+/* ---- Metodologia della ricerca sociale (Natale) — dagli appunti del test 2023 ---- */
+  { id:"RIC01", materia:"Statistica", testo:"Nel paradigma positivista della ricerca sociale, che ha in Durkheim il riferimento classico:",
+    opzioni:["La società esiste a prescindere dagli individui, i fatti sociali si studiano come fatti naturali e il metodo è quantitativo","La società è il prodotto delle relazioni fra individui attivi","Il ricercatore deve empatizzare con il soggetto studiato","Non esistono regole generali, solo interpretazioni soggettive"], corretta:0,
+    spiegazione:"È la teoria dell'integrazione: individuo passivo, coscienza collettiva, ricercatore distaccato, linguaggio delle variabili, analisi per variabili e logica del controllo (ricerca confermativa).",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC02", materia:"Statistica", testo:"Il paradigma interpretativista, che si richiama a Max Weber, si caratterizza per:",
+    opzioni:["La rinuncia a qualsiasi generalizzazione concettuale","Metodo qualitativo, analisi per soggetti e obiettivo di comprendere anziché spiegare","Metodo quantitativo e ricerca di leggi generali","L'uso esclusivo di questionari standardizzati"], corretta:1,
+    spiegazione:"È la teoria dell'azione: la società è prodotta dalle relazioni fra individui attivi, e il ricercatore cerca «enunciati di possibilità» e tipi ideali, non leggi.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC03", materia:"Statistica", testo:"Il «linguaggio delle variabili» introdotto da Lazarsfeld consiste nel:",
+    opzioni:["Tradurre i questionari in più lingue","Sostituire i numeri con etichette verbali","Trasformare un concetto in una variabile empiricamente misurabile secondo regole comuni, così da rendere il risultato verificabile e replicabile","Usare un lessico tecnico nella stesura del rapporto di ricerca"], corretta:2,
+    spiegazione:"È il cuore del neopositivismo: la replicabilità garantisce che chiunque ripeta la stessa analisi con le stesse modalità arrivi alla stessa conclusione.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC04", materia:"Statistica", testo:"Il «paradosso dell'osservatore», che segna il passaggio dal realismo ingenuo al realismo critico, afferma che:",
+    opzioni:["L'osservatore non può mai essere presente sul campo","Ogni osservazione va ripetuta almeno due volte","I dati quantitativi sono sempre falsi","L'atto stesso di osservare produce una distorsione sull'oggetto osservato, per cui il risultato è verosimile e non vero"], corretta:3,
+    spiegazione:"È la presa di coscienza che porta il neopositivismo a rinunciare alla pretesa di oggettività assoluta delle prime formulazioni positiviste.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC05", materia:"Statistica", testo:"Il criterio di falsificabilità introdotto da Karl Popper stabilisce che:",
+    opzioni:["Una teoria è scientifica se è esposta alla possibilità di essere smentita dai dati","Una teoria è scientifica se è stata confermata molte volte","Le ipotesi vanno verificate solo con metodi qualitativi","Ogni teoria smentita va comunque mantenuta"], corretta:0,
+    spiegazione:"Kuhn introduce poi il concetto di paradigma: se un dato falsifica un'ipotesi non cade l'intera visione del mondo entro cui gli scienziati operano, ma quella singola ipotesi.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC06", materia:"Statistica", testo:"La distinzione fra fenomeni «nomotetici» e «idiografici», elaborata da Windelband e Rickert, contrappone:",
+    opzioni:["Le variabili dipendenti a quelle indipendenti","I fenomeni ripetibili del mondo naturale a quelli irripetibili del mondo storico-sociale","I fenomeni economici a quelli politici","I dati primari ai dati secondari"], corretta:1,
+    spiegazione:"Ai primi corrisponde l'approccio quantitativo con pretesa generalizzante, ai secondi l'approccio qualitativo; la distinzione anticipa la posizione di Weber ed era già in Dilthey.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC07", materia:"Statistica", testo:"Nel metodo weberiano, il principio di «avalutatività» impone al ricercatore di:",
+    opzioni:["Usare solo dati numerici","Dichiarare in anticipo le proprie conclusioni","Sospendere i propri giudizi di valore, credenze e preconcetti sul fenomeno studiato","Evitare qualsiasi contatto con i soggetti studiati"], corretta:2,
+    spiegazione:"Gli altri due concetti chiave sono l'unilateralità, cioè la soggettività inevitabile delle scelte di ricerca, e il tipo ideale, astrazione generalizzante che consente il confronto fra casi.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC08", materia:"Statistica", testo:"L'interazionismo simbolico, sviluppato da Mead e Blumer nella Scuola di Chicago, studia:",
+    opzioni:["Le grandi strutture economiche della società","Il comportamento dei media di massa","La distribuzione statistica dei redditi","Le interazioni micro fra individui e il modo in cui ciascuno interpreta la realtà"], corretta:3,
+    spiegazione:"È microsociologia: la somma dei piccoli gesti individuali aiuta a comprendere la cultura di base su cui si fonda la società.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC09", materia:"Statistica", testo:"Il concetto di «frame» elaborato da Erving Goffman indica che:",
+    opzioni:["Il comportamento dipende dal quadro situazionale in cui l'individuo si trova e dal ruolo che vi interpreta","Le notizie vengono selezionate dai giornalisti","Ogni intervista va inquadrata in un questionario","La realtà sociale è immutabile"], corretta:0,
+    spiegazione:"Nella sociologia fenomenologica l'agire quotidiano è letto come teatro: ciascuno interpreta una parte in funzione della cornice, con uno «sdoppiamento» dei ruoli (pedone o automobilista).",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC10", materia:"Statistica", testo:"L'etnometodologia di Harold Garfinkel studia:",
+    opzioni:["Le teorie degli effetti dei media","I metodi ordinari con cui le persone comuni compiono le azioni quotidiane, spesso violandone le regole implicite per farle emergere","Le popolazioni extraeuropee","Le tecniche di campionamento probabilistico"], corretta:1,
+    spiegazione:"Le azioni quotidiane hanno una regolamentazione implicita: per renderla visibile il ricercatore assume comportamenti deliberatamente devianti e osserva le reazioni.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC11", materia:"Statistica", testo:"Le cinque fasi della ricerca empirica sono, nell'ordine:",
+    opzioni:["Campionamento, intervista, codifica, stampa, archiviazione","Osservazione, deduzione, induzione, sintesi, revisione","Disegno della ricerca, costruzione della base empirica, organizzazione dei dati, analisi dei dati, esposizione dei risultati","Ipotesi, esperimento, verifica, pubblicazione, brevetto"], corretta:2,
+    spiegazione:"L'esposizione dei risultati non chiude il ciclo: il confronto con le conoscenze precedenti diventa il punto di partenza di nuove ricerche.",
+    fonte:"Natale, La ricerca sociale — cap. 1" },
+
+  { id:"RIC12", materia:"Statistica", testo:"Nell'osservazione partecipante, il «gatekeeper» è:",
+    opzioni:["Il ricercatore che conduce l'indagine","L'individuo che fornisce informazioni dall'interno","Il luogo in cui si svolge la ricerca","Chi controlla l'accesso al gruppo studiato, in forma riconosciuta o informale"], corretta:3,
+    spiegazione:"Le altre figure della ricerca etnografica sono i mediatori culturali, gli informatori (testimoni privilegiati), i nativi, il setting e il backtalk, cioè il giudizio dei nativi sul lavoro dello studioso.",
+    fonte:"Natale, La ricerca sociale — cap. 2" },
+
+  { id:"RIC13", materia:"Statistica", testo:"L'«effetto Hawthorne» consiste:",
+    opzioni:["Nella tendenza degli individui a modificare il proprio comportamento quando si sanno osservati","Nella perdita di dati durante la codifica","Nel rifiuto sistematico di rispondere alle interviste","Nella distorsione dovuta a un campione troppo piccolo"], corretta:0,
+    spiegazione:"È legato all'intrusività dell'osservazione: più il ricercatore è presente e visibile, più il comportamento osservato rischia di non essere quello spontaneo.",
+    fonte:"Natale, La ricerca sociale — cap. 2" },
+
+  { id:"RIC14", materia:"Statistica", testo:"La «serendipity», nel senso indicato da Merton, indica:",
+    opzioni:["La saturazione teorica del campione","Le scoperte fatte incidentalmente, senza che fossero cercate","La capacità di prevedere i risultati di una ricerca","Un errore sistematico di rilevazione"], corretta:1,
+    spiegazione:"È una delle risorse tipiche della ricerca sul campo, dove l'osservazione prolungata fa emergere elementi non previsti dal disegno iniziale.",
+    fonte:"Natale, La ricerca sociale — cap. 2" },
+
+  { id:"RIC15", materia:"Statistica", testo:"In quale ordine crescente di strutturazione si dispongono i tipi di intervista?",
+    opzioni:["Semistrutturata, strutturata, non direttiva, non strutturata","Non strutturata, non direttiva, strutturata, semistrutturata","Non direttiva, non strutturata, semistrutturata, strutturata","Strutturata, semistrutturata, non strutturata, non direttiva"], corretta:2,
+    spiegazione:"Nella semistrutturata l'intervistatore ha una traccia di domande senza ordine prestabilito; nella strutturata formulazione, sequenza e comportamento sono fissati in anticipo.",
+    fonte:"Natale, La ricerca sociale — cap. 2" },
+
+  { id:"RIC16", materia:"Statistica", testo:"Il focus group è:",
+    opzioni:["Un campione probabilistico stratificato","Un questionario autosomministrato","Una tecnica di analisi statistica multivariata","Una tecnica qualitativa di discussione di gruppo guidata da uno o più moderatori"], corretta:3,
+    spiegazione:"Nato nelle scienze sociali con Merton e Lazarsfeld negli anni Quaranta, è oggi diffusissimo nelle ricerche di mercato; sfrutta l'effetto a valanga nella generazione delle idee.",
+    fonte:"Natale, La ricerca sociale — cap. 2" },
+
+  { id:"RIC17", materia:"Statistica", testo:"Quale dei seguenti è il limite principale del focus group?",
+    opzioni:["Il controllo ridotto del ricercatore, con il rischio di risposte socialmente accettabili e di influenza dei partecipanti più forti","La lentezza e i costi elevati","L'impossibilità di raccogliere molte informazioni","L'eccessiva standardizzazione delle risposte"], corretta:0,
+    spiegazione:"Per lo stesso motivo non è adatto ai temi delicati: lì è preferibile l'intervista individuale, più profonda e priva del condizionamento del gruppo.",
+    fonte:"Natale, La ricerca sociale — cap. 2" },
+
+  { id:"RIC18", materia:"Statistica", testo:"In un questionario, le domande-filtro servono a:",
+    opzioni:["Rilevare le caratteristiche sociodemografiche","Evitare che alcuni intervistati rispondano a domande o sezioni che non li riguardano","Verificare all'inizio se il soggetto può entrare nel campione","Misurare l'intensità di un atteggiamento"], corretta:1,
+    spiegazione:"Le domande di eleggibilità o screening, poste all'inizio, verificano invece i requisiti per l'inclusione nel campione: entrambe sono «domande di servizio».",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC19", materia:"Statistica", testo:"Nelle domande di comportamento, il «ricordo acquiescente» è la distorsione dovuta:",
+    opzioni:["Alla ricerca di coerenza interna nel racconto","All'ordine in cui sono poste le domande","Alla desiderabilità sociale, cioè alla tendenza a dichiarare ciò che appare socialmente accettabile","Alla diversa capacità di memorizzare gli eventi"], corretta:2,
+    spiegazione:"Le altre due distorsioni tipiche sono il ricordo selettivo, legato alla memoria, e la ristrutturazione del ricordo, dovuta alla propensione alla coerenza.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC20", materia:"Statistica", testo:"Nelle domande a risposta chiusa, il rischio principale è:",
+    opzioni:["La scarsa confrontabilità delle risposte","L'impossibilità di codificare i dati","L'assenza di standardizzazione","Il bias del ricercatore, che predefinisce le alternative disponibili"], corretta:3,
+    spiegazione:"Le domande aperte riducono la distorsione del ricercatore ma aumentano quella dell'intervistato, rendono meno confrontabili le risposte e richiedono un lavoro di ricodifica.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC21", materia:"Statistica", testo:"Il campione «a valanga» (snow-ball) è utile soprattutto quando:",
+    opzioni:["Si studia un fenomeno poco diffuso o difficilmente confessabile e gli intervistati segnalano altri soggetti","Si dispone dell'elenco completo della popolazione","Occorre garantire la piena rappresentatività statistica","Si vuole intervistare un campione per quote"], corretta:0,
+    spiegazione:"È una tecnica non probabilistica: i risultati sono indicativi e non generalizzabili all'universo di riferimento.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC22", materia:"Statistica", testo:"Il campione per quote si distingue da quello stratificato perché:",
+    opzioni:["Produce stime più precise","La suddivisione della popolazione è simile, ma la scelta di chi intervistare è arbitraria e non probabilistica","Non prevede alcuna suddivisione della popolazione","Richiede l'elenco completo dell'universo"], corretta:1,
+    spiegazione:"Abbatte costi e tempi ed è molto usato nelle ricerche di mercato, ma non consente stime generalizzabili proprio perché la selezione finale non segue un piano probabilistico.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC23", materia:"Statistica", testo:"Nel campionamento sistematico, il passo di campionamento k si calcola come:",
+    opzioni:["Differenza fra N e n","Radice quadrata di N","Rapporto fra l'ampiezza N della popolazione e l'ampiezza n desiderata del campione","Prodotto fra N e n"], corretta:2,
+    spiegazione:"Con k = N/n si estrae un individuo ogni k: la lista va però ordinata secondo criteri indipendenti dal fenomeno studiato, per evitare distorsioni.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC24", materia:"Statistica", testo:"Perché il campione stratificato è considerato più efficiente di quello casuale semplice?",
+    opzioni:["Perché richiede meno interviste in assoluto","Perché non richiede procedure probabilistiche","Perché elimina l'errore di rilevazione","Perché riduce la varianza interna e quindi, a parità di ampiezza, l'errore di campionamento"], corretta:3,
+    spiegazione:"Può essere proporzionale, non proporzionale (con strati sovra o sotto rappresentati) oppure ottimale, quando la numerosità degli strati segue la varianza interna a ciascuno.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC25", materia:"Statistica", testo:"Nel campione a grappolo (cluster), a differenza del multistadio:",
+    opzioni:["Nelle ultime unità estratte vengono intervistati tutti gli individui che vi appartengono","Si estrae un solo individuo per ogni livello","Non si usa alcuna suddivisione della popolazione","Il campione è necessariamente telefonico"], corretta:0,
+    spiegazione:"Il grappolo estratto all'ultimo stadio coincide con l'universo degli individui che ne fanno parte; si usa spesso in combinazione con il multistadio quando esistono unità di formazione naturale.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC26", materia:"Statistica", testo:"L'ampiezza dell'errore di campionamento dipende da:",
+    opzioni:["Dalla durata della rilevazione","Numerosità del campione e omogeneità dei risultati, misurata dalla varianza","Solo dalla dimensione della popolazione","Dal numero di domande del questionario"], corretta:1,
+    spiegazione:"L'errore si riduce se i casi aumentano e se sono più simili fra loro: per abbassare artificialmente la varianza si ricorre alla stratificazione.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC27", materia:"Statistica", testo:"L'errore globale di un'indagine campionaria è dato da:",
+    opzioni:["Solo dagli errori di codifica","Dalla somma delle mancate risposte","Errore di campionamento più errore di rilevazione","Solo dall'errore di campionamento"], corretta:2,
+    spiegazione:"L'errore di campionamento è quantificabile ma inevitabile; quello di rilevazione — copertura e mancata risposta — è teoricamente eliminabile ma di fatto non del tutto controllabile.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+
+  { id:"RIC28", materia:"Statistica", testo:"Qual è la differenza fra statistiche descrittive e statistiche inferenziali?",
+    opzioni:["Le descrittive si usano solo sui campioni, le inferenziali solo sulle popolazioni","Le inferenziali non richiedono campioni probabilistici","Non c'è differenza operativa","Le descrittive riassumono i dati osservati, le inferenziali valutano quanto i risultati siano generalizzabili all'universo"], corretta:3,
+    spiegazione:"L'inferenza è possibile solo con campioni probabilistici; il livello di significatività (indice p o sig) esprime la probabilità di sbagliare nel generalizzare: 0,05 equivale al 5%.",
+    fonte:"Natale, La ricerca sociale — cap. 4" },
+
+  { id:"RIC29", materia:"Statistica", testo:"La matrice «casi per variabili», input delle analisi statistiche, ha:",
+    opzioni:["I casi sulle righe e le variabili sulle colonne, con le stesse informazioni rilevate per tutti i casi","Le variabili sulle righe e i casi sulle colonne","Una struttura diversa per ogni intervistato","Solo variabili di tipo cardinale"], corretta:0,
+    spiegazione:"L'unità di analisi deve essere omogenea per tutti i casi; le variabili categoriali vanno codificate, quelle cardinali sono immediatamente utilizzabili.",
+    fonte:"Natale, La ricerca sociale — cap. 4" },
+
+  { id:"RIC30", materia:"Statistica", testo:"Un campione «panel» si distingue da un campione «cross section» perché:",
+    opzioni:["Non prevede un questionario","Gli stessi individui vengono intervistati più volte nel tempo, utile per monitorare mutamenti e stabilità","È sempre più numeroso","Riguarda una sola area geografica"], corretta:1,
+    spiegazione:"Solo i campioni cross section, in cui ciascun individuo è intervistato una volta sola, rispettano pienamente le condizioni probabilistiche.",
+    fonte:"Natale, La ricerca sociale — cap. 3" },
+/* ---- Informatica (Console e altri, Introduzione all'informatica) — appunti test 2023 ---- */
+  { id:"INF59", materia:"Informatica", testo:"Le due componenti che formano l'unità centrale di un elaboratore sono:",
+    opzioni:["Disco fisso e scheda video","Sistema operativo e applicazioni","Processore e memoria principale","Monitor e tastiera"], corretta:2,
+    spiegazione:"La memoria principale conserva programmi e dati in celle indirizzate; il processore esegue le istruzioni in linguaggio macchina che vi sono contenute.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF60", materia:"Informatica", testo:"Nella memoria principale, una cella corrisponde a:",
+    opzioni:["Un solo bit","Un intero programma","Un settore del disco","8 bit, cioè un byte, ed è individuata da un indirizzo"], corretta:3,
+    spiegazione:"La memoria è una sequenza di celle, ciascuna con un indirizzo espresso come numero intero: il numero di bit usati per gli indirizzi definisce lo spazio di indirizzamento.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF61", materia:"Informatica", testo:"La RAM è detta a «accesso casuale» perché:",
+    opzioni:["Il tempo di accesso a una cella è lo stesso qualunque sia la sua posizione","I dati vengono scritti in posizioni scelte a caso","Perde i dati in modo imprevedibile","Può essere letta solo in sequenza"], corretta:0,
+    spiegazione:"È inoltre volatile: senza alimentazione elettrica perde il contenuto, e per questo servono le memorie secondarie o di massa.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF62", materia:"Informatica", testo:"Nel ciclo fetch-execute, il Program Counter (PC):",
+    opzioni:["Conta i cicli di clock trascorsi","Contiene l'indirizzo della prossima istruzione da eseguire","Contiene il risultato dell'ultima operazione aritmetica","Indica lo stato di errore del processore"], corretta:1,
+    spiegazione:"Gli altri registri speciali sono il registro istruzioni (RI), che contiene l'istruzione in esecuzione, e il registro di stato (PS), che segnala le condizioni e gli errori.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF63", materia:"Informatica", testo:"Che cosa determina il clock di un processore?",
+    opzioni:["Il numero di programmi installabili","La risoluzione dello schermo","La frequenza dei cicli, e quindi la velocità di elaborazione","La quantità di memoria indirizzabile"], corretta:2,
+    spiegazione:"Il clock genera impulsi a intervalli costanti: a ogni impulso l'unità di controllo esegue un ciclo, cioè legge ed esegue un'istruzione.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF64", materia:"Informatica", testo:"L'unità aritmetico-logica (ALU) di un processore:",
+    opzioni:["Coordina le attività delle altre componenti","Conserva i programmi in modo permanente","Gestisce i dispositivi di input e output","Esegue le operazioni aritmetiche e logiche sui dati contenuti nei registri"], corretta:3,
+    spiegazione:"Il coordinamento spetta all'unità di controllo; i registri generali servono a conservare i risultati parziali dell'elaborazione.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF65", materia:"Informatica", testo:"I tre tipi di bus che collegano le componenti di un elaboratore sono:",
+    opzioni:["Bus dati, bus indirizzi e bus di controllo","Bus interno, bus esterno e bus di rete","Bus seriale, parallelo e ottico","Bus primario, secondario e terziario"], corretta:0,
+    spiegazione:"L'ampiezza del bus determina quanta informazione può essere trasferita contemporaneamente.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF66", materia:"Informatica", testo:"La memoria cache serve a:",
+    opzioni:["Aumentare lo spazio di indirizzamento","Conservare i dati usati più di frequente in un livello intermedio, più veloce della memoria principale","Archiviare i file in modo permanente","Gestire le immagini sullo schermo"], corretta:1,
+    spiegazione:"Sfrutta il principio di località: L1 è interna alla CPU, L2 sulla scheda madre o nel processore, L3 tipica dei processori multicore.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF67", materia:"Informatica", testo:"La differenza fra architettura CISC e RISC sta nel fatto che:",
+    opzioni:["CISC si usa solo nei telefoni","RISC non prevede istruzioni aritmetiche","CISC ha molte istruzioni anche complesse che richiedono più cicli di clock, RISC poche istruzioni semplici eseguibili in un solo ciclo","RISC è più lenta di CISC"], corretta:2,
+    spiegazione:"L'architettura RISC favorisce pipeline e parallelismo, alla base dei processori dual e quad core.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF68", materia:"Informatica", testo:"Un «processo», nel linguaggio dei sistemi operativi, è:",
+    opzioni:["Un file salvato su disco","Un dispositivo collegato al computer","Una porzione di memoria cache","Un programma in esecuzione"], corretta:3,
+    spiegazione:"Un processo alterna fasi di esecuzione e di attesa e può trovarsi in tre stati: in esecuzione, in attesa (bloccato) o pronto.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF69", materia:"Informatica", testo:"In un sistema multi-programmato (multi-tasking) con un solo processore:",
+    opzioni:["I processi non sono realmente paralleli: il processore viene alternato fra loro quando uno si blocca o si interrompe","Tutti i processi vengono eseguiti simultaneamente","Si può eseguire un solo programma alla volta","Ogni processo ha un processore dedicato"], corretta:0,
+    spiegazione:"Il numero di processi attivi è il grado di multiprogrammazione; i modelli di esecuzione sono batch, time sharing e real time.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF70", materia:"Informatica", testo:"Il modello di esecuzione «time sharing» è pensato per:",
+    opzioni:["Sistemi mono-programmati","Programmi interattivi, con frequenti operazioni di input e output, e più utenti contemporanei","Programmi che calcolano a lungo senza interazione","Sistemi in cui il tempo di reazione è critico"], corretta:1,
+    spiegazione:"Il modello batch serve ai programmi compute bound, quello real time agli ambiti in cui la reazione deve avvenire entro tempi garantiti.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF71", materia:"Informatica", testo:"Una politica di scheduling è detta «preemptive» quando:",
+    opzioni:["I processi vengono eseguiti in ordine alfabetico","Non esiste una coda dei processi pronti","Il sistema operativo può interrompere un processo in esecuzione per mandarne in esecuzione un altro","Il processo lascia la CPU solo volontariamente"], corretta:2,
+    spiegazione:"Shortest Job First è non preemptive, Shortest Remaining Time First è la sua variante preemptive; la selezione con priorità esiste in entrambe le forme.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF72", materia:"Informatica", testo:"Il «tempo di turnaround» di un processo è:",
+    opzioni:["Il tempo di accesso alla memoria cache","La durata di un ciclo di clock","Il tempo di risposta della rete","Il tempo che intercorre fra la creazione del processo e la sua terminazione"], corretta:3,
+    spiegazione:"Gli obiettivi dello scheduling sono massimizzare l'uso del processore e il throughput, e minimizzare turnaround e tempi di attesa.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF73", materia:"Informatica", testo:"La «modalità kernel» di esecuzione si distingue dalla modalità utente perché:",
+    opzioni:["Consente di eseguire le istruzioni delicate riservate al sistema operativo","È più veloce nell'esecuzione dei calcoli","Non richiede memoria principale","Riguarda solo i programmi grafici"], corretta:0,
+    spiegazione:"Il bit di modalità indica per conto di chi è in esecuzione l'istruzione; un timer hardware impedisce inoltre a un processo di monopolizzare la CPU.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF74", materia:"Informatica", testo:"Il sistema operativo è detto «event-driven» perché:",
+    opzioni:["Funziona solo all'avvio della macchina","Interviene quando si verificano eventi: interrupt hardware, trap ed errori, oppure system call dei processi utente","Esegue i programmi in ordine cronologico","Controlla continuamente ogni istruzione eseguita"], corretta:1,
+    spiegazione:"Per la maggior parte del tempo le risorse sono usate dai programmi utente: il sistema si «sveglia» solo in corrispondenza degli eventi.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF75", materia:"Informatica", testo:"Che cos'è lo swapping nella gestione della memoria?",
+    opzioni:["Lo scambio di dati fra due computer in rete","La sostituzione di un processore con un altro","Lo scambio delle immagini dei processi fra memoria principale e memoria secondaria","La conversione fra sistemi di numerazione"], corretta:2,
+    spiegazione:"Serve a far convivere più processi in una memoria principale limitata; le partizioni fisse generano invece frammentazione interna ed esterna.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF76", materia:"Informatica", testo:"Qual è la differenza fra compilazione e interpretazione di un programma?",
+    opzioni:["La compilazione è sempre più lenta","L'interpretazione produce un file eseguibile","Sono due nomi della stessa operazione","La compilazione traduce l'intero programma una volta sola, l'interpretazione traduce ed esegue le istruzioni una per una"], corretta:3,
+    spiegazione:"La compilazione è più efficiente ma richiede di ritradurre tutto a ogni modifica; l'interpretazione allunga i tempi di esecuzione ma è più flessibile.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF77", materia:"Informatica", testo:"Nei diagrammi di flusso, i blocchi di forma ellissoidale rappresentano:",
+    opzioni:["L'inizio e la fine dell'algoritmo","Le azioni elementari","Le condizioni da valutare","I dati di input"], corretta:0,
+    spiegazione:"I rettangoli indicano le azioni, i rombi le condizioni: il blocco iniziale ha solo un arco in uscita, quello finale solo un arco in entrata.",
+    fonte:"Console et al., Introduzione all'informatica" },
+
+  { id:"INF78", materia:"Informatica", testo:"Le azioni che compongono un algoritmo si distinguono in:",
+    opzioni:["Logiche e illogiche","Elementari, condizionali e ripetitive","Rapide, lente e istantanee","Interne ed esterne"], corretta:1,
+    spiegazione:"Le azioni composte possono annidarsi l'una nell'altra, per esempio un'azione ripetitiva dentro un ramo di un'azione condizionale.",
+    fonte:"Console et al., Introduzione all'informatica" },
+/* ---- Statistica (Agresti, Finlay — edizione italiana) — dagli appunti ---- */
+  { id:"STA31", materia:"Statistica", testo:"In un campione casuale semplice:",
+    opzioni:["Si intervistano solo i soggetti più rappresentativi","La probabilità di estrazione è ignota","Ogni soggetto della popolazione ha la stessa probabilità nota di essere estratto","Si sceglie il primo soggetto disponibile della lista"], corretta:2,
+    spiegazione:"In pratica si assegna un numero a ciascun soggetto della lista di campionamento, si estraggono numeri casuali e si includono i soggetti corrispondenti.",
+    fonte:"Agresti, Finlay — cap. 1" },
+
+  { id:"STA32", materia:"Statistica", testo:"Le tre principali fonti di distorsione in un'indagine campionaria sono:",
+    opzioni:["Errore di calcolo, di stampa e di archiviazione","Distorsione della media, della moda e della mediana","Errore di misura, di scala e di codifica","Distorsione campionaria, distorsione dovuta alle risposte e distorsione dovuta alle mancate risposte"], corretta:3,
+    spiegazione:"La prima nasce da un campionamento non probabilistico, la seconda da risposte non veritiere o da domande mal formulate, la terza dai dati mancanti.",
+    fonte:"Agresti, Finlay — cap. 1" },
+
+  { id:"STA33", materia:"Statistica", testo:"Nel campionamento sistematico si seleziona:",
+    opzioni:["Un soggetto fra i primi k della lista e poi ogni k-esimo soggetto successivo","Un soggetto ogni giorno della settimana","Solo i soggetti in cima alla lista","Un numero casuale di soggetti per ciascuno strato"], corretta:0,
+    spiegazione:"Il passo k dipende dal rapporto fra ampiezza della popolazione e ampiezza desiderata del campione; la lista non deve avere un ordinamento correlato al fenomeno studiato.",
+    fonte:"Agresti, Finlay — cap. 1" },
+
+  { id:"STA34", materia:"Statistica", testo:"La media risente dei valori anomali più della mediana perché:",
+    opzioni:["Si applica solo a variabili categoriali","Nel calcolo entrano i valori numerici di tutte le osservazioni","Viene calcolata solo sui valori estremi","Dipende dall'ordinamento dei dati"], corretta:1,
+    spiegazione:"La mediana dipende dalla posizione delle osservazioni nell'ordinamento: per distribuzioni asimmetriche, come i redditi, è la sintesi più rappresentativa del centro.",
+    fonte:"Agresti, Finlay — cap. 3" },
+
+  { id:"STA35", materia:"Statistica", testo:"Secondo la regola empirica valida per distribuzioni approssimativamente normali:",
+    opzioni:["Il 95% dei casi cade entro una deviazione standard","Tutti i casi cadono entro due deviazioni standard","Circa il 68% dei casi cade entro una deviazione standard dalla media, il 95% entro due, la quasi totalità entro tre","Il 50% dei casi cade entro una deviazione standard"], corretta:2,
+    spiegazione:"È la regola che rende immediatamente interpretabile la deviazione standard come unità di distanza dalla media.",
+    fonte:"Agresti, Finlay — cap. 3" },
+
+  { id:"STA36", materia:"Statistica", testo:"Nel box plot, la «scatola» è delimitata da:",
+    opzioni:["Valore minimo e massimo","Media più e meno una deviazione standard","I due valori più frequenti","Primo e terzo quartile, con la mediana all'interno"], corretta:3,
+    spiegazione:"La lunghezza della scatola è lo scarto interquartile Q3 − Q1, che contiene il 50% centrale delle osservazioni; il campo di variazione è invece massimo meno minimo.",
+    fonte:"Agresti, Finlay — cap. 3" },
+
+  { id:"STA37", materia:"Statistica", testo:"In una distribuzione normale con media 500 e deviazione standard 100, un punteggio di 650 corrisponde a uno z-score di:",
+    opzioni:["1,5","0,65","6,5","15"], corretta:0,
+    spiegazione:"z = (650 − 500) / 100 = 1,5: il valore dista una volta e mezza la deviazione standard sopra la media.",
+    fonte:"Agresti, Finlay — cap. 4" },
+
+  { id:"STA38", materia:"Statistica", testo:"Che cos'è la distribuzione campionaria di una statistica?",
+    opzioni:["La distribuzione degli errori di misura","La distribuzione dei valori che la statistica assumerebbe ripetendo il campionamento molte volte","La distribuzione dei dati osservati nel campione","La distribuzione della popolazione"], corretta:1,
+    spiegazione:"È il concetto che rende possibile l'inferenza: da essa derivano errore standard, intervalli di confidenza e test di significatività.",
+    fonte:"Agresti, Finlay — cap. 4" },
+
+  { id:"STA39", materia:"Statistica", testo:"L'ampiezza di un intervallo di confidenza:",
+    opzioni:["Non dipende dal livello di fiducia","Dipende solo dalla media campionaria","Cresce al crescere del livello di fiducia e decresce al crescere della dimensione campionaria","Cresce con la dimensione campionaria"], corretta:2,
+    spiegazione:"Sono proprietà generali di tutti gli intervalli di confidenza, non solo di quelli per una proporzione.",
+    fonte:"Agresti, Finlay — cap. 5" },
+
+  { id:"STA40", materia:"Statistica", testo:"Quando si costruisce un intervallo di confidenza per una media usando l'errore standard stimato, la distribuzione di riferimento è:",
+    opzioni:["La distribuzione normale standardizzata","La distribuzione chi quadrato","La distribuzione uniforme","La distribuzione t di Student"], corretta:3,
+    spiegazione:"La t ha code più pesanti della normale e dipende dai gradi di libertà; all'aumentare della dimensione campionaria tende alla normale standardizzata.",
+    fonte:"Agresti, Finlay — cap. 5" },
+
+  { id:"STA41", materia:"Statistica", testo:"Un metodo statistico è detto «robusto» quando:",
+    opzioni:["Fornisce risultati validi anche se una delle sue assunzioni non è pienamente rispettata","Richiede campioni molto grandi","Non richiede alcuna assunzione","Produce sempre risultati significativi"], corretta:0,
+    spiegazione:"L'intervallo di confidenza basato sulla t è robusto rispetto alla non normalità della popolazione, ma non lo è rispetto alla violazione della casualità del campione.",
+    fonte:"Agresti, Finlay — cap. 5" },
+
+  { id:"STA42", materia:"Statistica", testo:"Nel test di significatività su una media, l'ipotesi alternativa Ha: μ ≠ μ0 è detta:",
+    opzioni:["Non parametrica","Bidirezionale, perché comprende valori sia inferiori sia superiori a quello ipotizzato","Unidirezionale","Nulla"], corretta:1,
+    spiegazione:"Le alternative unidirezionali (μ > μ0 oppure μ < μ0) si usano quando il ricercatore prevede uno scostamento in una direzione precisa.",
+    fonte:"Agresti, Finlay — cap. 6" },
+
+  { id:"STA43", materia:"Statistica", testo:"Le cinque parti in cui si articola un test di significatività sono:",
+    opzioni:["Domanda, dati, grafico, tabella, commento","Popolazione, campione, stima, errore, intervallo","Assunzioni, ipotesi, statistica test, P-valore, conclusioni","Campione, media, varianza, errore, risultato"], corretta:2,
+    spiegazione:"Le assunzioni riguardano soprattutto la casualità della selezione; le conclusioni vanno sempre interpretate nel contesto empirico dell'analisi.",
+    fonte:"Agresti, Finlay — cap. 6" },
+
+  { id:"STA44", materia:"Statistica", testo:"Quanto più piccolo è il P-valore:",
+    opzioni:["Tanto più grande è l'effetto osservato","Tanto più il campione è rappresentativo","Tanto più l'ipotesi nulla è certamente falsa","Tanto più forte è l'evidenza contro l'ipotesi nulla"], corretta:3,
+    spiegazione:"Il P-valore fornisce evidenze, non certezze: si rifiuta H0 quando P è minore o uguale al livello di significatività α prefissato.",
+    fonte:"Agresti, Finlay — cap. 6" },
+
+  { id:"STA45", materia:"Statistica", testo:"In un sondaggio su 1200 persone, il 52% risponde «aumentare le tasse». Per stabilire se nella popolazione questa sia una maggioranza si verifica:",
+    opzioni:["H0: π = 0,50 contro Ha: π ≠ 0,50","H0: π = 0,52 contro Ha: π ≠ 0,52","La sola media campionaria","La varianza della popolazione"], corretta:0,
+    spiegazione:"Il valore 0,50 separa minoranza e maggioranza: il test valuta se lo scarto osservato dal 50% sia compatibile con il caso, dato l'errore standard della proporzione.",
+    fonte:"Agresti, Finlay — cap. 6" }
 
   ]
 }

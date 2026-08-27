@@ -9,15 +9,15 @@ La prova si tiene **il 2 settembre 2026 alle 9.30, da remoto**, e verte su **teo
 comunicazione, informatica, marketing, statistica e attualità**. Ogni risposta esatta vale
 1 punto, quelle errate e quelle non date valgono 0: conviene rispondere sempre. Regole,
 scadenze e pesi delle aree sono riassunti in [`BANDO.md`](BANDO.md).
-La banca dati contiene **228 domande** su queste aree, ognuna con spiegazione e
+La banca dati contiene **293 domande** su queste aree, ognuna con spiegazione e
 riferimento al testo o al capitolo da cui deriva:
 
 | Materia | Domande |
 | --- | --- |
+| Informatica (Snyder-Henry *Fluency*, Console et al.) | 78 |
+| Statistica (Agresti-Finlay, Natale *La ricerca sociale*) | 75 |
 | Teorie della comunicazione (Balbi, Magaudda) | 62 |
-| Informatica (Snyder, Henry, Amoroso — *Fluency*) | 58 |
 | Marketing (Kotler, Armstrong) | 46 |
-| Statistica (Agresti, Finlay) | 30 |
 | Inglese (per il test SLAM, fuori dalla prova) | 20 |
 | Attualità e istituzioni | 12 |
 
