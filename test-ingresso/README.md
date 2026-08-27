@@ -1,5 +1,7 @@
 # Preparazione al test d'ingresso
 
+**Online: https://papasecco.github.io/papasecco/**
+
 Sito per esercitarsi sul test di ammissione alla laurea magistrale in **Comunicazione
 pubblica e d'impresa (COM, LM-59)** dell'Università degli Studi di Milano: domande a
 risposta multipla con quattro opzioni, una sola corretta. Funziona offline, senza
@@ -60,11 +62,14 @@ si impostano nel blocco `esame` di ogni banca dati, così la simulazione rispecc
 Bibliografia ufficiale, materie della prova e materiale ancora da recuperare sono in
 [`COSA-SERVE.md`](COSA-SERVE.md).
 
-## Pubblicare il sito online (facoltativo)
+## Pubblicazione
 
-Sono file statici: si possono caricare su GitHub Pages, Netlify o qualunque hosting.
-Con GitHub Pages, impostando la pubblicazione dalla cartella del repository, il sito
-risponde all'indirizzo `.../test-ingresso/`.
+Il sito è già online su **https://papasecco.github.io/papasecco/** e si aggiorna da solo:
+`.github/workflows/pages.yml` ripubblica a ogni push su `main` che tocchi `test-ingresso/`.
+Serve solo che in *Settings → Pages* la sorgente resti impostata su *GitHub Actions*.
+
+Esiste anche una copia servita da proxy pubblici, utile se Pages non fosse raggiungibile:
+`https://raw.githack.com/papasecco/papasecco/main/test-ingresso/dist/test-ingresso.html`
 
 ## Struttura
 
