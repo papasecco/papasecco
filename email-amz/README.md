@@ -9,16 +9,18 @@ Email HTML pronta all'invio, in italiano, per la presentazione di AMZ a circoli,
 | `amz-email.html` | **Versione da usare.** Le immagini sono richiamate da `assets/` (percorsi relativi da sostituire con URL pubblici o allegati CID prima dell'invio). |
 | `amz-email-anteprima.html` | Copia autonoma con le immagini incorporate in base64: si apre nel browser con doppio clic per vedere subito il risultato. Non usarla per l'invio (Gmail e Outlook bloccano le immagini base64). |
 | `assets/amz-court-surface.png` | Logo di testata **AMZ Court Surface**, estratto dal PDF originale, sfondo trasparente, 700×278 px (visualizzato a 260 px). |
-| `assets/amz-sports.png` | Logo **AMZ Sports** dall'SVG originale, 760×130 px: chiude l'email nella fascia sopra il footer (visualizzato a 300 px) ed è la testata della variante antracite. |
+| `assets/amz-sports.png` | Logo AMZ Sports dall'SVG originale, 760×130 px: testata della variante antracite, non usato nella versione verde. |
+| `assets/loghi-partner.png` | **Segnaposto da sostituire** con la striscia loghi (AMZ GreenSet · Nitto ATP Finals · Next Gen ATP Finals · Davis Cup Madrid Finals 2019 · Tennis Australia). Occupa a tutta larghezza la fascia sopra il footer. |
 | `varianti/amz-email-antracite.html` | Variante a cornice antracite con testata AMZ Sports rossa, e relativa anteprima. Conservata per confronto: non è la versione da inviare. |
 | `assets/logo-greenset.png`<br>`assets/logo-solinco.png`<br>`assets/logo-easygrip.png` | Loghi ufficiali dei tre marchi, dai file originali (SVG e PDF), scontornati e normalizzati su canvas trasparente 440×130 px, visualizzati a 128 px. |
 
 ## Cosa completare prima dell'invio
 
-1. **Recapiti nel footer** – nel blocco footer di `amz-email.html` sostituire indirizzo, `info@amz.it` e `www.amz.it` con i dati reali (il telefono è stato rimosso).
-2. **Nome destinatario** – il testo usa il segnaposto `{{ contact.firstname }}`. Se la piattaforma di invio usa un'altra sintassi, adeguarlo (Mailchimp `*|FNAME|*`, Brevo `{{ contact.FIRSTNAME }}`).
-3. **Disiscrizione** – `{{unsubscribe_url}}` va sostituito con il link generato dalla piattaforma (obbligatorio per invii commerciali).
-4. **Immagini** – caricare i PNG su un server o CDN e sostituire `src="assets/..."` con gli URL completi `https://...`. In alternativa allegarli come CID (`src="cid:amz-logo"`).
+1. **Striscia loghi** – salvare l'immagine come `assets/loghi-partner.png`, formato orizzontale circa 7:1 (larghezza consigliata 1200 px, così resta nitida anche su schermi retina). Viene mostrata a tutta larghezza sopra il footer: se l'immagine ha già i propri filetti verdi sopra e sotto, il layout non ne aggiunge altri.
+2. **Recapiti nel footer** – nel blocco footer di `amz-email.html` sostituire indirizzo, `info@amz.it` e `www.amz.it` con i dati reali (il telefono è stato rimosso).
+3. **Nome destinatario** – il testo usa il segnaposto `{{ contact.firstname }}`. Se la piattaforma di invio usa un'altra sintassi, adeguarlo (Mailchimp `*|FNAME|*`, Brevo `{{ contact.FIRSTNAME }}`).
+4. **Disiscrizione** – `{{unsubscribe_url}}` va sostituito con il link generato dalla piattaforma (obbligatorio per invii commerciali).
+5. **Immagini** – caricare i PNG su un server o CDN e sostituire `src="assets/..."` con gli URL completi `https://...`. In alternativa allegarli come CID (`src="cid:amz-logo"`).
 
 ## Oggetto suggerito
 
