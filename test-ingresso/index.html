@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palestra Test d'Ingresso</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <button class="logo" id="btn-home" title="Torna alla home">📝 <span>Test d'Ingresso</span></button>
+    <nav class="top-nav">
+      <button class="ghost" id="nav-stat">Statistiche</button>
+      <button class="ghost icon" id="nav-tema" title="Cambia tema">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ===== HOME ===== -->
+  <section id="v-home" class="view">
+    <h1>Preparati al test</h1>
+    <p class="sub">Scegli una modalità. I progressi restano salvati su questo dispositivo.</p>
+
+    <div class="cards">
+      <button class="card" data-modalita="esame">
+        <span class="card-ico">⏱️</span>
+        <span class="card-t">Simulazione d'esame</span>
+        <span class="card-d">30 domande in 30 minuti, distribuite con i pesi del bando. Correzione alla consegna.</span>
+      </button>
+      <button class="card" data-modalita="allenamento">
+        <span class="card-ico">🎯</span>
+        <span class="card-t">Allenamento libero</span>
+        <span class="card-d">Tutte le domande in ordine casuale, filtrabili per materia. Senza tempo, con spiegazione dopo ogni risposta.</span>
+      </button>
+      <button class="card" data-modalita="errori">
+        <span class="card-ico">🔁</span>
+        <span class="card-t">I miei errori</span>
+        <span class="card-d">L'elenco completo delle domande sbagliate, con la risposta giusta e la spiegazione. Da qui puoi riallenarti solo su quelle.</span>
+      </button>
+    </div>
+
+    <div id="home-esame" class="esame-info" hidden></div>
+
+    <div id="home-riepilogo" class="riepilogo"></div>
+  </section>
+
+  <!-- ===== SETUP ===== -->
+  <section id="v-setup" class="view" hidden>
+    <button class="link back" data-back>← Indietro</button>
+    <h1 id="setup-titolo">Imposta la prova</h1>
+
+    <div class="form">
+      <p class="riassunto" id="f-riassunto"></p>
+
+      <label class="campo" id="c-banca">
+        <span class="lab">Banca dati</span>
+        <select id="f-banca"></select>
+        <span class="hint" id="f-banca-hint"></span>
+      </label>
+
+      <label class="campo" id="c-materie">
+        <span class="lab">Materie</span>
+        <div id="f-materie" class="chips"></div>
+      </label>
+
+      <div class="riga">
+        <label class="campo">
+          <span class="lab">Numero di domande</span>
+          <input type="number" id="f-numero" min="1" step="1">
+        </label>
+        <label class="campo" id="c-tempo">
+          <span class="lab">Tempo (minuti)</span>
+          <input type="number" id="f-tempo" min="1" step="1">
+        </label>
+      </div>
+
+      <label class="check" id="c-pesi" hidden><input type="checkbox" id="f-pesi" checked> Distribuisci le domande con i pesi del bando</label>
+      <p class="hint" id="f-pesi-nota" hidden></p>
+
+      <div class="riga">
+        <label class="check"><input type="checkbox" id="f-mesc-dom" checked> Mescola le domande</label>
+        <label class="check"><input type="checkbox" id="f-mesc-opz" checked> Mescola le opzioni</label>
+      </div>
+
+      <div class="punteggio" id="f-punteggio"></div>
+
+      <button class="primary big" id="f-avvia">Inizia</button>
+      <p class="err" id="f-errore" hidden></p>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="v-quiz" class="view" hidden>
+    <div class="quiz-bar">
+      <div class="q-progress"><div id="q-progress-fill"></div></div>
+      <div class="quiz-meta">
+        <span id="q-contatore">1 / 30</span>
+        <span id="q-materia" class="tag"></span>
+        <span id="q-timer" class="timer"></span>
+      </div>
+    </div>
+
+    <article class="domanda">
+      <p id="q-testo" class="q-testo"></p>
+      <div id="q-opzioni" class="opzioni"></div>
+      <div id="q-feedback" class="feedback" hidden></div>
+    </article>
+
+    <div class="quiz-azioni">
+      <button class="ghost" id="q-prec">← Precedente</button>
+      <button class="ghost" id="q-segna">⚑ Segna</button>
+      <button class="ghost" id="q-pulisci">Cancella risposta</button>
+      <button class="primary" id="q-succ">Successiva →</button>
+    </div>
+
+    <details class="mappa" id="q-mappa-box">
+      <summary>Mappa delle domande</summary>
+      <div id="q-mappa" class="mappa-grid"></div>
+      <button class="danger ghost" id="q-consegna">Consegna e correggi</button>
+    </details>
+  </section>
+
+  <!-- ===== RISULTATI ===== -->
+  <section id="v-risultati" class="view" hidden>
+    <h1>Risultato</h1>
+    <div id="r-sintesi" class="sintesi"></div>
+    <div id="r-materie" class="barre"></div>
+    <div class="quiz-azioni">
+      <button class="primary" id="r-rivedi">Rivedi le domande</button>
+      <button class="ghost" id="r-ripeti">Rifai una prova simile</button>
+      <button class="ghost" id="r-home">Home</button>
+    </div>
+    <div id="r-dettaglio" class="dettaglio" hidden></div>
+  </section>
+
+  <!-- ===== ERRORI ===== -->
+  <section id="v-errori" class="view" hidden>
+    <button class="link back" data-back>← Indietro</button>
+    <h1>I miei errori</h1>
+    <p class="sub" id="e-sottotitolo"></p>
+
+    <div class="quiz-azioni" id="e-azioni" hidden>
+      <button class="primary" id="e-allena">Allenati su questi errori</button>
+      <button class="ghost" id="e-solo-aperti">Mostra solo quelle da recuperare</button>
+      <button class="danger ghost" id="e-svuota">Svuota elenco</button>
+    </div>
+
+    <div id="e-materie" class="chips" style="margin-top:16px"></div>
+    <div id="e-elenco" class="dettaglio"></div>
+  </section>
+
+  <!-- ===== STATISTICHE ===== -->
+  <section id="v-stat" class="view" hidden>
+    <button class="link back" data-back>← Indietro</button>
+    <h1>Statistiche</h1>
+    <div id="s-corpo"></div>
+    <button class="danger ghost" id="s-reset">Azzera tutti i dati</button>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>Tutti i dati restano nel browser di chi studia. Nessun account, nessun server.</p>
+</footer>
+
+<script src="domande/banche.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
