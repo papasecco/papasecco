@@ -18,7 +18,7 @@ Email HTML pronta all'invio, in italiano, per la presentazione di AMZ a circoli,
 ## Cosa completare prima dell'invio
 
 1. **Recapiti nel footer** – nel blocco footer di `amz-email.html` sostituire indirizzo, `info@amz.it` e `www.amz.it` con i dati reali (il telefono è stato rimosso).
-2. **Nome destinatario** – il testo usa il segnaposto `{{ contact.firstname }}`. Se la piattaforma di invio usa un'altra sintassi, adeguarlo (Mailchimp `*|FNAME|*`, Brevo `{{ contact.FIRSTNAME }}`).
+2. **Nome destinatario** – il testo usa il merge tag di GoHighLevel `{{contact.first_name}}`. Su altre piattaforme va adeguato (Mailchimp `*|FNAME|*`, Brevo `{{ contact.FIRSTNAME }}`).
 3. **Disiscrizione** – `{{unsubscribe_url}}` va sostituito con il link generato dalla piattaforma (obbligatorio per invii commerciali).
 4. **Immagini** – caricare i PNG su un server o CDN e sostituire `src="assets/..."` con gli URL completi `https://...`. In alternativa allegarli come CID (`src="cid:amz-logo"`).
 
