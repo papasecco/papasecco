@@ -29,17 +29,17 @@
       <button class="card" data-modalita="esame">
         <span class="card-ico">⏱️</span>
         <span class="card-t">Simulazione d'esame</span>
-        <span class="card-d">Prova cronometrata con punteggio, esattamente come il test vero. Nessun aiuto durante la prova.</span>
+        <span class="card-d">30 domande in 30 minuti, distribuite con i pesi del bando. Correzione alla consegna.</span>
       </button>
       <button class="card" data-modalita="allenamento">
         <span class="card-ico">🎯</span>
-        <span class="card-t">Allenamento per materia</span>
-        <span class="card-d">Risposta corretta e spiegazione subito dopo ogni domanda. Senza tempo.</span>
+        <span class="card-t">Allenamento libero</span>
+        <span class="card-d">Tutte le domande in ordine casuale, filtrabili per materia. Senza tempo, con spiegazione dopo ogni risposta.</span>
       </button>
       <button class="card" data-modalita="errori">
         <span class="card-ico">🔁</span>
-        <span class="card-t">Ripasso degli errori</span>
-        <span class="card-d">Solo le domande sbagliate in passato, finché non diventano automatiche.</span>
+        <span class="card-t">I miei errori</span>
+        <span class="card-d">L'elenco completo delle domande sbagliate, con la risposta giusta e la spiegazione. Da qui puoi riallenarti solo su quelle.</span>
       </button>
     </div>
 
@@ -54,7 +54,9 @@
     <h1 id="setup-titolo">Imposta la prova</h1>
 
     <div class="form">
-      <label class="campo">
+      <p class="riassunto" id="f-riassunto"></p>
+
+      <label class="campo" id="c-banca">
         <span class="lab">Banca dati</span>
         <select id="f-banca"></select>
         <span class="hint" id="f-banca-hint"></span>
@@ -86,7 +88,7 @@
 
       <div class="punteggio" id="f-punteggio"></div>
 
-      <button class="primary big" id="f-avvia">Inizia la prova</button>
+      <button class="primary big" id="f-avvia">Inizia</button>
       <p class="err" id="f-errore" hidden></p>
     </div>
   </section>
@@ -133,6 +135,22 @@
       <button class="ghost" id="r-home">Home</button>
     </div>
     <div id="r-dettaglio" class="dettaglio" hidden></div>
+  </section>
+
+  <!-- ===== ERRORI ===== -->
+  <section id="v-errori" class="view" hidden>
+    <button class="link back" data-back>← Indietro</button>
+    <h1>I miei errori</h1>
+    <p class="sub" id="e-sottotitolo"></p>
+
+    <div class="quiz-azioni" id="e-azioni" hidden>
+      <button class="primary" id="e-allena">Allenati su questi errori</button>
+      <button class="ghost" id="e-solo-aperti">Mostra solo quelle da recuperare</button>
+      <button class="danger ghost" id="e-svuota">Svuota elenco</button>
+    </div>
+
+    <div id="e-materie" class="chips" style="margin-top:16px"></div>
+    <div id="e-elenco" class="dettaglio"></div>
   </section>
 
   <!-- ===== STATISTICHE ===== -->

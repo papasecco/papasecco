@@ -104,6 +104,11 @@ select,input[type=number]{
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1px solid var(--bordo-forte);background:var(--bg);color:var(--testo);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.88rem}
 .chip[aria-pressed=true]{background:var(--acc-tenue);border-color:var(--acc);color:var(--acc);font-weight:600}
+.riassunto{margin:0;font-size:.95rem;background:var(--acc-tenue);color:var(--acc);border-radius:10px;padding:12px 14px}
+.rev .meta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px;font-size:.82rem;color:var(--testo-tenue)}
+.rev .meta button{font-size:.82rem;padding:5px 10px}
+.rev .badge{background:var(--ko-tenue);color:var(--ko);border-radius:999px;padding:2px 9px;font-weight:600}
+.rev .badge.ok{background:var(--ok-tenue);color:var(--ok)}
 .punteggio{font-size:.85rem;color:var(--testo-tenue);background:var(--bg);border-radius:10px;padding:10px 12px}
 .err{color:var(--ko);margin:0;font-size:.9rem}
 
@@ -142,6 +147,8 @@ select,input[type=number]{
 .feedback .fonte{display:block;margin-top:8px;font-size:.82rem;color:var(--testo-tenue)}
 .quiz-azioni{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .quiz-azioni .primary{margin-left:auto}
+#e-azioni{justify-content:flex-start}
+#e-azioni .primary{margin-left:0}
 #q-segna.attivo{background:var(--acc-tenue);border-color:var(--acc);color:var(--acc)}
 
 .mappa{margin-top:22px;background:var(--sfondo-card);border:1px solid var(--bordo);border-radius:var(--r);padding:14px 18px}
@@ -220,17 +227,17 @@ select,input[type=number]{
       <button class="card" data-modalita="esame">
         <span class="card-ico">⏱️</span>
         <span class="card-t">Simulazione d'esame</span>
-        <span class="card-d">Prova cronometrata con punteggio, esattamente come il test vero. Nessun aiuto durante la prova.</span>
+        <span class="card-d">30 domande in 30 minuti, distribuite con i pesi del bando. Correzione alla consegna.</span>
       </button>
       <button class="card" data-modalita="allenamento">
         <span class="card-ico">🎯</span>
-        <span class="card-t">Allenamento per materia</span>
-        <span class="card-d">Risposta corretta e spiegazione subito dopo ogni domanda. Senza tempo.</span>
+        <span class="card-t">Allenamento libero</span>
+        <span class="card-d">Tutte le domande in ordine casuale, filtrabili per materia. Senza tempo, con spiegazione dopo ogni risposta.</span>
       </button>
       <button class="card" data-modalita="errori">
         <span class="card-ico">🔁</span>
-        <span class="card-t">Ripasso degli errori</span>
-        <span class="card-d">Solo le domande sbagliate in passato, finché non diventano automatiche.</span>
+        <span class="card-t">I miei errori</span>
+        <span class="card-d">L'elenco completo delle domande sbagliate, con la risposta giusta e la spiegazione. Da qui puoi riallenarti solo su quelle.</span>
       </button>
     </div>
 
@@ -245,7 +252,9 @@ select,input[type=number]{
     <h1 id="setup-titolo">Imposta la prova</h1>
 
     <div class="form">
-      <label class="campo">
+      <p class="riassunto" id="f-riassunto"></p>
+
+      <label class="campo" id="c-banca">
         <span class="lab">Banca dati</span>
         <select id="f-banca"></select>
         <span class="hint" id="f-banca-hint"></span>
@@ -277,7 +286,7 @@ select,input[type=number]{
 
       <div class="punteggio" id="f-punteggio"></div>
 
-      <button class="primary big" id="f-avvia">Inizia la prova</button>
+      <button class="primary big" id="f-avvia">Inizia</button>
       <p class="err" id="f-errore" hidden></p>
     </div>
   </section>
@@ -324,6 +333,22 @@ select,input[type=number]{
       <button class="ghost" id="r-home">Home</button>
     </div>
     <div id="r-dettaglio" class="dettaglio" hidden></div>
+  </section>
+
+  <!-- ===== ERRORI ===== -->
+  <section id="v-errori" class="view" hidden>
+    <button class="link back" data-back>← Indietro</button>
+    <h1>I miei errori</h1>
+    <p class="sub" id="e-sottotitolo"></p>
+
+    <div class="quiz-azioni" id="e-azioni" hidden>
+      <button class="primary" id="e-allena">Allenati su questi errori</button>
+      <button class="ghost" id="e-solo-aperti">Mostra solo quelle da recuperare</button>
+      <button class="danger ghost" id="e-svuota">Svuota elenco</button>
+    </div>
+
+    <div id="e-materie" class="chips" style="margin-top:16px"></div>
+    <div id="e-elenco" class="dettaglio"></div>
   </section>
 
   <!-- ===== STATISTICHE ===== -->
@@ -373,8 +398,8 @@ select,input[type=number]{
    (Introduzione all'informatica) e Natale (La ricerca sociale). Gli argomenti restano
    pertinenti alle stesse aree d'esame.
 
-   Numero di domande e durata non sono indicati dal bando: i valori qui sotto sono una
-   scelta di allenamento e si possono cambiare liberamente.
+   Numero di domande e durata non sono indicati dal bando: la simulazione usa 30 domande
+   in 30 minuti, e i due valori si possono cambiare liberamente.
    Formato delle domande: vedi domande/MODELLO.md
    ========================================================================== */
 
@@ -385,7 +410,7 @@ window.BANCHE = [
   descrizione: "teoria della comunicazione, informatica, marketing, statistica, attualità (più inglese per il test SLAM)",
   esame: {
     data: "2026-09-02T09:30",
-    durataMinuti: 50, numeroDomande: 50,
+    durataMinuti: 30, numeroDomande: 30,
     puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null,
     // pesi ufficiali delle aree del test (art. 5 del bando)
     pesi: {
@@ -1890,6 +1915,14 @@ function domandeDi(banca) {
 }
 const chiave = q => `${q._banca}::${q.id}`;
 
+// Ritrova una domanda a partire dalla chiave salvata negli errori.
+function domandaDaChiave(k) {
+  const [idBanca, idDomanda] = k.split("::");
+  const banca = BANCHE.find(b => b.id === idBanca);
+  if (!banca) return null;
+  return domandeDi(banca).find(q => q.id === idDomanda) || null;
+}
+
 // Ripartisce n domande fra le materie secondo i pesi del bando (metodo dei resti
 // maggiori). Se una materia non ha abbastanza domande, le mancanti vanno alle altre.
 function quotePesate(n, pesi, disponibiliPerMateria) {
@@ -1948,7 +1981,7 @@ $("#nav-tema").onclick = () => {
 // ---------- navigazione ----------
 function mostra(id) {
   $$(".view").forEach(v => { v.hidden = v.id !== id; });
-  if (id !== "v-stat") vistaPrec = id;
+  if (id !== "v-stat" && id !== "v-errori") vistaPrec = id;
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
 $("#btn-home").onclick = () => { if (confermaAbbandono()) { mostra("v-home"); disegnaHome(); } };
@@ -2003,7 +2036,7 @@ function disegnaHome() {
   html += `<div class="box"><h2>A che punto sei</h2><div class="mini">
       <div><b>${storico.length}</b><span>prove svolte</span></div>
       <div><b>${storico.length ? Math.round(storico.reduce((s, p) => s + p.percentuale, 0) / storico.length) : 0}%</b><span>media di risposte esatte</span></div>
-      <div><b>${daRipassare}</b><span>domande da ripassare</span></div>
+      <div><b>${daRipassare}</b><span>domande da recuperare</span></div>
     </div>`;
   if (ultime.length) {
     html += `<table class="tabella" style="margin-top:16px"><thead><tr><th>Quando</th><th>Prova</th><th>Esatte</th><th>Punti</th></tr></thead><tbody>` +
@@ -2018,7 +2051,10 @@ function disegnaHome() {
   if (s) s.onclick = () => { localStorage.removeItem(CHIAVI.sessione); disegnaHome(); };
 }
 
-$$(".card").forEach(c => c.onclick = () => apriSetup(c.dataset.modalita));
+$$(".card").forEach(c => c.onclick = () => {
+  if (c.dataset.modalita === "errori") { apriErrori(); return; }
+  apriSetup(c.dataset.modalita);
+});
 
 // ---------- SETUP ----------
 let modalitaSetup = "esame";
@@ -2027,8 +2063,9 @@ function apriSetup(modalita) {
   modalitaSetup = modalita;
   if (!BANCHE.length) { alert("Nessuna banca dati caricata: controlla il file domande/banche.js"); return; }
   $("#setup-titolo").textContent =
-    modalita === "esame" ? "Simulazione d'esame" : modalita === "allenamento" ? "Allenamento per materia" : "Ripasso degli errori";
+    modalita === "esame" ? "Simulazione d'esame" : modalita === "allenamento" ? "Allenamento libero" : "Ripasso degli errori";
   $("#c-tempo").hidden = modalita !== "esame";
+  $("#c-banca").hidden = BANCHE.length < 2;
   $("#f-banca").innerHTML = BANCHE.map(b => `<option value="${esc(b.id)}">${esc(b.titolo)}</option>`).join("");
   $("#f-banca").onchange = aggiornaSetup;
   $("#f-pesi").onchange = aggiornaSetup;
@@ -2073,7 +2110,16 @@ function aggiornaSetup() {
   });
 
   $("#f-tempo").value = conf.durataMinuti;
-  $("#f-numero").value = modalitaSetup === "esame" ? conf.numeroDomande : Math.min(15, banca.domande.length);
+  const totali = disponibili().length;
+  // in allenamento si parte da tutte le domande disponibili, in ordine casuale
+  $("#f-numero").value = modalitaSetup === "esame" ? conf.numeroDomande : totali;
+  $("#f-riassunto").textContent = modalitaSetup === "esame"
+    ? `${conf.numeroDomande} domande in ${conf.durataMinuti} minuti` +
+      (conf.pesi ? ", distribuite con i pesi del bando" : "") +
+      `. Risposta esatta ${segno(conf.puntiCorretta)}, errata ${segno(conf.puntiErrata)}: nessuna penalità, conviene rispondere sempre.`
+    : modalitaSetup === "allenamento"
+      ? `Tutte le ${totali} domande in ordine casuale, senza limite di tempo. Dopo ogni risposta vedi subito la soluzione e la spiegazione.`
+      : "Solo le domande che hai già sbagliato, con spiegazione immediata.";
   $("#f-punteggio").textContent = modalitaSetup === "esame"
     ? `Punteggio: risposta esatta ${segno(conf.puntiCorretta)}, errata ${segno(conf.puntiErrata)}, non data ${segno(conf.puntiOmessa)}` +
       (conf.sogliaSufficienza != null
@@ -2115,6 +2161,34 @@ function aggiornaMax() {
   } else { err.hidden = true; $("#f-avvia").disabled = false; }
 }
 
+// Costruisce la sessione a partire da un elenco di domande già scelto.
+function creaSessione(banca, qs, opzioni) {
+  const conf = confDi(banca);
+  const o = Object.assign({ modalita: "allenamento", durataMs: null, pesata: false, mescolaOpz: true, titolo: null }, opzioni);
+  sessione = {
+    modalita: o.modalita,
+    pesata: o.pesata,
+    banca: banca.id,
+    titolo: o.titolo || `${banca.titolo} — ${ETICHETTA[o.modalita] || o.modalita}`,
+    conf,
+    durataMs: o.durataMs,
+    inizio: Date.now(),
+    indice: 0,
+    finita: false,
+    segnate: [],
+    risposte: new Array(qs.length).fill(null),
+    domande: qs.map(q => {
+      const ordine = o.mescolaOpz ? mescola(q.opzioni.map((_, i) => i)) : q.opzioni.map((_, i) => i);
+      return { id: q.id, banca: q._banca, materia: q.materia, testo: q.testo,
+               spiegazione: q.spiegazione || "", fonte: q.fonte || "",
+               opzioni: ordine.map(i => q.opzioni[i]), corretta: ordine.indexOf(q.corretta) };
+    })
+  };
+  avvia();
+}
+
+const ETICHETTA = { esame: "simulazione", allenamento: "allenamento libero", errori: "ripasso errori" };
+
 $("#f-avvia").onclick = () => {
   const banca = bancaDi($("#f-banca").value);
   const conf = confDi(banca);
@@ -2129,26 +2203,14 @@ $("#f-avvia").onclick = () => {
     qs = qs.slice(0, n);
   }
 
-  const mescolaOpz = $("#f-mesc-opz").checked;
-  sessione = {
+  creaSessione(banca, qs, {
     modalita: modalitaSetup,
     pesata: conPesi,
-    banca: banca.id,
-    titolo: `${banca.titolo} — ${modalitaSetup === "esame" ? "simulazione" : modalitaSetup === "allenamento" ? "allenamento" : "ripasso errori"}`,
-    conf,
-    durataMs: modalitaSetup === "esame" ? Math.max(1, parseInt($("#f-tempo").value, 10) || conf.durataMinuti) * 60000 : null,
-    inizio: Date.now(),
-    indice: 0,
-    finita: false,
-    segnate: [],
-    risposte: new Array(qs.length).fill(null),
-    domande: qs.map(q => {
-      const ordine = mescolaOpz ? mescola(q.opzioni.map((_, i) => i)) : q.opzioni.map((_, i) => i);
-      return { id: q.id, banca: q._banca, materia: q.materia, testo: q.testo, spiegazione: q.spiegazione || "", fonte: q.fonte || "",
-               opzioni: ordine.map(i => q.opzioni[i]), corretta: ordine.indexOf(q.corretta) };
-    })
-  };
-  avvia();
+    mescolaOpz: $("#f-mesc-opz").checked,
+    durataMs: modalitaSetup === "esame"
+      ? Math.max(1, parseInt($("#f-tempo").value, 10) || conf.durataMinuti) * 60000
+      : null
+  });
 };
 
 function avvia() {
@@ -2227,7 +2289,10 @@ function rispondi(k) {
   if (inAllenamento() && sessione.risposte[i] !== null) return; // già rivelata
   sessione.risposte[i] = k;
   salvaSessione();
-  if (inAllenamento()) registraEsito(sessione.domande[i], k === sessione.domande[i].corretta);
+  if (inAllenamento()) {
+    const q = sessione.domande[i];
+    registraEsito(q, k === q.corretta, q.opzioni[k]);
+  }
   disegnaDomanda();
 }
 
@@ -2267,12 +2332,15 @@ function chiediConsegna() {
 }
 
 // ---------- CORREZIONE ----------
-function registraEsito(q, giusto) {
+function registraEsito(q, giusto, rispostaData) {
   const errori = leggi(CHIAVI.errori, {});
   const k = `${q.banca}::${q.id}`;
   const e = errori[k] || { ko: 0, ok2: 0, materia: q.materia, testo: q.testo };
   if (giusto) e.ok2 = (e.ok2 || 0) + 1;
-  else { e.ko = (e.ko || 0) + 1; e.ok2 = 0; }
+  else {
+    e.ko = (e.ko || 0) + 1; e.ok2 = 0;
+    if (rispostaData != null) e.sbagliata = rispostaData;   // testo dell'opzione scelta
+  }
   e.ultima = Date.now(); e.materia = q.materia; e.testo = q.testo;
   errori[k] = e;
   scrivi(CHIAVI.errori, errori);
@@ -2291,7 +2359,7 @@ function consegna() {
     if (data === null) { omesse++; punti += conf.puntiOmessa; }
     else if (data === q.corretta) { corrette++; m.ok++; punti += conf.puntiCorretta; }
     else { errate++; punti += conf.puntiErrata; }
-    if (!inAllenamento()) registraEsito(q, data === q.corretta);
+    if (!inAllenamento()) registraEsito(q, data === q.corretta, data === null ? null : q.opzioni[data]);
   });
 
   punti = arrotonda(punti);
@@ -2385,6 +2453,112 @@ $("#r-rivedi").onclick = () => {
 };
 
 $("#r-ripeti").onclick = () => apriSetup(ultimoEsito.sessione.modalita);
+
+// ---------- I MIEI ERRORI ----------
+let filtroErrori = null;    // materia selezionata, null = tutte
+let soloDaRecuperare = false;
+
+// Errori registrati, riagganciati alla domanda della banca dati.
+function elencoErrori() {
+  const errori = leggi(CHIAVI.errori, {});
+  return Object.entries(errori)
+    .filter(([, e]) => e.ko > 0)
+    .map(([k, e]) => ({ k, e, q: domandaDaChiave(k) }))
+    .filter(x => x.q)
+    .sort((a, b) => (b.e.ultima || 0) - (a.e.ultima || 0));
+}
+
+const daRecuperare = e => (e.ok2 || 0) < 2;
+
+function apriErrori() {
+  filtroErrori = null; soloDaRecuperare = false;
+  disegnaErrori();
+  mostra("v-errori");
+}
+
+function erroriFiltrati() {
+  return elencoErrori()
+    .filter(x => !filtroErrori || x.q.materia === filtroErrori)
+    .filter(x => !soloDaRecuperare || daRecuperare(x.e));
+}
+
+function disegnaErrori() {
+  const tutti = elencoErrori();
+  const aperti = tutti.filter(x => daRecuperare(x.e)).length;
+  $("#e-azioni").hidden = !tutti.length;
+  $("#e-solo-aperti").classList.toggle("attivo", soloDaRecuperare);
+  $("#e-solo-aperti").textContent = soloDaRecuperare ? "Mostra tutte" : "Mostra solo quelle da recuperare";
+
+  if (!tutti.length) {
+    $("#e-sottotitolo").textContent = "";
+    $("#e-materie").innerHTML = "";
+    $("#e-elenco").innerHTML = `<div class="vuoto">Nessun errore registrato. Svolgi una simulazione o un allenamento: le domande sbagliate finiscono qui, con la risposta giusta e la spiegazione.</div>`;
+    return;
+  }
+
+  $("#e-sottotitolo").textContent =
+    `${tutti.length} ${plur(tutti.length, "domanda sbagliata", "domande sbagliate")} in tutto, ` +
+    `${aperti} ancora da recuperare. Una domanda esce dall'elenco delle aperte dopo due risposte esatte consecutive.`;
+
+  const perMateria = {};
+  tutti.forEach(x => perMateria[x.q.materia] = (perMateria[x.q.materia] || 0) + 1);
+  $("#e-materie").innerHTML =
+    `<button type="button" class="chip" aria-pressed="${!filtroErrori}" data-materia="">Tutte (${tutti.length})</button>` +
+    Object.entries(perMateria).sort((a, b) => b[1] - a[1]).map(([m, n]) =>
+      `<button type="button" class="chip" aria-pressed="${filtroErrori === m}" data-materia="${esc(m)}">${esc(m)} (${n})</button>`).join("");
+  $$("#e-materie .chip").forEach(ch => ch.onclick = () => {
+    filtroErrori = ch.dataset.materia || null;
+    disegnaErrori();
+  });
+
+  const righe = erroriFiltrati();
+  $("#e-elenco").innerHTML = righe.length ? righe.map(({ k, e, q }) => {
+    const recuperata = !daRecuperare(e);
+    return `<div class="rev ${recuperata ? "" : "ko"}">
+      <div class="num">${esc(q.materia)} · sbagliata ${e.ko} ${plur(e.ko, "volta", "volte")}${
+        e.ultima ? " · ultima volta il " + dataIt(e.ultima) : ""}</div>
+      <p class="t">${esc(q.testo)}</p>
+      <ul>${q.opzioni.map((t, i) => {
+        const giusta = i === q.corretta;
+        const tua = e.sbagliata != null && t === e.sbagliata;
+        return `<li class="${giusta ? "g" : (tua ? "s" : "")}">${LETTERE[i]}. ${esc(t)}${
+          giusta ? " ← risposta corretta" : (tua ? " ← la tua risposta" : "")}</li>`;
+      }).join("")}</ul>
+      ${q.spiegazione ? `<p class="sp">${esc(q.spiegazione)}</p>` : ""}
+      ${q.fonte ? `<p class="sp">Fonte: ${esc(q.fonte)}</p>` : ""}
+      <div class="meta">
+        <span class="badge ${recuperata ? "ok" : ""}">${recuperata ? "recuperata" : "da recuperare"}</span>
+        <button class="ghost" data-rimuovi="${esc(k)}">Rimuovi dall'elenco</button>
+      </div>
+    </div>`;
+  }).join("") : `<div class="vuoto">Nessun errore con questo filtro.</div>`;
+
+  $$("#e-elenco [data-rimuovi]").forEach(b => b.onclick = () => {
+    const errori = leggi(CHIAVI.errori, {});
+    delete errori[b.dataset.rimuovi];
+    scrivi(CHIAVI.errori, errori);
+    disegnaErrori(); disegnaHome();
+  });
+}
+
+$("#e-solo-aperti").onclick = () => { soloDaRecuperare = !soloDaRecuperare; disegnaErrori(); };
+
+$("#e-allena").onclick = () => {
+  const righe = erroriFiltrati();
+  if (!righe.length) { alert("Non c'è nessun errore da allenare con questo filtro."); return; }
+  const qs = mescola(righe.map(x => x.q));
+  const banca = bancaDi(qs[0]._banca);
+  creaSessione(banca, qs, {
+    modalita: "errori",
+    titolo: `${banca.titolo} — ripasso errori${filtroErrori ? " · " + filtroErrori : ""}`
+  });
+};
+
+$("#e-svuota").onclick = () => {
+  if (!confirm("Cancellare l'intero elenco degli errori? L'operazione non è reversibile.")) return;
+  localStorage.removeItem(CHIAVI.errori);
+  disegnaErrori(); disegnaHome();
+};
 
 // ---------- STATISTICHE ----------
 function disegnaStat() {

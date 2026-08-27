@@ -97,6 +97,11 @@ select,input[type=number]{
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1px solid var(--bordo-forte);background:var(--bg);color:var(--testo);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:.88rem}
 .chip[aria-pressed=true]{background:var(--acc-tenue);border-color:var(--acc);color:var(--acc);font-weight:600}
+.riassunto{margin:0;font-size:.95rem;background:var(--acc-tenue);color:var(--acc);border-radius:10px;padding:12px 14px}
+.rev .meta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px;font-size:.82rem;color:var(--testo-tenue)}
+.rev .meta button{font-size:.82rem;padding:5px 10px}
+.rev .badge{background:var(--ko-tenue);color:var(--ko);border-radius:999px;padding:2px 9px;font-weight:600}
+.rev .badge.ok{background:var(--ok-tenue);color:var(--ok)}
 .punteggio{font-size:.85rem;color:var(--testo-tenue);background:var(--bg);border-radius:10px;padding:10px 12px}
 .err{color:var(--ko);margin:0;font-size:.9rem}
 
@@ -135,6 +140,8 @@ select,input[type=number]{
 .feedback .fonte{display:block;margin-top:8px;font-size:.82rem;color:var(--testo-tenue)}
 .quiz-azioni{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .quiz-azioni .primary{margin-left:auto}
+#e-azioni{justify-content:flex-start}
+#e-azioni .primary{margin-left:0}
 #q-segna.attivo{background:var(--acc-tenue);border-color:var(--acc);color:var(--acc)}
 
 .mappa{margin-top:22px;background:var(--sfondo-card);border:1px solid var(--bordo);border-radius:var(--r);padding:14px 18px}

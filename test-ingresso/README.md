@@ -27,18 +27,19 @@ ed esclude l'inglese. Il risultato mostra anche il punteggio ponderato con quei 
 
 ## Le tre modalità
 
-| Modalità | A cosa serve |
+| Sezione | Che cosa fa |
 | --- | --- |
-| **Simulazione d'esame** | Prova cronometrata con il punteggio e la soglia del bando reale. Nessun aiuto durante la prova: la correzione arriva alla consegna. |
-| **Allenamento per materia** | Risposta esatta e spiegazione subito dopo ogni domanda, senza limite di tempo. Si sceglie su quali materie lavorare. |
-| **Ripasso degli errori** | Ripropone solo le domande sbagliate in passato; una domanda esce dall'elenco dopo due risposte esatte consecutive. |
+| **Simulazione d'esame** | 30 domande in 30 minuti, estratte con i pesi del bando. Nessun aiuto durante la prova: la correzione arriva alla consegna, con punteggio ponderato e percentuali per materia. |
+| **Allenamento libero** | Tutte le 293 domande in ordine casuale, filtrabili per materia, senza limite di tempo. Dopo ogni risposta compaiono soluzione e spiegazione. |
+| **I miei errori** | L'elenco completo delle domande sbagliate, con la risposta giusta, la tua risposta, la spiegazione e la fonte. Si filtra per materia, si rimuove ciò che è acquisito e si può riallenarsi solo su quelle domande. |
 
 ## Come si usa
 
 1. Scarica la cartella `test-ingresso/` e apri `index.html` nel browser (Chrome, Safari, Firefox).
-2. Scegli la modalità, la banca dati, le materie, quante domande e quanto tempo.
+2. Scegli una delle tre sezioni. La simulazione parte già impostata a 30 domande in 30 minuti; numero, tempo e materie restano modificabili.
 3. Durante la prova: `1`–`4` (o `A`–`D`) per rispondere, `←` e `→` per spostarsi, `⚑ Segna`
    per marcare una domanda da rivedere, la *Mappa delle domande* per saltare dove serve.
+   Le domande sbagliate finiscono automaticamente nella sezione **I miei errori**.
 4. Alla consegna: punteggio, esito rispetto alla soglia, percentuale per materia e
    revisione di tutte le domande con le spiegazioni.
 

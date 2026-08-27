@@ -30,8 +30,8 @@
    (Introduzione all'informatica) e Natale (La ricerca sociale). Gli argomenti restano
    pertinenti alle stesse aree d'esame.
 
-   Numero di domande e durata non sono indicati dal bando: i valori qui sotto sono una
-   scelta di allenamento e si possono cambiare liberamente.
+   Numero di domande e durata non sono indicati dal bando: la simulazione usa 30 domande
+   in 30 minuti, e i due valori si possono cambiare liberamente.
    Formato delle domande: vedi domande/MODELLO.md
    ========================================================================== */
 
@@ -42,7 +42,7 @@ window.BANCHE = [
   descrizione: "teoria della comunicazione, informatica, marketing, statistica, attualità (più inglese per il test SLAM)",
   esame: {
     data: "2026-09-02T09:30",
-    durataMinuti: 50, numeroDomande: 50,
+    durataMinuti: 30, numeroDomande: 30,
     puntiCorretta: 1, puntiErrata: 0, puntiOmessa: 0, sogliaSufficienza: null,
     // pesi ufficiali delle aree del test (art. 5 del bando)
     pesi: {
