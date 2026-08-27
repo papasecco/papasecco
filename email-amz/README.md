@@ -7,6 +7,7 @@ Email HTML pronta all'invio, in italiano, per la presentazione di AMZ a circoli,
 | File | A cosa serve |
 |---|---|
 | `amz-email.html` | **Versione da usare.** Le immagini sono richiamate da `assets/` (percorsi relativi da sostituire con URL pubblici o allegati CID prima dell'invio). |
+| `amz-email-builder.html` | Versione per l'import in una piattaforma di invio: identica, ma con cinque segnaposto `URL_...` al posto dei percorsi immagine, da sostituire con gli URL della libreria immagini del builder. |
 | `amz-email-anteprima.html` | Copia autonoma con le immagini incorporate in base64: si apre nel browser con doppio clic per vedere subito il risultato. Non usarla per l'invio (Gmail e Outlook bloccano le immagini base64). |
 | `assets/amz-court-surface.png` | Logo di testata **AMZ Court Surface**, estratto dal PDF originale, sfondo trasparente, 700×278 px (visualizzato a 260 px). |
 | `assets/amz-sports.png` | Logo AMZ Sports dall'SVG originale, 760×130 px: testata della variante antracite, non usato nella versione verde. |
