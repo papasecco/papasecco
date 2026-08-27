@@ -52,6 +52,10 @@ jobs:
                     s|\"domande/banche.js\"|\"domande/banche.js?v=${GITHUB_SHA}\"|g" "$f"
           done
           grep -o 'v=[0-9a-f]\{7\}' _site/index.html | head -3
+          # Copia in un solo file sotto /app/: un unico documento, senza css e
+          # js separati che possano restare in cache sui telefoni.
+          mkdir -p _site/app
+          cp test-ingresso/dist/test-ingresso.html _site/app/index.html
 
       - name: Carica l'artefatto
         uses: actions/upload-pages-artifact@v3
