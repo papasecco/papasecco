@@ -30,10 +30,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Pages va attivato una volta sola a mano, in Settings -> Pages,
+      # scegliendo "GitHub Actions" come sorgente: il token del workflow ha i
+      # permessi per pubblicare, non per creare il sito.
       - name: Configura Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true   # attiva Pages al primo passaggio, senza toccare le impostazioni
 
       - name: Prepara i file del sito
         run: |
