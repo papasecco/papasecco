@@ -43,6 +43,15 @@ jobs:
           cp -r test-ingresso/. _site/
           cp -r test-ingresso/. _site/test-ingresso/
           touch _site/.nojekyll
+          # Versiona i riferimenti a css e js con il commit pubblicato: senza
+          # questo i browser continuano a usare la copia in cache dopo un
+          # aggiornamento, e le correzioni non si vedono.
+          for f in _site/index.html _site/test-ingresso/index.html; do
+            sed -i "s|\"style.css\"|\"style.css?v=${GITHUB_SHA}\"|g; \
+                    s|\"app.js\"|\"app.js?v=${GITHUB_SHA}\"|g; \
+                    s|\"domande/banche.js\"|\"domande/banche.js?v=${GITHUB_SHA}\"|g" "$f"
+          done
+          grep -o 'v=[0-9a-f]\{7\}' _site/index.html | head -3
 
       - name: Carica l'artefatto
         uses: actions/upload-pages-artifact@v3
