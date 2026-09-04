@@ -9,7 +9,8 @@ Email HTML pronta all'invio, in italiano, per la presentazione di AMZ a circoli,
 | `amz-email.html` | **Versione da usare.** Le immagini sono richiamate da `assets/` (percorsi relativi da sostituire con URL pubblici o allegati CID prima dell'invio). |
 | `amz-email-builder.html` | Versione per l'import in una piattaforma di invio: identica, ma con cinque segnaposto `URL_...` al posto dei percorsi immagine, da sostituire con gli URL della libreria immagini del builder. |
 | `amz-email-anteprima.html` | Copia autonoma con le immagini incorporate in base64: si apre nel browser con doppio clic per vedere subito il risultato. Non usarla per l'invio (Gmail e Outlook bloccano le immagini base64). |
-| `assets/amz-court-surface.png` | Logo di testata **AMZ Court Surface**, estratto dal PDF originale, sfondo trasparente, 700×278 px (visualizzato a 260 px). |
+| `assets/amz-logo.png` | Logo di testata **AMZ**, ritagliato dal PDF Court Surface togliendo la dicitura "COURT SURFACE", 640×189 px trasparente (visualizzato a 190 px). |
+| `assets/amz-court-surface.png` | Il logo Court Surface completo, non più usato nel layout: conservato come alternativa di testata. |
 | `assets/amz-sports.png` | Logo AMZ Sports dall'SVG originale, 760×130 px: testata della variante antracite, non usato nella versione verde. |
 | `assets/loghi-partner.png` | Striscia loghi (AMZ GreenSet · Nitto ATP Finals · Next Gen ATP Finals · Davis Cup Madrid Finals 2019 · Tennis Australia), dal PDF originale, 1200×166 px trasparente. Occupa la fascia sopra il footer (visualizzata a 560 px). |
 | `varianti/amz-email-antracite.html` | Variante a cornice antracite con testata AMZ Sports rossa, e relativa anteprima. Conservata per confronto: non è la versione da inviare. |
@@ -36,4 +37,5 @@ Alternative: *Da oltre 40 anni al fianco di chi vive il tennis* · *AMZ: Greense
 - Palette: verde scuro `#1F5C34` per barra titolo, striscia loghi e footer, verde AMZ `#5CBD75` (campionato dal logo Court Surface) come accento, fondo `#F2F4F2`. Ogni marchio porta i propri colori, campionati dai file originali: Greenset `#4CDE71`, Solinco `#EC1B21`, Easygrip `#0089CF` per la barretta della card; per l'occhiello si usano le varianti scurite (`#1E9E4A`, `#C8141A`, `#0072AE`) che restano leggibili su bianco.
 - La variante antracite in `varianti/` usa la stessa struttura con cornice `#1A1A1A`, accento rosso `#D61920` e testata AMZ Sports.
 - Le card dei marchi sono a due colonne (logo + testo) su desktop e si impilano sotto i 620 px, con logo e testo centrati.
+- In testata, sotto il logo AMZ, i tre marchi compaiono in piccolo separati da filetti verticali: restano su un'unica riga anche a 390 px di larghezza, quindi non serve una regola responsive dedicata.
 - Testo alternativo (`alt`) su tutte le immagini: l'email resta leggibile anche con le immagini bloccate.
